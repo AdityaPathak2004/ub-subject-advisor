@@ -744,7 +744,8 @@ if(model&&!MODELS.includes(model)) model=""; if(pinned&&!MODELS.includes(pinned)
 const textOf=j=>((j.candidates&&j.candidates[0]&&j.candidates[0].content&&j.candidates[0].content.parts)||[]).filter(p=>!p.thought).map(p=>p.text||"").join("");
 function apiErr(status,body){
   let m=""; try{m=JSON.parse(body).error.message}catch(e){m=body.slice(0,160)}
-  if(status===400&&/key/i.test(m)) m="That API key wasn't accepted. Check it and try again.";
+  if(status===503||/high demand|overloaded/i.test(m)) m="Gemini is busy right now. Please try again in a moment.";
+  else if(status===400&&/key/i.test(m)) m="That API key wasn't accepted. Check it and try again.";
   else if(status===401||status===403) m="This key doesn't have access to the Gemini API ("+status+").";
   else if(status===429) m="Rate limit reached. Wait a minute and try again.";
   const e=new Error(m||("Gemini error "+status)); e.status=status; return e;
@@ -767,6 +768,10 @@ async function gemini(body,{stream=false,onText,timeout=30000}={}){
         if(/thinking/i.test(txt)){delete b.generationConfig.thinkingConfig;res=await post();}
       }
       if(res.status===404){last=new Error(`Model ${m} isn't available for this key.`);continue;}
+      if(res.status===503||res.status===500||(res.status===429&&list.length>1)){
+        await new Promise(r=>setTimeout(r,1200)); res=await post();           // one quick retry
+        if(!res.ok&&res.status!==400){ last=apiErr(res.status,await res.text()); continue; } // then try the next model
+      }
       if(!res.ok) throw apiErr(res.status,await res.text());
       if(model!==m){model=m;store.set("ubadv_model",m);}
       setAiUI();
