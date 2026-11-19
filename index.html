@@ -833,6 +833,102 @@ footer{background:#051a33}
 .chip .cl{min-width:0;overflow-wrap:break-word;hyphens:auto}
 @media (max-width:560px){.card{padding:22px 16px;border-radius:16px}.card h2{font-size:26px}.chip{gap:7px;padding:10px 9px!important}.chip .ic{width:18px;height:18px}.chip .cl{font-size:13px}
  .trust i+i::before{display:none}.trust{gap:2px 14px}.row .btn{flex:1;justify-content:center}}
+
+/* ===================== UB SPIRIT LAYER ===================== */
+/* header sticker button */
+.stk-btn{position:relative;display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:6px 11px 6px 9px;cursor:pointer;font:inherit;font-size:13px;font-weight:700;margin-left:6px;transition:background .2s,border-color .2s}
+.stk-btn svg{width:17px;height:17px}
+.stk-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.6)}
+.stk-btn.has{border-color:rgba(255,199,44,.7)}.stk-btn.has span{color:var(--solar)}
+.stk-btn.bump{animation:bump .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump{30%{transform:scale(1.25) rotate(-6deg)}100%{transform:none}}
+@media (max-width:560px){.stk-btn{padding:6px 8px}}
+/* flying sticker */
+.stk-fly{position:fixed;left:50%;top:44%;z-index:300;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(0 18px 30px rgba(0,30,70,.35))}
+.stk-fly svg{display:block;animation:slap .55s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes slap{0%{transform:scale(2.6) rotate(-30deg);opacity:0}60%{opacity:1}100%{transform:scale(1) rotate(var(--r));opacity:1}}
+/* sticker book */
+.stk-intro{margin-top:0;color:var(--townsend)}
+.stk-prog{font-size:14px;margin-bottom:14px}.stk-prog b{font-family:var(--serif);font-size:22px;color:var(--harriman)}.stk-prog .pbar{margin-top:6px}
+.stk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px;max-height:58vh;overflow-y:auto;padding:6px 4px 10px;background:radial-gradient(#e3e8ef 1px,transparent 1px) 0 0/16px 16px;border-radius:12px}
+.stk{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.stk figcaption{font-size:12.5px;color:var(--townsend);line-height:1.35;max-width:130px}
+.stk.got svg{transform:rotate(var(--r));filter:drop-shadow(0 4px 6px rgba(0,30,70,.22));transition:transform .3s cubic-bezier(.2,1.4,.4,1),filter .3s}
+.stk.got:hover svg{transform:rotate(0) scale(1.08) translateY(-4px);filter:drop-shadow(0 12px 16px rgba(0,30,70,.25))}
+.stk.got figcaption{color:var(--harriman);font-weight:600}
+.stk.lock .slot{width:104px;height:104px;border-radius:50%;border:2px dashed #c9d3df;display:grid;place-items:center;background:#fff;margin:7px 0}
+.stk.lock .slot span{font-family:var(--serif);font-size:34px;color:#b6c2d1}
+/* hero decor */
+.hero-campus{position:absolute;left:0;right:0;bottom:0;color:rgba(255,255,255,.22);pointer-events:none}
+.hero-campus .campus{width:100%;height:auto;display:block}
+.hero-campus .gold{color:rgba(255,199,44,.55)}
+.hc-stk{position:absolute;pointer-events:auto;transition:transform .35s cubic-bezier(.2,1.4,.4,1);filter:drop-shadow(0 6px 10px rgba(0,30,70,.3))}
+.hc-stk.s1{right:-26px;top:-30px;transform:rotate(12deg)}.hc-stk.s2{left:-24px;bottom:-30px;transform:rotate(-10deg)}
+.hc-stk:hover{transform:rotate(0) scale(1.12) translateY(-4px)}
+.hc-stk svg{display:block}
+/* dashboard sticker */
+.dash-stk{position:absolute;right:22px;top:18px;transform:rotate(10deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.3));animation:slapIn .6s .9s cubic-bezier(.2,1.5,.4,1) both;z-index:2}
+@keyframes slapIn{from{transform:scale(2.4) rotate(-20deg);opacity:0}to{transform:rotate(10deg);opacity:1}}
+@media (max-width:760px){.dash-stk{right:10px;top:10px}.dash-stk svg{width:66px;height:66px}}
+/* footer panorama */
+.foot-campus{background:linear-gradient(180deg,#0a2e57,#051a33);padding:34px 0 0;color:rgba(255,255,255,.55)}
+#footCampus .campus{width:100%;height:auto;display:block}
+.campus .gold{color:var(--solar)}
+.campus-hint{margin:8px 0 0;font-size:12.5px;color:#7f93ad;text-align:center;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08)}
+#footCampus .egg{cursor:pointer;transition:color .25s}
+#footCampus .egg:hover,#footCampus .egg:focus{color:#fff;outline:none}
+#footCampus .egg:focus-visible{outline:2px solid var(--solar)}
+#hayesBell{transform-box:fill-box;transform-origin:50% 0}
+#hayesBell.ring{animation:ringb 1.6s ease}
+@keyframes ringb{10%{transform:rotate(22deg)}25%{transform:rotate(-18deg)}40%{transform:rotate(14deg)}55%{transform:rotate(-10deg)}70%{transform:rotate(6deg)}100%{transform:none}}
+.campus .rip{stroke-dasharray:80;stroke-dashoffset:0}
+.campus.splash .rip{animation:rip 1.4s ease}
+.campus.splash .r2{animation-delay:.15s}.campus.splash .r3{animation-delay:.3s}
+@keyframes rip{0%{stroke-dashoffset:80;opacity:.2}50%{opacity:1;color:#8fd3ff}100%{stroke-dashoffset:0}}
+.campus .pnl{transition:fill .3s,color .3s}
+.campus.lit .pnl{animation:pnl 2.6s var(--d) both}
+@keyframes pnl{20%{fill:var(--solar);color:var(--solar)}70%{fill:var(--solar);color:var(--solar)}100%{fill:transparent}}
+.campus .busg{transition:transform .2s}
+.campus.drive .busg{animation:drive 3.2s cubic-bezier(.5,0,.5,1)}
+@keyframes drive{0%{transform:none}45%{transform:translateX(160px)}46%{transform:translateX(-1200px)}100%{transform:none}}
+/* palette */
+.palette{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:4px 20px 18px}
+.pal-k{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#7f93ad;font-weight:700;margin-right:6px}
+.palette button{display:inline-flex;align-items:center;gap:7px;background:none;border:0;color:#c8d4e3;font:inherit;font-size:12.5px;cursor:pointer;padding:3px 0}
+.palette button i{width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px rgba(255,255,255,.15)}
+.palette button:hover{color:#fff}.palette button:hover i{transform:scale(1.2)}
+.legal .linkbtn{color:var(--solar);font-size:12.5px}
+/* effects */
+.fx{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:250}
+.rain{position:fixed;top:-50px;z-index:250;pointer-events:none;animation:fall 3s cubic-bezier(.4,0,.8,1) forwards}
+@keyframes fall{to{transform:translateY(calc(100vh + 80px)) rotate(540deg)}}
+.bus-run{position:fixed;bottom:18px;left:-240px;z-index:250;pointer-events:none;filter:drop-shadow(0 10px 16px rgba(0,30,70,.3));animation:busrun 4s cubic-bezier(.45,0,.55,1) forwards}
+@keyframes busrun{to{transform:translateX(calc(100vw + 480px))}}
+.plaque{position:fixed;left:24px;bottom:24px;z-index:260;width:min(380px,calc(100vw - 48px));background:linear-gradient(160deg,#00376f,#002f56);color:#fff;border:1px solid rgba(255,199,44,.5);border-radius:16px;padding:22px 22px 18px;box-shadow:0 24px 50px rgba(0,20,50,.4);transform:translateY(20px);opacity:0;transition:all .45s cubic-bezier(.2,1.2,.4,1)}
+.plaque.in{transform:none;opacity:1}
+.plaque h4{font-family:var(--serif);font-size:22px;margin:2px 0 8px}
+.plaque p{margin:0 0 8px;font-size:14px;line-height:1.55;opacity:.92}
+.pl-k{font-size:11px!important;letter-spacing:1.6px;text-transform:uppercase;color:var(--solar);font-weight:700;opacity:1!important}
+.pl-m{font-family:var(--serif);color:var(--solar)}
+.pl-x{position:absolute;right:12px;top:8px;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;opacity:.7}
+/* lab extras */
+.lab-status{margin-top:22px;font-size:14px;display:flex;flex-direction:column;gap:2px}
+.lab-status span{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--solar);font-weight:700}
+.lab-status b{font-weight:500;opacity:.9}.lab-status b.swap{animation:rotIn .4s cubic-bezier(.2,.8,.2,1)}
+.lab-campus{position:absolute;left:0;right:0;bottom:0;color:rgba(255,255,255,.14);pointer-events:none}
+.lab-campus .campus{width:100%;height:auto;display:block}.lab-campus .gold{color:rgba(255,199,44,.4)}
+@media print{.stk-btn,.foot-campus,.palette,.plaque,.fx,.rain,.bus-run,.dash-stk,.hc-stk{display:none!important}}
+@media (prefers-reduced-motion:reduce){.stk-fly,.rain,.bus-run{display:none}}
+
+.brand-sub,.ai-btn,.topnav>button,.stk-btn{white-space:nowrap}
+.topnav{gap:2px}
+@media (max-width:1320px){#hdr.past .brand-sub{display:none}}
+@media (max-width:1180px){#hdr.past .topnav>button:not(.ai-btn){display:none}}
+.hero-campus{color:rgba(255,255,255,.15)}
+.hero-campus .campus{height:118px;width:100%}
+@media (max-width:760px){.hero-campus .campus{height:70px}.foot-campus{padding-top:20px}.palette button{font-size:12px}}
+
+.topnav>.stk-btn{display:inline-flex!important}
 </style>
 </head>
 <body>
@@ -853,6 +949,7 @@ footer{background:#051a33}
       <nav class="topnav" aria-label="Main">
         <button type="button" data-open-explore>Programs</button>
         <button type="button" data-open-how>Methodology</button>
+        <button class="stk-btn" id="stkBtn" type="button" title="Sticker book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h7l8-8V6a3 3 0 0 0-3-3z"/><path d="M13 21v-5a3 3 0 0 1 3-3h5"/></svg><span id="stkN">0</span></button>
         <button class="ai-btn" id="aiBtn" type="button"><span class="sdot"></span><span id="aiLbl">Unlock AI</span></button>
       </nav>
     </div>
@@ -861,6 +958,7 @@ footer{background:#051a33}
 
 <section class="hero">
   <canvas id="heroDots" class="hero-dots" aria-hidden="true"></canvas>
+  <div class="hero-campus" id="heroCampus" aria-hidden="true"></div>
   <svg class="hero-art" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs><linearGradient id="hg" x1="0" x2="1"><stop offset="0" stop-color="#ffc72c" stop-opacity="0"/><stop offset=".55" stop-color="#ffc72c" stop-opacity=".9"/><stop offset="1" stop-color="#ffc72c" stop-opacity=".2"/></linearGradient></defs>
     <g class="hc">
@@ -1001,6 +1099,12 @@ footer{background:#051a33}
   </tbody></table></div>
 </dialog>
 
+<dialog id="stkDlg" class="wide">
+  <div class="modal-head"><h3>Your UB sticker book</h3><button aria-label="Close" data-close>×</button></div>
+  <div class="modal-body"><p class="stk-intro">Eighteen stickers — one for each program. Earn them by using the advisor, and find the rest hidden around the page.</p><div class="stk-prog" id="stkProg"></div><div class="stk-grid" id="stkGrid"></div>
+  <div class="modal-actions"><button class="btn" id="stkDl" type="button">Download my sticker sheet</button></div></div>
+</dialog>
+
 <dialog id="aiDlg">
   <div class="modal-head"><h3>Connect Gemini AI</h3><button aria-label="Close" data-close>×</button></div>
   <div class="modal-body">
@@ -1039,13 +1143,25 @@ footer{background:#051a33}
 </dialog>
 
 <footer>
+  <div class="foot-campus"><div class="wrap"><div id="footCampus"></div><p class="campus-hint">North &amp; South Campus, drawn in line. Some landmarks are clickable.</p></div></div>
   <div class="wrap foot">
-    <div class="f-brand"><img src="assets/ub-logo-white.png" alt="University at Buffalo"><p>An unofficial student demo for exploring UB majors from your own academic results.</p></div>
+    <div class="f-brand"><img src="assets/ub-logo-white.png" alt="University at Buffalo"><p>An unofficial student demo for exploring UB majors from your own academic results. Made in Buffalo, NY · 716.</p></div>
     <nav class="f-links" aria-label="Footer">
-      <button data-open-how>Methodology</button><button data-open-explore>Programs</button><a href="https://www.buffalo.edu" target="_blank" rel="noopener">buffalo.edu</a><a href="https://admissions.buffalo.edu" target="_blank" rel="noopener">Admissions</a><button id="restart2">Start over</button>
+      <button data-open-how>Methodology</button><button data-open-explore>Programs</button><button data-open-stk>Sticker book</button><a href="https://www.buffalo.edu" target="_blank" rel="noopener">buffalo.edu</a><a href="https://admissions.buffalo.edu" target="_blank" rel="noopener">Admissions</a><button id="restart2">Start over</button>
     </nav>
   </div>
-  <div class="wrap legal"><span>Not affiliated with or endorsed by the University at Buffalo. Statistical methods adapted from published research by Dr. Leonid Khinkis.</span><span>Press <kbd>?</kbd> for keyboard shortcuts</span></div>
+  <div class="wrap palette" aria-label="UB brand colours, named after campus places">
+    <span class="pal-k">Colours named after campus</span>
+    <button data-hex="#005bbb" data-name="UB Blue" style="--c:#005bbb"><i></i>UB Blue</button>
+    <button data-hex="#002f56" data-name="Harriman Blue" style="--c:#002f56"><i></i>Harriman Blue</button>
+    <button data-hex="#ffffff" data-name="Hayes Hall White" style="--c:#ffffff"><i></i>Hayes Hall White</button>
+    <button data-hex="#ffc72c" data-name="Solar Strand" style="--c:#ffc72c"><i></i>Solar Strand</button>
+    <button data-hex="#2f9fd0" data-name="Victor E. Blue" style="--c:#2f9fd0"><i></i>Victor E. Blue</button>
+    <button data-hex="#006570" data-name="Niagara Whirlpool" style="--c:#006570"><i></i>Niagara Whirlpool</button>
+    <button data-hex="#990000" data-name="Capen Brick" style="--c:#990000"><i></i>Capen Brick</button>
+    <button data-hex="#ad841f" data-name="Bronze Buffalo" style="--c:#ad841f"><i></i>Bronze Buffalo</button>
+  </div>
+  <div class="wrap legal"><span>Not affiliated with or endorsed by the University at Buffalo. Statistical methods adapted from published research by Dr. Leonid Khinkis.</span><span>Psst — 18 stickers are hidden around this site. <button class="linkbtn" data-open-stk>Open your sticker book</button> · Horns up 🤘</span></div>
 </footer>
 
 <script>
@@ -2362,7 +2478,7 @@ function countUp(el,to,{dur=1200,dec=0,suffix=""}={}){
 
 /* ---------- Hero: rotating word, count-up stats, parallax, flowing data points ---------- */
 (()=>{
-  const rot=$("#rot"); const words=["you","builders","healers","coders","thinkers","creators"]; let wi=0;
+  const rot=$("#rot"); const words=["you","builders","healers","coders","thinkers","creators","future Bulls"]; let wi=0;
   if(rot&&!reduceMotion) setInterval(()=>{ rot.classList.add("out"); setTimeout(()=>{wi=(wi+1)%words.length; rot.textContent=words[wi]; rot.classList.remove("out"); rot.classList.add("in"); setTimeout(()=>rot.classList.remove("in"),500);},320); },2600);
   const stats=$$(".hero-stats b[data-to]"); setTimeout(()=>stats.forEach(b=>countUp(b,+b.dataset.to,{dur:1400})),500);
   const hero=$(".hero"), card=$(".hero-card"), art=$(".hero-art");
@@ -2452,6 +2568,222 @@ function renderDash(a,res){
   countUp($("#gNum"),r0.score,{dur:1300}); $$("#dash [data-cu]").forEach(b=>countUp(b,+b.dataset.cu,{dur:1100}));
   $$("#dash .pod").forEach(b=>b.onclick=()=>{ focusProg=b.dataset.prog; setTab("plan"); $(".tabs").scrollIntoView({behavior:"smooth",block:"start"}); toast(`Showing the 4-year plan for ${b.dataset.prog}.`); });
 }
+
+/* =====================================================================
+   UB SPIRIT LAYER — collectible sticker book, easter eggs, campus panorama
+   All artwork is original line art; UB facts verified against buffalo.edu.
+   ===================================================================== */
+const PAL={blue:"#005bbb",harriman:"#002f56",white:"#ffffff",solar:"#ffc72c",victor:"#2f9fd0",whirl:"#006570",capen:"#990000",bronze:"#ad841f",coral:"#e56a54",night:"#0b2545"};
+const SHAPES={
+  circle:'<circle cx="100" cy="100" r="86"/>',
+  burst:(()=>{const p=[];for(let i=0;i<32;i++){const a=i/32*Math.PI*2-Math.PI/2,r=i%2?79:93;p.push((100+r*Math.cos(a)).toFixed(1)+","+(100+r*Math.sin(a)).toFixed(1));}return `<polygon points="${p.join(" ")}"/>`;})(),
+  pill:'<rect x="6" y="50" width="188" height="100" rx="50"/>',
+  rrect:'<rect x="14" y="28" width="172" height="144" rx="30"/>',
+  hex:'<polygon points="100,8 180,54 180,146 100,192 20,146 20,54"/>',
+  shield:'<path d="M100 10 174 36v54c0 48-31 82-74 100-43-18-74-52-74-100V36z"/>',
+  ticket:'<path d="M12 50h176v32a18 18 0 0 0 0 36v32H12v-32a18 18 0 0 0 0-36z"/>'
+};
+const GLYPH={
+  star:'<path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+  horns:'<path d="M5 13c0 3.5 3 6 7 6s7-2.5 7-6M5 13C2.5 11 2 7 3 4c1.2 3.4 3.4 6 6 7M19 13c2.5-2 3-6 2-9-1.2 3.4-3.4 6-6 7"/><path d="M9.5 15h.01M14.5 15h.01"/>',
+  bell:'<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0M12 3v2"/>',
+  tower:'<path d="M8.5 21V11h7v10M6 21h12M9.5 11V7.5L12 4l2.5 3.5V11M12 4V1.5"/><circle cx="12" cy="14.5" r="2"/><path d="M12 13.4v1.1l.8.6"/>',
+  waves:'<path d="M2 8c2.5-2 4.5-2 7 0s4.5 2 7 0 4.5-2 6 0M2 13c2.5-2 4.5-2 7 0s4.5 2 7 0 4.5-2 6 0M2 18c2.5-2 4.5-2 7 0s4.5 2 7 0 4.5-2 6 0"/>',
+  panels:'<path d="M2.5 16 6 9h15.5L18 16zM4.2 12.5h15.6M10 9l-2.5 7M15 9l-2.5 7M11 16v4M7.5 21h7"/><circle cx="19.5" cy="3.8" r="1.7"/>',
+  bus:'<rect x="3" y="4.5" width="18" height="12.5" rx="2.5"/><path d="M3 11h18M8.5 4.5V11M15.5 4.5V11"/><circle cx="7.5" cy="19" r="1.6"/><circle cx="16.5" cy="19" r="1.6"/>',
+  flake:'<path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.8l3 2 3-2M9 20.2l3-2 3 2M3.6 10.6l3.1-1.7-.2-3.5M20.4 13.4l-3.1 1.7.2 3.5M3.6 13.4l3.1 1.7-.2 3.5M20.4 10.6l-3.1-1.7.2-3.5"/>',
+  wing:'<path d="M14.8 3.2c3.3 0 6 2.7 6 6 0 2.4-1.4 4.4-3.4 5.4l-4.8 2.1-3.3-3.3 2.1-4.8c1-2.1 3-3.4 5.4-3.4zM9.3 13.4l-4 4M6.8 17.4a1.7 1.7 0 1 1-2.2-2.2M6.8 17.4a1.7 1.7 0 1 0 2.2 2.2"/>',
+  sigma:'<path d="M18 4H6l6.5 8L6 20h12"/>',
+  dice:'<rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="15.5" cy="8.5" r="1.2"/><circle cx="8.5" cy="15.5" r="1.2"/>',
+  cal:'<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M7 14h3M14 14h3M7 17.5h3"/>',
+  laurel:'<path d="M12 22V8M12 8c-3 0-5-2-5-5 3 0 5 2 5 5zm0 0c3 0 5-2 5-5-3 0-5 2-5 5zM12 14c-3 0-5-2-5-5 3 0 5 2 5 5zm0 0c3 0 5-2 5-5-3 0-5 2-5 5z"/>',
+  moon:'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/><path d="M17 4.5h.01M20 8h.01"/>',
+  chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>',
+  question:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 1 1 3.7 2.4c-.7.3-1.2 1-1.2 1.8M12 17h.01"/>'
+};
+const L=(t,y,s,o={})=>({t,y,s,...o});
+const STICKERS=[
+  {id:"go-bulls",name:"Go Bulls!",hint:"Generate your first report.",shape:"burst",bg:PAL.blue,fg:"#fff",icon:"star",ic:PAL.solar,ix:88,iy:40,is:1,lines:[L("GO",100,40,{c:PAL.solar}),L("BULLS!",142,40,{w:128})]},
+  {id:"horns-up",name:"Horns Up!",hint:"Score a 90%+ match.",shape:"circle",bg:PAL.solar,fg:PAL.harriman,icon:"horns",lines:[L("HORNS",120,30,{w:118}),L("UP!",156,36)]},
+  {id:"more-cowbell",name:"More Cowbell!",hint:"↑ ↑ ↓ ↓ ← → ← → B A",shape:"ticket",bg:PAL.capen,fg:"#fff",icon:"bell",ix:28,iy:76,lines:[L("MORE",98,26,{x:124}),L("COWBELL!",128,22,{x:124,w:100})]},
+  {id:"est-1846",name:"Est. 1846",hint:"Tap the UB logo five times, quickly.",shape:"shield",bg:PAL.harriman,fg:"#fff",lines:[L("EST.",74,24),L("1846",124,50,{c:PAL.solar,w:112}),L("MENS SANA",152,12,{ls:2}),L("IN CORPORE SANO",168,9,{ls:1.5})]},
+  {id:"hayes",name:"Hayes Hall Chimes",hint:"Ring the bell on South Campus (see the footer).",shape:"rrect",bg:"#fff",fg:PAL.blue,ring:PAL.blue,icon:"tower",iy:38,lines:[L("HAYES HALL",124,20,{w:140}),L("CHIMES · 1928",150,13,{c:PAL.harriman,ls:2})]},
+  {id:"lake",name:"Lake LaSalle",hint:"Make a splash in the footer.",shape:"circle",bg:PAL.victor,fg:"#fff",icon:"waves",iy:36,lines:[L("LAKE",120,30),L("LaSALLE",152,28,{w:122})]},
+  {id:"solar",name:"Solar Strand",hint:"3,200 panels are waiting in the footer.",shape:"hex",bg:PAL.solar,fg:PAL.harriman,icon:"panels",iy:34,lines:[L("SOLAR",118,30),L("STRAND",148,26,{w:112}),L("3,200 PANELS",168,10,{ls:2})]},
+  {id:"stampede",name:"Stampede Rider",hint:"Catch the bus in the footer.",shape:"ticket",bg:PAL.blue,fg:"#fff",icon:"bus",ix:28,iy:76,lines:[L("STAMPEDE",100,19,{x:124,w:102}),L("RIDER",130,26,{x:124,c:PAL.solar})]},
+  {id:"lake-effect",name:"Lake-Effect Certified",hint:"Type s-n-o-w anywhere.",shape:"circle",bg:"#fff",fg:PAL.victor,ring:PAL.victor,icon:"flake",iy:30,lines:[L("LAKE-EFFECT",118,18,{w:138,c:PAL.harriman}),L("CERTIFIED",146,20,{w:116})]},
+  {id:"wings",name:"716 Wing Capital",hint:"Type w-i-n-g-s anywhere.",shape:"burst",bg:PAL.coral,fg:"#fff",icon:"wing",iy:30,lines:[L("716",118,36),L("WING CAPITAL",146,15,{w:112})]},
+  {id:"d-optimal",name:"D-Optimal & Proud",hint:"Read the methodology.",shape:"rrect",bg:PAL.harriman,fg:"#fff",icon:"sigma",ic:PAL.solar,iy:38,lines:[L("D-OPTIMAL",124,24,{w:140}),L("& PROUD",150,16,{c:PAL.solar,ls:2})]},
+  {id:"monte-carlo",name:"600 Simulations",hint:"Get a clear best fit.",shape:"circle",bg:PAL.whirl,fg:"#fff",icon:"dice",iy:28,lines:[L("600",122,40,{c:PAL.solar}),L("SIMULATIONS",148,14,{w:116})]},
+  {id:"planner",name:"Four-Year Planner",hint:"Open your 4-Year Plan.",shape:"rrect",bg:PAL.bronze,fg:"#fff",icon:"cal",iy:38,lines:[L("FOUR-YEAR",124,22,{w:140}),L("PLANNER",150,20)]},
+  {id:"mens-sana",name:"Mens Sana",hint:"Tick off five advising tasks.",shape:"shield",bg:PAL.blue,fg:"#fff",icon:"laurel",ic:PAL.solar,iy:26,lines:[L("MENS SANA",116,22,{w:124}),L("IN CORPORE",140,12,{ls:2}),L("SANO",160,16,{c:PAL.solar})]},
+  {id:"night-owl",name:"Night Owl",hint:"Visit after midnight.",shape:"circle",bg:PAL.night,fg:"#fff",icon:"moon",ic:PAL.solar,iy:30,lines:[L("NIGHT",120,30),L("OWL",152,30,{c:PAL.solar})]},
+  {id:"chatter",name:"Ask the Advisor",hint:"Ask the advisor anything.",shape:"pill",bg:PAL.victor,fg:"#fff",icon:"chat",ix:24,iy:76,lines:[L("ASK THE",98,18,{x:124}),L("ADVISOR",126,24,{x:124,w:104})]},
+  {id:"explorer",name:"Program Explorer",hint:"Explore all the programs.",shape:"hex",bg:PAL.whirl,fg:"#fff",icon:"compass",iy:32,lines:[L("18",124,40,{c:PAL.solar}),L("PROGRAMS",150,16,{w:96})]},
+  {id:"quiz",name:"Quiz Whiz",hint:"Finish the interest quiz.",shape:"burst",bg:PAL.solar,fg:PAL.harriman,icon:"question",iy:32,lines:[L("QUIZ",122,34),L("WHIZ",154,30,{c:PAL.blue})]}
+];
+function stickerSVG(d,size=120){
+  const sh=SHAPES[d.shape];
+  const ic=d.icon?`<g transform="translate(${d.ix??76} ${d.iy??34}) scale(${d.is??2})" fill="none" stroke="${d.ic||d.fg}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${GLYPH[d.icon]}</g>`:"";
+  const tx=d.lines.map(l=>`<text x="${l.x??100}" y="${l.y}" text-anchor="middle" font-size="${l.s}" font-weight="800" fill="${l.c||d.fg}" letter-spacing="${l.ls??1}"${l.w?` textLength="${l.w}" lengthAdjust="spacingAndGlyphs"`:""}>${l.t}</text>`).join("");
+  return `<svg viewBox="-12 -12 224 224" width="${size}" height="${size}" font-family="Inter,system-ui,sans-serif" role="img" aria-label="${esc(d.name)} sticker"><g fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round">${sh}</g><g fill="${d.bg}">${sh}</g>${d.ring?`<g fill="none" stroke="${d.ring}" stroke-width="3" transform="translate(100 100) scale(.9) translate(-100 -100)">${sh}</g>`:""}${ic}${tx}</svg>`;
+}
+const SBYID=Object.fromEntries(STICKERS.map(s=>[s.id,s]));
+let owned=[]; try{owned=JSON.parse(store.get("ubadv_stickers")||"[]")}catch(e){}
+const stkBtn=$("#stkBtn");
+function stkCount(){ $("#stkN").textContent=owned.length; stkBtn.classList.toggle("has",owned.length>0); stkBtn.setAttribute("aria-label",`Sticker book: ${owned.length} of ${STICKERS.length} collected`); }
+stkCount();
+let flyQ=Promise.resolve();
+function unlock(id){
+  if(owned.includes(id)||!SBYID[id]) return; owned.push(id); store.set("ubadv_stickers",JSON.stringify(owned));
+  const d=SBYID[id];
+  flyQ=flyQ.then(()=>new Promise(res=>{
+    const done=()=>{stkCount(); stkBtn.classList.remove("bump"); void stkBtn.offsetWidth; stkBtn.classList.add("bump"); toast(`New sticker: ${d.name} · ${owned.length}/${STICKERS.length}`,{action:"View",onAction:openBook}); res();};
+    if(reduceMotion){done();return;}
+    const el=document.createElement("div"); el.className="stk-fly"; el.innerHTML=stickerSVG(d,170); el.style.setProperty("--r",(Math.random()*16-8).toFixed(1)+"deg"); document.body.appendChild(el);
+    setTimeout(()=>{ const b=stkBtn.getBoundingClientRect(), r=el.getBoundingClientRect();
+      el.style.transition="transform .7s cubic-bezier(.6,0,.3,1), opacity .7s"; el.style.transform=`translate(${b.left+b.width/2-(r.left+r.width/2)}px,${b.top+b.height/2-(r.top+r.height/2)}px) scale(.12) rotate(200deg)`; el.style.opacity=".4";
+      setTimeout(()=>{el.remove(); done();},700); },1250);
+  }));
+}
+const stkDlg=$("#stkDlg");
+function openBook(){
+  const n=owned.length;
+  $("#stkProg").innerHTML=`<b>${n}</b> of ${STICKERS.length} collected<div class="pbar"><i style="width:${n/STICKERS.length*100}%"></i></div>`;
+  $("#stkGrid").innerHTML=STICKERS.map((d,i)=>owned.includes(d.id)
+    ?`<figure class="stk got" style="--r:${((i*37)%15-7)}deg">${stickerSVG(d,118)}<figcaption>${esc(d.name)}</figcaption></figure>`
+    :`<figure class="stk lock"><div class="slot"><span>?</span></div><figcaption>${esc(d.hint)}</figcaption></figure>`).join("");
+  $("#stkDl").disabled=!n; stkDlg.showModal();
+}
+stkBtn.onclick=openBook; $$("[data-open-stk]").forEach(b=>b.onclick=openBook);
+$("#stkDl").onclick=()=>{
+  const got=STICKERS.filter(d=>owned.includes(d.id)); const C=4, S=220, rows=Math.ceil(got.length/C);
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${C*S+40}" height="${rows*S+110}" viewBox="0 0 ${C*S+40} ${rows*S+110}"><rect width="100%" height="100%" fill="#f3f6fa"/><text x="20" y="52" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#002f56">My UB sticker sheet</text><text x="20" y="80" font-family="Inter,Arial,sans-serif" font-size="14" fill="#5b6677">${got.length} of ${STICKERS.length} collected · UB Subject Advisor</text>${got.map((d,i)=>`<g transform="translate(${20+(i%C)*S} ${100+Math.floor(i/C)*S}) rotate(${(i*37)%13-6} ${S/2} ${S/2})">${stickerSVG(d,S-10).replace("<svg ",'<svg x="5" y="5" ')}</g>`).join("")}</svg>`;
+  const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([svg],{type:"image/svg+xml"})); a.download="my-ub-sticker-sheet.svg"; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500); toast("Sticker sheet downloaded — print it on sticker paper.");
+};
+
+/* ---------- Campus panorama (original line art) ---------- */
+function campusSVG(interactive){
+  let win="";for(let x=80;x<=286;x+=17){ if(x>160&&x<205) continue; win+=`<rect x="${x}" y="106" width="7" height="10" rx="1"/><rect x="${x}" y="126" width="7" height="10" rx="1"/>`; }
+  let pn=""; for(let r=0;r<3;r++) for(let x=880;x<=1072;x+=11){ const y=118+r*10+5*Math.sin((x-880)/34+r*1.3); pn+=`<rect class="pnl" x="${x}" y="${y.toFixed(1)}" width="8" height="4.5" rx="1" transform="rotate(${(-8+r*3).toFixed(0)} ${x+4} ${(y+2).toFixed(1)})" style="--d:${((x-880)/11*25+r*90)}ms"/>`; }
+  const T=(t)=>interactive?`<title>${t}</title>`:"";
+  const HIT={hayes:[56,0,262,156],lake:[398,108,268,46],solar:[872,100,212,54],bus:[1088,110,86,46]};
+  const G=(id,t,body)=>{const r=HIT[id]; return `<g class="egg" data-egg="${id}"${interactive?` tabindex="0" role="button" aria-label="${t}"`:""}>${T(t)}${interactive?`<rect class="hit" x="${r[0]}" y="${r[1]}" width="${r[2]}" height="${r[3]}" fill="transparent" stroke="none" pointer-events="all"/>`:""}${body}</g>`;};
+  return `<svg class="campus" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="${!interactive}">
+   <path d="M0 152H1200" class="ground"/>
+   ${G("hayes","Hayes Hall — South Campus clock tower",`<rect x="70" y="96" width="232" height="56"/><path d="M62 96h248M170 96V60h32v36"/>${win}
+     <circle class="gold" cx="186" cy="76" r="9"/><path class="gold" d="M186 76v-5M186 76l3.5 2"/><rect x="174" y="40" width="24" height="20"/><path d="M178 60v-9a3 3 0 0 1 6 0v9M188 60v-9a3 3 0 0 1 6 0v9"/>
+     <g id="hayesBell"><path class="gold" d="M182.5 50.5a3.5 3.5 0 0 1 7 0v2.5h1v1h-9v-1h1z"/></g><path d="M172 40c3-14 25-14 28 0M186 26V12"/><circle cx="186" cy="10" r="2"/>`)}
+   <path d="M336 152v-22M336 130a12 12 0 1 1 0-1zM364 152v-30M364 122a16 16 0 1 1 0-1z" class="tree"/>
+   ${G("lake","Lake LaSalle & Baird Point — North Campus",`<path d="M404 152c40-14 210-14 256 0"/><path d="M420 152a26 26 0 0 1 52 0M428 152a18 18 0 0 1 36 0M436 152a10 10 0 0 1 20 0"/>
+     <path class="rip r1" d="M500 146c10-3 20-3 30 0s20 3 30 0"/><path class="rip r2" d="M540 140c10-3 20-3 30 0s20 3 30 0"/><path class="rip r3" d="M590 147c8-2 16-2 24 0"/>`)}
+   <g class="spine"><rect x="680" y="104" width="48" height="48"/><rect x="734" y="90" width="44" height="62"/><rect x="784" y="110" width="40" height="42"/><rect x="830" y="98" width="30" height="54"/><path d="M684 120h176"/><path d="M692 112v-2M704 112v-2M746 100v-2M758 100v-2M796 118v-2M840 106v-2"/></g>
+   ${G("solar","Solar Strand — 3,200 panels along Flint Road",`<path d="M880 128c40-12 120 10 196-6M880 138c40-12 120 10 196-6M880 148c40-12 120 10 196-6" class="strand"/>${pn}`)}
+   <circle class="gold sun" cx="1160" cy="36" r="11"/><path class="gold sun" d="M1160 18v-5M1160 59v-5M1142 36h-5M1183 36h-5M1147 23l-3-3M1176 52l-3-3M1173 23l3-3M1144 52l3-3"/>
+   ${G("bus","The Stampede — North ⇄ South Campus",`<g class="busg"><rect x="1094" y="118" width="74" height="28" rx="6"/><path d="M1094 130h74M1112 118v12M1130 118v12M1148 118v12"/><circle cx="1110" cy="148" r="4.5"/><circle cx="1152" cy="148" r="4.5"/><text x="1131" y="141" font-size="7" font-weight="700" letter-spacing="1" fill="currentColor" stroke="none" text-anchor="middle">STAMPEDE</text></g>`)}
+  </svg>`;
+}
+$("#footCampus").innerHTML=campusSVG(true);
+$("#heroCampus").innerHTML=campusSVG(false);
+const FACT={
+  hayes:["“I am the voice of life; I call you: Come and learn.” — inscription on a Hayes Hall bell. The Westminster chimes ring every 15 minutes.","hayes"],
+  lake:["Lake LaSalle, with its Greek-style amphitheater at Baird Point — the iconic image of North Campus.","lake"],
+  solar:["The Solar Strand: 3,200 solar panels in three rows along Flint Road, designed by landscape architect Walter Hood.","solar"],
+  bus:["The Stampede: UB’s free buses between North and South Campus.","stampede"]
+};
+function egg(id,g){
+  const svg=g.closest("svg");
+  if(id==="hayes"){ const b=svg.querySelector("#hayesBell"); b.classList.remove("ring"); void b.getBBox(); b.classList.add("ring"); }
+  if(id==="lake"){ svg.classList.remove("splash"); void svg.getBBox(); svg.classList.add("splash"); }
+  if(id==="solar"){ svg.classList.remove("lit"); void svg.getBBox(); svg.classList.add("lit"); setTimeout(()=>svg.classList.remove("lit"),3800); }
+  if(id==="bus"){ svg.classList.remove("drive"); void svg.getBBox(); svg.classList.add("drive"); }
+  toast(FACT[id][0],{ms:6500}); unlock(FACT[id][1]);
+}
+$$("#footCampus .egg").forEach(g=>{ g.onclick=()=>egg(g.dataset.egg,g); g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();egg(g.dataset.egg,g);}}; });
+
+/* ---------- Palette strip ---------- */
+$$(".palette button").forEach(b=>b.onclick=()=>copyText(b.dataset.hex,`Copied ${b.dataset.name} ${b.dataset.hex}`));
+
+/* ---------- Effects: confetti, snow, wings, stampede ---------- */
+function confetti(){
+  if(reduceMotion) return; const cv=document.createElement("canvas"); cv.className="fx"; document.body.appendChild(cv);
+  const ctx=cv.getContext("2d"), W=cv.width=innerWidth, H=cv.height=innerHeight, cols=[PAL.blue,PAL.solar,"#fff",PAL.victor,PAL.harriman];
+  const P=Array.from({length:180},()=>({x:W/2+(Math.random()-.5)*120,y:H*.55,vx:(Math.random()-.5)*16,vy:-Math.random()*17-6,w:6+Math.random()*7,h:4+Math.random()*5,a:Math.random()*6,va:(Math.random()-.5)*.35,c:cols[Math.floor(Math.random()*cols.length)]}));
+  let t0=performance.now(); (function f(t){ ctx.clearRect(0,0,W,H); for(const p of P){p.vy+=.42;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.va; ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle=p.c;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();}
+    if(t-t0<3200) requestAnimationFrame(f); else cv.remove(); })(t0);
+}
+let snowRaf=0, snowCv=null;
+function toggleSnow(){
+  if(snowCv){ cancelAnimationFrame(snowRaf); snowCv.remove(); snowCv=null; toast("The lake-effect band moved on."); return; }
+  snowCv=document.createElement("canvas"); snowCv.className="fx snow"; document.body.appendChild(snowCv);
+  const ctx=snowCv.getContext("2d"); let W,H; const size=()=>{W=snowCv.width=innerWidth;H=snowCv.height=innerHeight;}; size(); addEventListener("resize",size);
+  const F=Array.from({length:reduceMotion?60:170},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:.8+Math.random()*2.6,v:.5+Math.random()*1.4,s:Math.random()*6}));
+  (function f(){ ctx.clearRect(0,0,W,H); ctx.fillStyle="rgba(255,255,255,.9)"; ctx.shadowColor="rgba(0,47,86,.35)"; ctx.shadowBlur=3;
+    for(const p of F){ if(!reduceMotion){p.y+=p.v; p.s+=.02; p.x+=Math.sin(p.s)*.6; if(p.y>H+5){p.y=-5;p.x=Math.random()*W;}} ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill(); }
+    if(!reduceMotion) snowRaf=requestAnimationFrame(f); })();
+  toast("Lake-effect snow warning in effect for this page. Type “snow” again to clear it.",{ms:6000}); unlock("lake-effect");
+}
+function wings(){
+  for(let i=0;i<28;i++){ const s=document.createElement("span"); s.className="rain"; s.textContent=i%3?"🍗":"🔥"; s.style.left=Math.random()*100+"vw"; s.style.animationDelay=Math.random()*1.2+"s"; s.style.fontSize=(18+Math.random()*18)+"px"; document.body.appendChild(s); setTimeout(()=>s.remove(),4200); }
+  toast("Buffalo, NY — home of the Buffalo wing. Extra blue cheese, obviously.",{ms:5000}); unlock("wings");
+}
+function stampedeRun(){
+  const b=document.createElement("div"); b.className="bus-run"; b.innerHTML=`<svg viewBox="0 0 220 90" width="220" height="90"><rect x="4" y="10" width="208" height="62" rx="12" fill="${PAL.blue}"/><rect x="4" y="10" width="208" height="16" rx="8" fill="${PAL.solar}"/><text x="108" y="22" text-anchor="middle" font-size="10" font-weight="800" fill="${PAL.harriman}" font-family="Inter,sans-serif" letter-spacing="2">NORTH ⇄ SOUTH</text>${[0,1,2,3,4].map(i=>`<rect x="${18+i*36}" y="32" width="28" height="20" rx="3" fill="#cfe3ff"/>`).join("")}<text x="108" y="66" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Inter,sans-serif" letter-spacing="3">STAMPEDE</text><circle cx="46" cy="76" r="11" fill="#1d2b3f"/><circle cx="170" cy="76" r="11" fill="#1d2b3f"/><circle cx="46" cy="76" r="4" fill="#9aa6b5"/><circle cx="170" cy="76" r="4" fill="#9aa6b5"/></svg>`;
+  document.body.appendChild(b); setTimeout(()=>b.remove(),4200); toast("All aboard the Stampede — next stop, South Campus.",{ms:4000}); unlock("stampede");
+}
+
+/* ---------- Secret inputs: Konami code + typed words ---------- */
+const KONAMI=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"]; let kpos=0, typed="";
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea,select,[contenteditable]")||e.metaKey||e.ctrlKey||e.altKey) return;
+  const k=e.key.length===1?e.key.toLowerCase():e.key;
+  kpos=(k===KONAMI[kpos])?kpos+1:(k===KONAMI[0]?1:0);
+  if(kpos===KONAMI.length){ kpos=0; confetti(); toast("More cowbell! Horns up, Bulls. 🤘",{ms:5000}); unlock("more-cowbell"); }
+  if(/^[a-z0-9]$/.test(k)){ typed=(typed+k).slice(-12);
+    if(typed.endsWith("snow")) toggleSnow();
+    else if(typed.endsWith("wings")) wings();
+    else if(typed.endsWith("stampede")) stampedeRun();
+    else if(typed.endsWith("gobulls")||typed.endsWith("hornsup")){ confetti(); toast("Horns up! 🤘 Go Bulls!"); }
+    else if(typed.endsWith("1846")) showPlaque();
+  }
+});
+
+/* ---------- Logo ×5 → Est. 1846 plaque ---------- */
+let lc=0, lt=0;
+$("#homeLink").addEventListener("click",()=>{ const n=Date.now(); lc=(n-lt<700)?lc+1:1; lt=n; if(lc>=5){lc=0; showPlaque();} });
+function showPlaque(){
+  $$(".plaque").forEach(p=>p.remove());
+  const p=document.createElement("aside"); p.className="plaque"; p.setAttribute("role","status");
+  p.innerHTML=`<button class="pl-x" aria-label="Close">×</button><p class="pl-k">Est. 1846</p><h4>Founded May 11, 1846</h4><p>UB began as a private medical school in Buffalo. Its first chancellor, Millard Fillmore, later became the 13th president of the United States. UB joined the SUNY system in 1962.</p><p class="pl-m"><i>Mens sana in corpore sano</i> — “a sound mind in a sound body”</p>`;
+  document.body.appendChild(p); requestAnimationFrame(()=>p.classList.add("in")); p.querySelector(".pl-x").onclick=()=>p.remove(); setTimeout(()=>p.remove(),11000); unlock("est-1846");
+}
+
+/* ---------- Progress-based unlocks ---------- */
+const _renderResults=renderResults;
+renderResults=function(a,res,note){ _renderResults(a,res,note); unlock("go-bulls"); if(res.recs[0].score>=90){ unlock("horns-up"); } if(last.mc&&verdict(last.mc,res.recs).key==="clear") unlock("monte-carlo");
+  const d=$("#dash"); if(d&&res.recs[0].score>=90){ const s=document.createElement("div"); s.className="dash-stk"; s.innerHTML=stickerSVG(SBYID["horns-up"],92); d.appendChild(s);} };
+const _setTab=setTab; setTab=function(t){ _setTab(t); if(t==="plan") unlock("planner"); };
+const _send=send; send=function(text){ if((text||"").trim()) unlock("chatter"); return _send(text); };
+$$("[data-open-explore]").forEach(b=>b.addEventListener("click",()=>unlock("explorer")));
+$$("[data-open-how]").forEach(b=>b.addEventListener("click",()=>unlock("d-optimal")));
+document.addEventListener("click",e=>{ if(e.target.closest("#quizApply")) unlock("quiz"); });
+document.addEventListener("change",e=>{ if(e.target.matches("[data-ck]")&&Object.values(checks).some(o=>Object.values(o).filter(Boolean).length>=5)) unlock("mens-sana"); });
+if(new Date().getHours()<5) setTimeout(()=>unlock("night-owl"),1500);
+
+/* ---------- Lab overlay: campus status line ---------- */
+const CAMPUS_STATUS=["Catching the Stampede to North Campus…","Counting 3,200 panels on the Solar Strand…","Waiting for the Hayes Hall chimes…","Skipping stones on Lake LaSalle…","Shoveling out from the lake-effect…","Ringing more cowbell…"];
+const _openLab=openLab;
+openLab=function(a,name){ const pr=_openLab(a,name); const lab=$(".labov"); if(lab){ const s=document.createElement("p"); s.className="lab-status"; s.innerHTML=`<span>Campus status</span><b>${CAMPUS_STATUS[0]}</b>`; lab.querySelector(".lab-l").appendChild(s);
+    const art=document.createElement("div"); art.className="lab-campus"; art.innerHTML=campusSVG(false); lab.appendChild(art);
+    let i=0; const iv=setInterval(()=>{ if(!document.body.contains(lab)){clearInterval(iv);return;} i=(i+1)%CAMPUS_STATUS.length; const b=s.querySelector("b"); b.classList.remove("swap"); void b.offsetWidth; b.textContent=CAMPUS_STATUS[i]; b.classList.add("swap"); },900); }
+  return pr; };
+
+/* ---------- Hello, developers ---------- */
+try{ console.log("%cHorns up! 🤘","font:800 22px Inter,sans-serif;color:#005bbb"); console.log("%cYou found the console. There are 18 stickers hidden around this page — try the Konami code, or type “snow”.","font:13px Inter,sans-serif;color:#002f56"); }catch(e){}
+
+/* ---------- Decorative stickers on the hero preview card ---------- */
+const hcCard=$(".hero-card"); if(hcCard) hcCard.insertAdjacentHTML("beforeend",`<span class="hc-stk s1" aria-hidden="true">${stickerSVG(SBYID["go-bulls"],84)}</span><span class="hc-stk s2" aria-hidden="true">${stickerSVG(SBYID["est-1846"],74)}</span>`);
 
 /* ---------- Demo data ---------- */
 const DEMO=`student,Arjun Mehta

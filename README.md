@@ -30,6 +30,11 @@ report ranking UB undergraduate programs, with step-by-step reasoning and an AI 
 - Saved profiles · share link that reopens the exact report
 - Keyboard shortcuts (press `?`) · session restore, undo, toasts
 
+**UB spirit**
+- Collectible **UB sticker book**: 18 original stickers (Go Bulls!, Horns Up!, Est. 1846, Hayes Hall Chimes, Lake LaSalle, Solar Strand, Stampede Rider…), downloadable as a printable sticker sheet
+- Interactive campus panorama in the footer, campus-named brand colours, and a handful of hidden easter eggs (hint: the console knows)
+- All artwork is original line art; no UB athletics marks or mascot artwork are reproduced
+
 ## Statistical methodology
 Adapted, for an educational advising context, from published research by **Dr. Leonid Khinkis**
 (Professor of Teaching, Institute for Artificial Intelligence and Data Science, University at Buffalo):
