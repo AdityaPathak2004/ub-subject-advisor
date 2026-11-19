@@ -649,9 +649,98 @@ footer{background:#06203f;margin-top:40px}
 .toast{border-radius:10px;background:#0f2a4a}
 @media (max-width:560px){.topnav>button:not(.ai-btn){display:none}.hero-stats{gap:18px}.hero-stats b{font-size:24px}.hero-stats li{padding-left:9px}}
 @media (prefers-reduced-motion:reduce){.hero-card{animation:none}.hero-art .hc path{stroke-dashoffset:0}}
+
+/* ===================== EXPERIENCE LAYER ===================== */
+.scroll-prog{position:fixed;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--solar),#ffe08a);transform-origin:left;transform:scaleX(0);z-index:100;pointer-events:none}
+.hero-dots{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-art{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.hero-card{transition:transform .5s cubic-bezier(.2,.8,.2,1);animation:none}
+#rot{display:inline-block;transition:opacity .3s,transform .3s;min-width:3ch}
+#rot.out{opacity:0;transform:translateY(-14px)}#rot.in{animation:rotIn .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes rotIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.btn:active{transform:scale(.97)}
+.chip.on .box{animation:pop .28s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.6)}100%{transform:scale(1)}}
+.drop{position:relative;overflow:hidden}
+.drop::before{content:"";position:absolute;inset:-2px;background:radial-gradient(400px 120px at var(--mx,50%) var(--my,50%),rgba(0,91,187,.10),transparent 60%);opacity:0;transition:opacity .3s}
+.drop:hover::before,.drop.over::before{opacity:1}
+.drop svg{transition:transform .3s}.drop:hover svg,.drop.over svg{transform:translateY(-4px)}
+/* tabs glider */
+.tabs{position:sticky}
+.tabs .glider{position:absolute;left:4px;top:4px;bottom:4px;background:#fff;border-radius:9px;box-shadow:0 1px 3px rgba(16,34,64,.14),0 4px 12px rgba(16,34,64,.06);transition:transform .35s cubic-bezier(.2,.8,.2,1),width .35s cubic-bezier(.2,.8,.2,1);z-index:0}
+.tabs button{position:relative;z-index:1;background:transparent!important;box-shadow:none!important}
+.pane{animation:paneIn .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes paneIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* live lab overlay */
+.labov{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:radial-gradient(900px 600px at 70% 20%,rgba(47,128,214,.55),transparent 60%),linear-gradient(160deg,rgba(0,40,92,.96),rgba(0,64,138,.96));color:#fff;opacity:0;transition:opacity .4s;backdrop-filter:blur(6px)}
+.labov.open{opacity:1}.labov.closing{opacity:0}
+.lab-in{width:min(1040px,100%);display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;transform:translateY(14px) scale(.98);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.labov.open .lab-in{transform:none}
+@media (max-width:820px){.lab-in{grid-template-columns:1fr;gap:20px}.lab-l h2{font-size:26px!important}}
+.lab-l h2{font-family:var(--serif);font-size:36px;line-height:1.15;margin:0 0 22px}
+.lab-steps{list-style:none;margin:0;padding:0}
+.lab-steps li{display:flex;align-items:center;gap:12px;padding:9px 0;font-size:16px;color:rgba(255,255,255,.5);transition:color .3s}
+.lab-steps li i{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;transition:all .3s}
+.lab-steps li.now{color:#fff}.lab-steps li.now i{border-color:var(--solar);border-top-color:transparent;animation:spin .8s linear infinite}
+.lab-steps li.ok{color:rgba(255,255,255,.92)}.lab-steps li.ok i{background:var(--solar);border-color:var(--solar)}
+.lab-steps li.ok i::after{content:"";width:4px;height:8px;border:solid var(--harriman);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.lab-note{font-size:14px;opacity:.75;margin-top:18px}
+.lab-r{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px 18px 14px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.lab-head{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;margin-bottom:8px}
+.lab-head span{letter-spacing:1.2px;text-transform:uppercase;color:var(--solar);font-weight:700;font-size:11.5px}
+.lab-head b{font-variant-numeric:tabular-nums;font-weight:600;opacity:.9}
+#labCv{width:100%;height:auto;display:block}
+.lab-legend{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;margin-top:6px}
+.lab-legend b{display:block;font-family:var(--serif);font-size:22px;font-variant-numeric:tabular-nums}
+.lab-legend div:first-child b{color:var(--solar)}
+.lab-legend span{font-size:12px;opacity:.75;line-height:1.3;display:block;padding:0 4px}
+.lab-stamp{position:absolute;right:18px;top:44px;transform:rotate(-6deg) scale(1.6);opacity:0;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:14px;padding:8px 14px;border:3px solid currentColor;border-radius:8px;color:#7ff0d6;animation:stamp .45s .05s cubic-bezier(.2,1.4,.4,1) forwards;background:rgba(0,40,92,.6)}
+.lab-stamp.v-likely{color:var(--solar)}.lab-stamp.v-close{color:#ffb4a4}
+@keyframes stamp{to{opacity:1;transform:rotate(-6deg) scale(1)}}
+/* results dashboard */
+.dash{position:relative;overflow:hidden;border-radius:18px;margin:8px 0 26px;padding:30px 32px 26px;color:#fff;background:radial-gradient(700px 300px at 85% -20%,rgba(47,128,214,.9),transparent 60%),linear-gradient(150deg,#00376f,var(--ub-blue) 70%,#0a6fd1);box-shadow:0 24px 60px rgba(0,47,110,.28)}
+.dash::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:var(--solar)}
+.dash:empty{display:none}
+.dash-main{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:center}
+@media (max-width:760px){.dash-main{grid-template-columns:1fr;justify-items:center;text-align:center}.d-badges{justify-content:center}.dash{padding:24px 18px}}
+.gauge{position:relative;width:220px;height:220px}
+.gauge svg{width:100%;height:100%}
+.gauge circle{fill:none;stroke-width:14}
+.g-track{stroke:rgba(255,255,255,.14)}
+.g-ci{stroke:rgba(255,255,255,.28);stroke-width:22}
+.g-val{stroke:url(#gg);stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 4px 10px rgba(255,199,44,.35))}
+.g-lbl{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.g-lbl b{font-family:var(--serif);font-size:60px;line-height:1;font-variant-numeric:tabular-nums}
+.g-lbl span{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;opacity:.8;margin-top:4px}
+.dash-copy h2{font-family:var(--serif);font-size:38px;line-height:1.1;margin:0 0 4px;color:#fff}
+.dash-copy .eyebrow{margin-bottom:8px}
+.d-school{margin:0 0 14px;opacity:.82}
+.d-badges{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.vbadge{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:#7ff0d6;color:#00413a}
+.vbadge.v-likely{background:var(--solar);color:var(--harriman)}.vbadge.v-close{background:#ffb4a4;color:#5c1405}
+.d-stat{font-size:13.5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px 11px;border-radius:999px}
+.d-next{margin:16px 0 0;font-size:14.5px;background:rgba(255,255,255,.08);border-left:3px solid var(--solar);padding:9px 12px;border-radius:6px;max-width:620px}
+.d-next span{display:block;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--solar);font-weight:700;margin-bottom:2px}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+@media (max-width:760px){.podium{grid-template-columns:1fr}}
+.pod{font:inherit;color:#fff;text-align:left;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"r n s" "b b b" "p p p";gap:6px 10px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 14px;transition:transform .2s,background .2s,border-color .2s}
+.pod:hover{transform:translateY(-3px);background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+.pod.p0{border-color:rgba(255,199,44,.7);background:rgba(255,199,44,.12)}
+.pod-r{grid-area:r;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:12.5px;background:rgba(255,255,255,.2)}
+.pod.p0 .pod-r{background:var(--solar);color:var(--harriman)}
+.pod-n{grid-area:n;font-weight:600;font-size:14.5px;line-height:1.25}
+.pod-s{grid-area:s;font-family:var(--serif);font-size:15px}.pod-s b{font-size:24px}
+.pod-bar{grid-area:b;height:5px;background:rgba(255,255,255,.15);border-radius:3px;overflow:hidden}
+.pod-bar i{display:block;height:100%;width:var(--w);background:var(--solar);border-radius:3px;animation:grow 1.2s .3s cubic-bezier(.2,.8,.2,1) both;transform-origin:left}
+.pod-p{grid-area:p;font-size:12px;opacity:.75}
+@media print{.dash,.scroll-prog,.labov{display:none!important}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to main content</a>
 <noscript><div>This advisor needs JavaScript turned on.</div></noscript>
 
@@ -670,6 +759,7 @@ footer{background:#06203f;margin-top:40px}
 </header>
 
 <section class="hero">
+  <canvas id="heroDots" class="hero-dots" aria-hidden="true"></canvas>
   <svg class="hero-art" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs><linearGradient id="hg" x1="0" x2="1"><stop offset="0" stop-color="#ffc72c" stop-opacity="0"/><stop offset=".55" stop-color="#ffc72c" stop-opacity=".9"/><stop offset="1" stop-color="#ffc72c" stop-opacity=".2"/></linearGradient></defs>
     <g class="hc">
@@ -681,17 +771,17 @@ footer{background:#06203f;margin-top:40px}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Undergraduate Subject Advisor</p>
-      <h1>Find the major<br>that fits <em>you</em>.</h1>
+      <h1>Find the major<br>that fits <em id="rot">you</em>.</h1>
       <p class="lead">Upload your previous results and tell us what you enjoy. The advisor ranks all 18 UB programs, stress-tests the result with statistics, and maps out your four years.</p>
       <div class="cta"><a class="btn gold" href="#upload">Start with my results</a><button class="btn glass" type="button" id="heroDemo">Try the demo student →</button></div>
-      <ul class="hero-stats"><li><b>18</b><span>UB programs ranked</span></li><li><b>600</b><span>simulations per report</span></li><li><b>8</b><span>semesters planned</span></li></ul>
+      <ul class="hero-stats"><li><b data-to="18">18</b><span>UB programs ranked</span></li><li><b data-to="600">600</b><span>simulations per report</span></li><li><b data-to="8">8</b><span>semesters planned</span></li></ul>
     </div>
     <div class="hero-card" aria-hidden="true">
       <div class="hc-top"><span class="hc-dot"></span>Advising report · preview</div>
       <div class="hc-row best"><span>Computer Science (BS)</span><b>97%</b></div><div class="hc-bar"><i style="--w:97%"></i></div>
       <div class="hc-row"><span>Mathematics (BS)</span><b>87%</b></div><div class="hc-bar"><i style="--w:87%"></i></div>
       <div class="hc-row"><span>Computer Engineering (BS)</span><b>86%</b></div><div class="hc-bar"><i style="--w:86%"></i></div>
-      <div class="hc-foot"><span class="hc-badge">Clear best fit</span><span>P(#1) = 0.93 · Monte Carlo</span></div>
+      <div class="hc-foot"><span class="hc-badge">Clear best fit</span><span>P(#1) = 1.00 · Monte Carlo</span></div>
     </div>
   </div>
 </section>
@@ -759,7 +849,9 @@ footer{background:#06203f;margin-top:40px}
           <button class="btn ghost" id="restart">Start over</button>
           <button class="btn" onclick="window.print()">Print / save PDF</button>
         </div></div>
+      <section class="dash" id="dash" aria-label="Summary of your best fit"></section>
       <nav class="tabs" role="tablist" aria-label="Results sections" hidden>
+        <span class="glider" aria-hidden="true"></span>
         <button role="tab" data-tab="report" class="on" aria-selected="true">Report</button>
         <button role="tab" data-tab="advisor" aria-selected="false">Academic Advisor</button>
         <button role="tab" data-tab="plan" aria-selected="false">4-Year Plan</button>
@@ -1299,7 +1391,7 @@ function renderResults(a,res,note){
     </ol>
     <div class="p-foot"><span>Report ${repNo} · Generated ${date}</span><span>Advisory only — not an admission decision</span></div>
   </article>`;
-  $("#out").hidden=false; wi=null; cmpSel=null; afterResults();
+  $("#out").hidden=false; wi=null; cmpSel=null; renderDash(a,res); afterResults();
   document.title=`${meta.student?meta.student+"’s":"Your"} report — UB Subject Advisor`;
   refreshSugs();
 }
@@ -1311,22 +1403,18 @@ async function run(){
   if(busy) return;
   if(!hasResults()) return showErr("Add at least one recognised subject with a score.");
   showErr(); busy=true; $("#go").disabled=$("#go2").disabled=true;
-  $("#placeholder").hidden=true; $("#out").hidden=true;
-  let ld=$("#loading"); if(!ld){ld=document.createElement("div");ld.id="loading";ld.className="loading";$("#results").prepend(ld);}
-  ld.innerHTML=`<div class="think"><h3><span class="spinner"></span>The advisor is thinking…</h3><p>${apiKey?"Gemini is reasoning through your results step by step":"Working through your results step by step"}</p><ol>${THINK.map(s=>`<li><i></i>${s}</li>`).join("")}</ol></div>`;
-  ld.hidden=false; $("#results").scrollIntoView({behavior:"smooth",block:"start"});
-  const lis=ld.querySelectorAll("li");
-  const a=analyse(); let done=false;
-  const ticker=(async()=>{for(let i=0;i<lis.length;i++){lis[i].className="now";
-    if(i===lis.length-1){while(!done)await sleep(100);break;}
-    await sleep(apiKey?650:240); lis[i].className="ok";}})();
+  const a=analyse(); const first=meta.student?meta.student.split(" ")[0]:"";
+  const anim=openLab(a,first?first:"your"); const lab=$(".labov"); if(!first) lab.querySelector("h2").textContent="Analysing your record";
+  const lis=lab.querySelectorAll(".lab-steps li"); let done=false;
+  const ticker=(async()=>{for(let i=0;i<lis.length;i++){lis[i].className="now"; if(i===lis.length-1){while(!done)await sleep(100);break;} await sleep(apiKey?600:380); lis[i].className="ok";}})();
   let res, note="";
-  if(apiKey){
-    try{ res=await aiReason(a); }
-    catch(e){ res=localReason(a); note=`Gemini wasn't reachable (${e.message.replace(/\.$/,"")}), so the built-in engine produced this reasoning.`; }
-  } else { res=localReason(a); await sleep(1000); }
-  done=true; await ticker; lis.forEach(l=>l.className="ok"); await sleep(250);
-  ld.hidden=true; shown=true; renderResults(a,res,note); updateSteps(); busy=false;
+  const work=(async()=>{ if(apiKey){ try{ res=await aiReason(a); } catch(e){ res=localReason(a); note=`Gemini wasn't reachable (${e.message.replace(/\.$/,"")}), so the built-in engine produced this reasoning.`; } } else res=localReason(a); })();
+  await Promise.all([work,anim,sleep(1900)]);
+  done=true; await ticker; lis.forEach(l=>l.className="ok");
+  const vd=verdict(monteCarlo(a),a.recs); const st=document.createElement("div"); st.className=`lab-stamp v-${vd.key}`; st.textContent=vd.label; lab.querySelector(".lab-r").appendChild(st);
+  await sleep(reduceMotion?200:900);
+  $("#placeholder").hidden=true; shown=true; renderResults(a,res,note); updateSteps(); busy=false;
+  closeLab(lab); setTimeout(()=>$("#results").scrollIntoView({behavior:"smooth",block:"start"}),120);
 }
 
 /* ---------- Chatbot ---------- */
@@ -1760,6 +1848,7 @@ function setTab(t){
   curTab=t; $$(".tabs [data-tab]").forEach(b=>{const on=b.dataset.tab===t;b.classList.toggle("on",on);b.setAttribute("aria-selected",on);});
   $$(".pane").forEach(p=>p.hidden=p.dataset.pane!==t);
   if(t==="advisor") renderAdvisor(); if(t==="plan") renderPlan(); if(t==="compare") renderCompare(); if(t==="whatif") renderWhatIf();
+  requestAnimationFrame(moveGlider);
 }
 $$(".tabs [data-tab]").forEach(b=>b.onclick=()=>{setTab(b.dataset.tab); $(".tabs").scrollIntoView({behavior:"smooth",block:"start"});});
 $(".tabs").addEventListener("keydown",e=>{ if(!/Arrow(Left|Right)/.test(e.key)) return; const bs=[...$$(".tabs [data-tab]")]; let i=bs.findIndex(b=>b.dataset.tab===curTab); i=(i+(e.key==="ArrowRight"?1:-1)+bs.length)%bs.length; setTab(bs[i].dataset.tab); bs[i].focus(); });
@@ -2153,6 +2242,110 @@ function hillChart(items){
   </svg>`;
 }
 
+/* =====================================================================
+   EXPERIENCE LAYER — hero motion, live analysis lab, results dashboard,
+   scroll reveal, tab glider, scroll progress
+   ===================================================================== */
+const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ease=t=>1-Math.pow(1-t,3);
+function countUp(el,to,{dur=1200,dec=0,suffix=""}={}){
+  if(reduceMotion){el.textContent=to.toFixed(dec)+suffix;return;}
+  const t0=performance.now(); const step=t=>{const k=Math.min(1,(t-t0)/dur); el.textContent=(to*ease(k)).toFixed(dec)+suffix; if(k<1)requestAnimationFrame(step);}; requestAnimationFrame(step);
+}
+
+/* ---------- Hero: rotating word, count-up stats, parallax, flowing data points ---------- */
+(()=>{
+  const rot=$("#rot"); const words=["you","builders","healers","coders","thinkers","creators"]; let wi=0;
+  if(rot&&!reduceMotion) setInterval(()=>{ rot.classList.add("out"); setTimeout(()=>{wi=(wi+1)%words.length; rot.textContent=words[wi]; rot.classList.remove("out"); rot.classList.add("in"); setTimeout(()=>rot.classList.remove("in"),500);},320); },2600);
+  const stats=$$(".hero-stats b[data-to]"); setTimeout(()=>stats.forEach(b=>countUp(b,+b.dataset.to,{dur:1400})),500);
+  const hero=$(".hero"), card=$(".hero-card"), art=$(".hero-art");
+  if(hero&&!reduceMotion) hero.addEventListener("pointermove",e=>{ const r=hero.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    if(card) card.style.transform=`perspective(1200px) rotateY(${-8+x*10}deg) rotateX(${3-y*8}deg) translate3d(${x*10}px,${y*8}px,0)`;
+    if(art) art.style.transform=`translate3d(${x*-14}px,${y*-10}px,0)`; });
+  hero&&hero.addEventListener("pointerleave",()=>{ if(card) card.style.transform=""; if(art) art.style.transform=""; });
+  // flowing data points along a Hill (sigmoid) curve
+  const cv=$("#heroDots"); if(!cv||reduceMotion) return; const ctx=cv.getContext("2d"); let W=0,H=0,dpr=Math.min(2,devicePixelRatio||1);
+  const size=()=>{W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}; size(); addEventListener("resize",size);
+  const curveY=(x,k)=>{const t=x/W; const s=1/(1+Math.exp(-(t-.55-k*.06)*10)); return H*(.9-.72*s)+k*14;};
+  const P=Array.from({length:70},()=>({x:Math.random()*1200,k:Math.floor(Math.random()*3),j:(Math.random()-.5)*26,v:.35+Math.random()*.7,r:.8+Math.random()*1.8,a:.25+Math.random()*.6}));
+  let vis=true; new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(hero);
+  (function loop(){ if(vis){ ctx.clearRect(0,0,W,H);
+    for(const p of P){ p.x+=p.v; if(p.x>W+10){p.x=-10;p.j=(Math.random()-.5)*26;} const y=curveY(p.x,p.k)+p.j*Math.sin(p.x/90+p.k);
+      ctx.beginPath(); ctx.arc(p.x,y,p.r,0,6.283); ctx.fillStyle=p.k===0?`rgba(255,199,44,${p.a})`:`rgba(255,255,255,${p.a*.6})`; ctx.fill(); } }
+    requestAnimationFrame(loop); })();
+})();
+
+/* ---------- Scroll progress + reveal ---------- */
+const prog=$("#scrollProg");
+addEventListener("scroll",()=>{ const h=document.documentElement; prog.style.transform=`scaleX(${h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)})`; },{passive:true});
+const revealIO=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target);} }),{rootMargin:"0px 0px -6% 0px"});
+function revealScan(root=document){ if(reduceMotion) return; root.querySelectorAll(".card,.panel,.sem,.paper,.dash,.plan-bar,.tablewrap").forEach((el,i)=>{ if(el.dataset.rv) return; el.dataset.rv=1; el.classList.add("reveal"); el.style.transitionDelay=Math.min(i%6,5)*60+"ms"; revealIO.observe(el); }); }
+new MutationObserver(()=>revealScan($("main"))).observe($("main"),{childList:true,subtree:true});
+revealScan();
+
+/* ---------- Tab glider ---------- */
+function moveGlider(){ const on=$(".tabs button.on"), g=$(".tabs .glider"); if(!on||!g) return; g.style.width=on.offsetWidth+"px"; g.style.transform=`translateX(${on.offsetLeft-4}px)`; }
+addEventListener("resize",moveGlider);
+
+/* ---------- Live analysis lab (full-screen) ---------- */
+function openLab(a,name){
+  const lab=document.createElement("div"); lab.className="labov"; lab.setAttribute("role","dialog"); lab.setAttribute("aria-label","Analysing your results");
+  const top=a.recs.slice(0,3);
+  lab.innerHTML=`<div class="lab-in">
+    <div class="lab-l"><p class="eyebrow">Live analysis</p><h2>Analysing ${esc(name)}’s record</h2>
+      <ol class="lab-steps">${THINK.map(s=>`<li><i></i>${s}</li>`).join("")}</ol>
+      <p class="lab-note">${apiKey?"Gemini is reasoning through the evidence step by step.":"The built-in engine is reasoning through the evidence."}</p></div>
+    <div class="lab-r"><div class="lab-head"><span>Monte Carlo robustness</span><b><span id="labN">0</span> / 600 simulations</b></div>
+      <canvas id="labCv" width="560" height="320" aria-hidden="true"></canvas>
+      <div class="lab-legend">${top.map((p,i)=>`<div><b id="labP${i}">0%</b><span>${esc(p.name.replace(/ \((BS|BA)\)/,""))}</span></div>`).join("")}<div><b id="labP3">0%</b><span>Other programs</span></div></div></div>
+  </div>`;
+  document.body.appendChild(lab); requestAnimationFrame(()=>lab.classList.add("open"));
+  const mc=monteCarlo(a); const shares=[...top.map(p=>mc.wins[p.name]||0)]; shares.push(Math.max(0,1-shares.reduce((s,x)=>s+x,0)));
+  // drop 120 dots (5 simulations each) into 4 columns according to the simulated share of wins
+  const cv=$("#labCv"), ctx=cv.getContext("2d"), W=cv.width, H=cv.height, cols=4, cw=W/cols, R=4.2, perRow=Math.floor((cw-24)/(R*2+2));
+  const total=120; const counts=shares.map(s=>Math.round(s*total)); let seq=[]; counts.forEach((c,i)=>{for(let k=0;k<c;k++)seq.push(i);});
+  for(let i=seq.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[seq[i],seq[j]]=[seq[j],seq[i]];}
+  const stack=[0,0,0,0], dots=[]; let spawned=0, t0=performance.now();
+  const colX=i=>i*cw+12, colors=["#ffc72c","#7fb6f2","#a9cbf3","rgba(255,255,255,.45)"];
+  return new Promise(resolve=>{
+    function frame(t){
+      const want=Math.min(seq.length,Math.floor((t-t0)/(1700/seq.length)));
+      while(spawned<want){ const c=seq[spawned++]; const n=stack[c]++; const row=Math.floor(n/perRow), col=n%perRow;
+        dots.push({c,x:colX(c)+R+col*(R*2+2),ty:H-30-R-row*(R*2+2),y:-10-Math.random()*40,v:0}); }
+      ctx.clearRect(0,0,W,H);
+      ctx.strokeStyle="rgba(255,255,255,.18)"; ctx.beginPath(); ctx.moveTo(0,H-26); ctx.lineTo(W,H-26); ctx.stroke();
+      for(const d of dots){ if(d.y<d.ty){ d.v+=.9; d.y=Math.min(d.ty,d.y+d.v);} ctx.beginPath(); ctx.arc(d.x,d.y,R,0,6.283); ctx.fillStyle=colors[d.c]; ctx.fill(); }
+      const k=Math.min(1,spawned/Math.max(1,seq.length)); $("#labN").textContent=Math.round(600*k);
+      shares.forEach((s,i)=>{const el=$("#labP"+i); if(el) el.textContent=Math.round(s*100*k)+"%";});
+      if(spawned<seq.length||dots.some(d=>d.y<d.ty)) requestAnimationFrame(frame); else resolve(lab);
+    }
+    if(reduceMotion){ $("#labN").textContent=600; shares.forEach((s,i)=>$("#labP"+i).textContent=Math.round(s*100)+"%"); resolve(lab);} else requestAnimationFrame(frame);
+  });
+}
+function closeLab(lab){ lab.classList.remove("open"); lab.classList.add("closing"); setTimeout(()=>lab.remove(),450); }
+
+/* ---------- Results dashboard ---------- */
+function renderDash(a,res){
+  const r0=res.recs[0], mc=last.mc, vd=verdict(mc,res.recs); const p1=mc.wins[r0.name]||0;
+  const sh=r0.score-mc.mean[r0.name]; const [lo,hi]=mc.ci[r0.name].map(x=>Math.max(0,Math.min(100,x+sh)));
+  const nx=dOptimalNext(a,res.recs)[0]; const C=2*Math.PI*84;
+  $("#dash").innerHTML=`
+   <div class="dash-main">
+     <div class="gauge"><svg viewBox="0 0 200 200"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc72c"/><stop offset="1" stop-color="#ffdf80"/></linearGradient></defs>
+       <circle cx="100" cy="100" r="84" class="g-track"/><circle cx="100" cy="100" r="84" class="g-ci" stroke-dasharray="${C*(hi-lo)/100} ${C}" transform="rotate(${-90+lo*3.6} 100 100)"/>
+       <circle cx="100" cy="100" r="84" class="g-val" stroke-dasharray="${C}" stroke-dashoffset="${C}" data-off="${C*(1-r0.score/100)}" transform="rotate(-90 100 100)"/></svg>
+       <div class="g-lbl"><b id="gNum">0</b><span>% match</span></div></div>
+     <div class="dash-copy"><p class="eyebrow">Your best fit</p><h2>${esc(r0.name)}</h2><p class="d-school">${esc(r0.school)}</p>
+       <div class="d-badges"><span class="vbadge v-${vd.key}">${vd.label}</span><span class="d-stat">Ranked #1 in <b>${Math.round(p1*100)}%</b> of 600 simulations</span><span class="d-stat">90% interval <b>${Math.round(lo)}–${Math.round(hi)}</b></span></div>
+       ${nx?`<p class="d-next"><span>Next best step</span>Add ${nx.missing?"a":"another"} <b>${AREAS[nx.k]}</b> grade — it would sharpen your top matches by ${Math.round(nx.gain*100)}%.</p>`:""}
+     </div>
+   </div>
+   <div class="podium">${res.recs.slice(0,3).map((r,i)=>`<button class="pod p${i}" data-prog="${esc(r.name)}"><span class="pod-r">${i+1}</span><span class="pod-n">${esc(r.name.replace(/ \((BS|BA)\)/,""))}</span><span class="pod-s"><b data-cu="${Math.round(r.score)}">0</b>%</span><span class="pod-bar"><i style="--w:${Math.round((mc.wins[r.name]||0)*100)}%"></i></span><span class="pod-p">P(#1) ${(mc.wins[r.name]||0).toFixed(2)}</span></button>`).join("")}</div>`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ const v=$("#dash .g-val"); if(v) v.style.strokeDashoffset=v.dataset.off; }));
+  countUp($("#gNum"),r0.score,{dur:1300}); $$("#dash [data-cu]").forEach(b=>countUp(b,+b.dataset.cu,{dur:1100}));
+  $$("#dash .pod").forEach(b=>b.onclick=()=>{ focusProg=b.dataset.prog; setTab("plan"); $(".tabs").scrollIntoView({behavior:"smooth",block:"start"}); toast(`Showing the 4-year plan for ${b.dataset.prog}.`); });
+}
+
 /* ---------- Demo data ---------- */
 const DEMO=`student,Arjun Mehta
 board,CBSE Class XII (India)
@@ -2174,6 +2367,7 @@ const showErr=m=>$("#err").textContent=m||"";
 function readFile(f){ if(!f) return; const fr=new FileReader();
   fr.onload=()=>{try{showErr();load(parse(fr.result,f.name));toast(`Loaded ${rows.length} subjects from ${f.name}.`);const d=$("#demo");d.textContent="Load demo student";d.classList.remove("done");d.disabled=false;}catch(e){showErr("Couldn't read that file: "+e.message);}}; fr.readAsText(f); }
 const drop=$("#drop"), file=$("#file");
+drop.addEventListener("pointermove",e=>{const r=drop.getBoundingClientRect();drop.style.setProperty("--mx",(e.clientX-r.left)+"px");drop.style.setProperty("--my",(e.clientY-r.top)+"px");});
 drop.onclick=()=>file.click(); drop.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();file.click();}};
 file.onchange=()=>readFile(file.files[0]);
 ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over");}));
