@@ -33,7 +33,8 @@ report ranking UB undergraduate programs, with step-by-step reasoning and an AI 
 **UB spirit**
 - Collectible **UB sticker book**: 18 original stickers (Go Bulls!, Horns Up!, Est. 1846, Hayes Hall Chimes, Lake LaSalle, Solar Strand, Stampede Rider…), downloadable as a printable sticker sheet
 - Interactive campus panorama in the footer, campus-named brand colours, and a handful of hidden easter eggs (hint: the console knows)
-- All artwork is original line art; no UB athletics marks or mascot artwork are reproduced
+- Original line art for stickers and the campus panorama
+- Official UB marks (UB wordmark, Bulls logo, university seal) are used as supplied, unaltered apart from one-colour white reversal on blue
 
 ## Statistical methodology
 Adapted, for an educational advising context, from published research by **Dr. Leonid Khinkis**
