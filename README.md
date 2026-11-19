@@ -7,13 +7,28 @@ report ranking UB undergraduate programs, with step-by-step reasoning and an AI 
 **Live site:** https://adityapathak2004.github.io/ub-subject-advisor/
 
 ## Features
+**Core**
 - Upload results as CSV/JSON (percentages, letter grades, GPA, SAT), or load the demo student
-- Interest picker, career goal and applicant type
-- Scoring model: 60% academic fit, 30% interests, 10% career goal
-- Gemini AI reasons through the evidence step by step, with a built-in engine as offline fallback
-- "Ask the advisor" chatbot that streams Gemini replies, with built-in answers when AI is off
-- Report styled like a research paper (abstract, tables, figure, discussion, references), printable to PDF
-- Session restore, undo, toasts, back-to-top, keyboard access, mobile layout
+- Scoring model (60% academic fit, 30% interests, 10% goal) + Gemini step-by-step reasoning, with offline fallback
+- Research-paper-style report (abstract, tables, figure, discussion, references), printable to PDF
+- "Ask the advisor" chatbot (streaming Gemini, voice input, knows your report and 4-year plan)
+
+**Academic Advisor tab**
+- Readiness scorecard per key subject · math-placement recommendation
+- Interactive advising checklist (saved) · 4-week prep plans for weak subjects
+- Questions to ask your advisor (+ AI advisor notes) · career paths · suggested minors
+
+**4-Year Plan tab**
+- 8-semester plan for all 18 programs with prerequisites in order and ~15 credits/term
+- Move courses between semesters with a live prerequisite and credit-load checker
+- Pick gen-ed courses · lighter first semester · start-with-Precalculus option
+- 120-credit tracker · GPA planner · AI plan review with per-semester tips · CSV export
+
+**More**
+- Compare up to 3 programs side by side · What-if simulator (sliders)
+- Program explorer with search/filter · 1-minute interest quiz
+- Saved profiles · share link that reopens the exact report
+- Dark mode · text size · keyboard shortcuts (press `?`) · session restore, undo, toasts
 
 ## AI access
 The Gemini API key is stored **only encrypted** (AES-256-GCM, PBKDF2-SHA256 with 250k iterations)

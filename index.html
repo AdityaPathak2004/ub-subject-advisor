@@ -300,6 +300,157 @@ body.has-mbar .toasts{bottom:88px}
 .ai-btn.offline .sdot{background:var(--autumn);box-shadow:none}
 noscript div{background:#fff3cd;color:#664d03;padding:12px 20px;text-align:center;font-weight:600}
 
+
+/* ===== Feature pack ===== */
+body{zoom:var(--zoom,1)}
+.icon-btn{width:34px;height:34px;display:grid;place-items:center;border-radius:2px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.icon-btn:hover{background:rgba(255,255,255,.24)}.icon-btn svg{width:18px;height:18px}
+.subnav kbd{font-size:11px;border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:0 5px}
+.profrow{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.profrow select{flex:1;min-width:160px;font:inherit;font-size:14px;padding:6px 8px;border:1px solid #b9c2cf;border-radius:2px;background:#fff}
+.btn.sm{font-size:13.5px;padding:6px 12px}
+.spinner.sm{width:14px;height:14px;border-width:2px;display:inline-block;margin:0;vertical-align:-2px}
+.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:2px solid var(--line);margin:0 0 18px;position:sticky;top:57px;z-index:15;background:var(--bg);padding-top:6px;scroll-margin-top:60px}
+.tabs button{font:inherit;font-size:14.5px;font-weight:600;white-space:nowrap;border:0;background:none;color:var(--townsend);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tabs button:hover{color:var(--harriman)}
+.tabs button.on{color:var(--ub-blue);border-bottom-color:var(--ub-blue)}
+.pane{animation:up .25s ease both}
+.pane-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.pane-head h2{margin:0;font-size:22px;color:var(--harriman)}.pane-head .hint{margin:2px 0 0}
+.psel{font-size:13px;margin:0;display:flex;align-items:center;gap:8px}
+.psel select{font:inherit;font-size:14px;padding:7px 9px;border:1px solid #b9c2cf;border-radius:2px;background:#fff;max-width:300px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+@media (max-width:820px){.grid2{grid-template-columns:1fr}}
+.box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.box h3{margin:0 0 12px;font-size:16px;color:var(--harriman);display:flex;align-items:center;gap:8px}
+.box .count{margin-left:auto;font-size:13px;color:var(--townsend);font-weight:600}
+.rd{margin-bottom:12px}.rd-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px;gap:8px}
+.rd small{color:var(--townsend);font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin-left:4px}
+.chipst{font-size:12px;font-weight:700;padding:1px 8px;border-radius:10px;white-space:nowrap}
+.chipst.ok{background:#e3f6f3;color:#007a72}.chipst.mid{background:#fff4d6;color:#8a5a00}.chipst.bad{background:#fde8e4;color:#b23a22}.chipst.miss{background:#eef1f5;color:var(--townsend)}
+.rbar,.pbar{height:7px;background:#eef1f5;border-radius:4px;overflow:hidden}
+.rbar i,.pbar i{display:block;height:100%;border-radius:4px;transition:width .4s}
+.rbar i.ok{background:var(--lasalle)}.rbar i.mid{background:var(--solar)}.rbar i.bad{background:var(--autumn)}
+.pbar i{background:var(--ub-blue)}
+.callout{background:#fff8e6;border-left:3px solid var(--solar);padding:9px 12px;font-size:14px;margin:12px 0 0}
+.ok-note{color:#007a72;font-weight:600;font-size:14px}
+.checklist{list-style:none;margin:12px 0 0;padding:0}
+.checklist li{border-bottom:1px solid #eef1f5}.checklist li:last-child{border-bottom:0}
+.checklist label{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--ink);margin:0;padding:8px 0;cursor:pointer;font-size:14.5px}
+.checklist input{margin-top:3px;width:17px;height:17px;accent-color:var(--ub-blue);flex:none}
+.checklist input:checked+span{color:var(--townsend);text-decoration:line-through}
+.prep{margin-bottom:12px}.prep small{color:var(--townsend)}
+.prep ol{list-style:none;margin:6px 0 0;padding:0}
+.prep li{font-size:14px;padding:4px 0;display:flex;gap:10px}
+.prep li span{flex:none;font-size:11px;font-weight:700;text-transform:uppercase;color:var(--ub-blue);background:#eaf2fc;padding:2px 7px;border-radius:2px;height:fit-content}
+.qlist{margin:0 0 12px;padding-left:20px;font-size:14.5px}.qlist li{margin-bottom:6px}.qlist li.new{color:var(--harriman)}
+.qlist li.new::marker{color:var(--solar)}
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
+.tags li{background:#eaf2fc;color:var(--harriman);font-size:13.5px;padding:5px 11px;border-radius:14px}
+.minors{list-style:none;padding:0;margin:0}.minors li{padding:7px 0;border-bottom:1px solid #eef1f5;font-size:14.5px}
+.minors li span{display:block;font-size:13px;color:var(--townsend)}
+.ai-box{background:#f3f8ff;border:1px solid #cfe0f5;border-radius:var(--radius);padding:12px 14px;margin:12px 0;font-size:14.5px}
+.ai-box ul{margin:8px 0 0;padding-left:18px}.ai-box p{margin:8px 0 0}
+.mini-load{display:flex;gap:8px;align-items:center;color:var(--harriman);font-weight:600;font-size:14px;margin-top:10px}
+.mini-load .spinner{width:16px;height:16px;border-width:3px;margin:0}
+.plan-bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin-bottom:12px}
+.plan-bar .credits{min-width:170px;font-size:14px}.plan-bar .credits b{font-size:20px;color:var(--harriman)}
+.plan-bar .pbar{margin-top:4px}
+.tog{display:flex;gap:7px;align-items:center;font-weight:500;font-size:14px;margin:0;color:var(--ink)}
+.tog input{accent-color:var(--ub-blue);width:16px;height:16px}
+.grow{flex:1}
+.issues{background:#fff6f4;border:1px solid #f0c4bb;border-radius:var(--radius);padding:10px 14px;font-size:14px;margin-bottom:12px}
+.issues ul{margin:4px 0 0;padding-left:18px}.issues.ok{background:#eefaf7;border-color:#b5e5dc;color:#007a72;font-weight:600}
+.sems{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:1000px){.sems{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.sems{grid-template-columns:1fr}}
+.sem{position:relative;background:#fff;border:1px solid var(--line);border-top:4px solid var(--ub-blue);border-radius:var(--radius);display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.sem:nth-child(2n){border-top-color:var(--harriman)}
+.sem.warn{border-top-color:var(--autumn)}
+.sem header{display:flex;justify-content:space-between;padding:9px 12px;font-size:13.5px;border-bottom:1px solid #eef1f5;color:var(--harriman)}
+.sem header span{font-weight:700;color:var(--townsend)}
+.sem ul{list-style:none;margin:0;padding:6px;flex:1}
+.crs{display:grid;grid-template-columns:auto 1fr auto;gap:2px 8px;align-items:baseline;padding:6px 7px;border-radius:3px;cursor:pointer;font-size:13px;border:1px solid transparent}
+.crs:hover,.crs:focus{background:#eaf2fc;outline:none;border-color:#b9cde6}
+.crs .cc{font-weight:700;color:var(--ub-blue);white-space:nowrap}.crs .cn{color:var(--ink);line-height:1.3}.crs .cr{color:var(--townsend);font-size:12px}
+.crs.gen .cc{color:#7a8594}.crs.gen .cn{font-style:italic;color:#4b5563}
+.crs.bad{background:#fde8e4;border-color:#f0c4bb}.crs.bad .cc{color:#b23a22}
+.sem .tip{font-size:12.5px;margin:0 10px 8px;padding:7px 9px;background:#fff8e6;border-radius:3px;line-height:1.4}
+.sem footer{border-top:1px solid #eef1f5;padding:7px 12px}
+.sem footer label{font-size:12px;font-weight:600;color:var(--townsend);margin:0;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sem footer input{width:64px;font:inherit;font-size:13px;padding:3px 6px;border:1px solid #c3cbd6;border-radius:2px;text-align:center}
+.gpa-out{margin:14px 0 6px;font-size:15px;color:var(--harriman)}.gpa-out b{font-size:20px}
+.pop{position:absolute;z-index:25;left:6px;right:6px;top:40px;background:#fff;border:1px solid #b9cde6;border-radius:var(--radius);box-shadow:0 12px 30px rgba(0,47,86,.2);padding:12px;display:flex;flex-direction:column;gap:6px;font-size:13.5px;animation:up .15s ease both}
+.pop small{color:var(--townsend)}.pop label{margin:4px 0 0;font-size:12.5px}
+.pop select{font:inherit;font-size:13.5px;padding:5px;border:1px solid #b9c2cf;border-radius:2px;width:100%;margin-top:3px}
+.cmp-pick{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.cmp-pick .chip{width:auto;font-size:13px;padding:6px 10px}
+.cmp-pick .chip input{position:absolute;opacity:0;pointer-events:none}
+.tablewrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;min-width:620px;margin:0}
+table.cmp th,table.cmp td{padding:11px 14px;border-bottom:1px solid #eef1f5;text-align:left;vertical-align:top;text-transform:none;letter-spacing:0}
+table.cmp thead th{background:var(--harriman);color:#fff;font-size:14px;border:0}
+table.cmp tbody th{color:var(--townsend);font-size:12px;text-transform:uppercase;letter-spacing:.4px;width:170px;font-weight:700}
+table.cmp .big{font-size:22px;color:var(--harriman)}table.cmp .big.win{color:var(--ub-blue)}
+table.cmp .big.win::after{content:" ★";color:var(--solar);font-size:16px}
+.ok{color:#007a72;font-weight:700}.mid{color:#8a5a00;font-weight:700}.bad{color:#b23a22;font-weight:700}.miss{color:#8a94a3}
+.chipst.ok,.chipst.mid,.chipst.bad{font-weight:700}
+.sliders .sl{display:grid;grid-template-columns:170px 1fr 46px;gap:10px;align-items:center;padding:5px 0}
+.sliders label{margin:0;font-weight:500;color:var(--ink);font-size:14px;display:flex;gap:7px;align-items:center}
+.sliders input[type=checkbox]{accent-color:var(--ub-blue)}
+.sliders input[type=range]{width:100%;accent-color:var(--ub-blue)}
+.sliders output{font-weight:700;color:var(--harriman);font-size:14px;text-align:right}
+@media (max-width:560px){.sliders .sl{grid-template-columns:1fr 46px}.sliders .sl label{grid-column:1/-1}}
+.wi-list{margin:0;padding-left:22px}.wi-list li{padding:8px 0;border-bottom:1px solid #eef1f5;font-size:14.5px}
+.wi-list li{display:list-item}.wi-list .nm{font-weight:600}.wi-list .sc{float:right;font-weight:700;color:var(--harriman);margin-left:10px}
+.wi-list .dl{float:right;font-size:12.5px;min-width:44px;text-align:right;color:var(--townsend)}.wi-list .dl.up{color:#007a72}.wi-list .dl.dn{color:#b23a22}
+.wi-list .mv{font-size:12px;background:#e3f6f3;color:#007a72;border-radius:8px;padding:0 6px;margin-left:6px}
+dialog.wide{max-width:760px}
+.exlist{margin-top:12px;max-height:60vh;overflow-y:auto}
+.ex{border:1px solid var(--line);border-radius:var(--radius);margin-bottom:8px;background:#fff}
+.ex summary{cursor:pointer;padding:11px 14px;display:flex;flex-direction:column;list-style:none}
+.ex summary::-webkit-details-marker{display:none}
+.ex summary b{color:var(--harriman)}.ex summary span{font-size:13px;color:var(--townsend)}
+.ex[open] summary{border-bottom:1px solid #eef1f5}
+.ex-body{padding:10px 14px;font-size:14px}.ex-body p{margin:0 0 6px}
+.qprog{height:6px;background:#eef1f5;border-radius:3px;overflow:hidden;margin-bottom:6px}.qprog i{display:block;height:100%;background:var(--ub-blue);transition:width .3s}
+#quizBody h4{margin:4px 0 12px;font-size:18px;color:var(--harriman)}
+.qopts{display:grid;gap:8px}
+.qopt{font:inherit;text-align:left;border:1px solid var(--line);background:#fff;padding:12px 14px;border-radius:var(--radius);cursor:pointer;font-size:15px;color:var(--ink)}
+.qopt:hover,.qopt:focus{border-color:var(--ub-blue);background:#eaf2fc;outline:none}
+table.keys td{padding:6px 8px;border:0}table.keys{margin:0}
+kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;border:1px solid #c3cbd6;border-bottom-width:2px;border-radius:4px;padding:1px 6px;background:#f7f9fc;color:var(--ink)}
+.chat .mic{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ub-blue);cursor:pointer;display:grid;place-items:center;align-self:flex-end}
+.chat .mic svg{width:18px;height:18px}.chat .mic.rec{background:var(--autumn);color:#fff;border-color:var(--autumn);animation:blink 1s infinite}
+@media print{ .tabs,.pane-head .psel,.plan-bar .btn,.plan-bar .tog,.pop,.cmp-pick,#wiReset{display:none!important} .pane{animation:none} .sem,.box{box-shadow:none;break-inside:avoid} .sems{grid-template-columns:repeat(2,1fr)} }
+
+/* ===== Dark mode ===== */
+[data-theme=dark]{--bg:#0e1621;--ink:#e6ebf2;--line:#2a3646;--townsend:#9aa7b8;--harriman:#cfe0f7;--shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);color-scheme:dark}
+[data-theme=dark] body{background:var(--bg);color:var(--ink)}
+[data-theme=dark] .topbar{background:#0b3d7a}[data-theme=dark] .subnav,[data-theme=dark] footer{background:#081423}
+[data-theme=dark] .hero{background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 22px),linear-gradient(120deg,#0a2f5c,#0b3d7a 60%,#114a8f)}
+[data-theme=dark] .stepper,[data-theme=dark] .card,[data-theme=dark] .box,[data-theme=dark] .rec,[data-theme=dark] .sem,[data-theme=dark] .plan-bar,[data-theme=dark] .tablewrap,[data-theme=dark] .think,[data-theme=dark] .reason,[data-theme=dark] .ex,[data-theme=dark] .qopt,[data-theme=dark] .chip,[data-theme=dark] .pop,[data-theme=dark] dialog,[data-theme=dark] .chat,[data-theme=dark] .sugs,[data-theme=dark] .chat form,[data-theme=dark] .mbar,[data-theme=dark] .toTop,[data-theme=dark] .chat .mic{background:#152131;color:var(--ink);border-color:var(--line)}
+[data-theme=dark] .stepper .dot{background:#152131}
+[data-theme=dark] input[type=text],[data-theme=dark] select,[data-theme=dark] textarea,[data-theme=dark] .cell,[data-theme=dark] td input,[data-theme=dark] .sem footer input,[data-theme=dark] .profrow select,[data-theme=dark] .psel select,[data-theme=dark] .pop select{background:#0e1621;color:var(--ink);border-color:#36465b}
+[data-theme=dark] .drop{background:#122033;border-color:#36557d}[data-theme=dark] .drop:hover{background:#16283f}
+[data-theme=dark] .btn.ghost{background:transparent;color:#8fc0ff;border-color:#4a87d6}[data-theme=dark] .btn.ghost:hover{background:#16283f;color:#cfe0f7}
+[data-theme=dark] .linkbtn,[data-theme=dark] a{color:#8fc0ff}
+[data-theme=dark] .chip.on,[data-theme=dark] .crs:hover,[data-theme=dark] .crs:focus,[data-theme=dark] .qopt:hover{background:#16304f;border-color:#4a87d6}
+[data-theme=dark] .chip.on{color:#fff}
+[data-theme=dark] .student,[data-theme=dark] .ai-box,[data-theme=dark] .tags li,[data-theme=dark] .prep li span,[data-theme=dark] .src{background:#16283f;color:#cfe0f7;border-color:#2b4a72}
+[data-theme=dark] .callout,[data-theme=dark] .sem .tip,[data-theme=dark] .ai-note{background:#2b2512;color:#f0e2b8}
+[data-theme=dark] .issues{background:#2b1a17;border-color:#5a2f27;color:#f4c9c0}[data-theme=dark] .issues.ok{background:#11291f;border-color:#1f5a46;color:#7fe0c6}
+[data-theme=dark] .crs .cn{color:var(--ink)}[data-theme=dark] .crs.gen .cn{color:#a9b4c3}[data-theme=dark] .crs.bad{background:#3a1d18;border-color:#7a3a2f}
+[data-theme=dark] .rbar,[data-theme=dark] .pbar,[data-theme=dark] .qprog,[data-theme=dark] .ring .track{background:#24303f;stroke:#24303f}
+[data-theme=dark] .msgs{background:#0e1621}[data-theme=dark] .msg.bot{background:#152131;border-color:var(--line)}
+[data-theme=dark] .placeholder{background:repeating-linear-gradient(135deg,#111b28 0 10px,#0f1824 10px 20px);border-color:#2a3646}
+[data-theme=dark] .tabs{background:var(--bg)}
+[data-theme=dark] table.cmp th,[data-theme=dark] table.cmp td,[data-theme=dark] .checklist li,[data-theme=dark] .minors li,[data-theme=dark] .wi-list li,[data-theme=dark] .sem header,[data-theme=dark] .sem footer{border-color:var(--line)}
+[data-theme=dark] table.cmp thead th{background:#0b3d7a}
+[data-theme=dark] .ok{color:#5fd6b9}[data-theme=dark] .mid{color:#f0c24f}[data-theme=dark] .bad{color:#ff8f78}
+[data-theme=dark] kbd{background:#0e1621;color:var(--ink);border-color:#36465b}
+[data-theme=dark] .paper{box-shadow:0 10px 40px rgba(0,0,0,.5)}
+
 /* AI status */
 .ai-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:5px 11px;border-radius:2px;cursor:pointer;margin-left:auto}
 .ai-btn:hover{background:rgba(255,255,255,.24)}
@@ -397,12 +548,16 @@ body.has-mbar .fab{bottom:84px}
     <div class="wrap">
       <a href="./" class="logo-link" id="homeLink" aria-label="University at Buffalo — Subject Advisor home"><img class="logo-img" alt="University at Buffalo" src="assets/ub-logo-white.png"></a>
       <button class="ai-btn" id="aiBtn" type="button"><span class="sdot"></span><span id="aiLbl">Connect AI</span></button>
+      <button class="icon-btn" id="sizeBtn" type="button" aria-label="Change text size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 18 9 6l5 12M6 14h6M15 18l3-7 3 7M16 16h4"/></svg></button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
       <span class="tag">Student Advisor · Demo</span>
     </div>
   </div>
   <nav class="subnav"><div class="wrap">
     <a href="#upload">Upload results</a><a href="#profile">Your interests</a><a href="#results">Recommendations</a>
+    <button data-open-explore>Explore programs</button>
     <button class="right" data-open-how>How matching works</button>
+    <button data-open-keys aria-label="Keyboard shortcuts">Shortcuts&nbsp;<kbd>?</kbd></button>
   </div></nav>
 </header>
 
@@ -437,6 +592,7 @@ body.has-mbar .fab{bottom:84px}
         <button class="btn ghost" id="demo">Load demo student</button>
         <button class="btn ghost" id="addRow">+ Add subject</button>
       </div>
+      <div class="profrow"><button class="btn ghost sm" id="profSave" type="button">💾 Save profile</button><select id="profSel" aria-label="Saved profiles"></select><button class="linkbtn" id="profDel" type="button" hidden>Delete</button></div>
       <div class="linkrow"><button class="linkbtn" id="tplBtn" type="button">⤓ Download a blank template (CSV)</button> · <button class="linkbtn" id="sampleBtn" type="button">⤓ Download the demo file</button></div>
       <div class="err" id="err" style="color:#990000;font-size:14px;margin-top:8px"></div>
       <div class="student" id="student"></div>
@@ -452,7 +608,7 @@ body.has-mbar .fab{bottom:84px}
 
     <section class="card" id="profile">
       <h2><span class="num">2</span>What you enjoy</h2>
-      <p class="hint">Pick everything that sounds like you.</p>
+      <p class="hint">Pick everything that sounds like you. Not sure? <button class="linkbtn" type="button" data-open-quiz>Take the 1-minute interest quiz →</button></p>
       <div class="picked-count"><span id="count">None selected</span><button class="linkbtn" id="clear" type="button">Clear all</button></div>
       <div id="chips"></div>
       <hr class="divider">
@@ -474,10 +630,22 @@ body.has-mbar .fab{bottom:84px}
       <div class="toolbar"><h2>Your recommendations report</h2>
         <div class="actions">
           <button class="btn ghost" data-open-how>How is my match calculated?</button>
+          <button class="btn ghost" id="shareBtn">🔗 Share</button>
           <button class="btn ghost" id="restart">Start over</button>
           <button class="btn" onclick="window.print()">Print / save PDF</button>
         </div></div>
-      <div id="recs"></div>
+      <nav class="tabs" role="tablist" aria-label="Results sections" hidden>
+        <button role="tab" data-tab="report" class="on" aria-selected="true">📄 Report</button>
+        <button role="tab" data-tab="advisor" aria-selected="false">🎓 Academic Advisor</button>
+        <button role="tab" data-tab="plan" aria-selected="false">🗓️ 4-Year Plan</button>
+        <button role="tab" data-tab="compare" aria-selected="false">⚖️ Compare</button>
+        <button role="tab" data-tab="whatif" aria-selected="false">🎚️ What-if</button>
+      </nav>
+      <div id="recs" class="pane" data-pane="report" role="tabpanel"></div>
+      <div id="paneAdvisor" class="pane" data-pane="advisor" role="tabpanel" hidden></div>
+      <div id="panePlan" class="pane" data-pane="plan" role="tabpanel" hidden></div>
+      <div id="paneCompare" class="pane" data-pane="compare" role="tabpanel" hidden></div>
+      <div id="paneWhatif" class="pane" data-pane="whatif" role="tabpanel" hidden></div>
     </div>
   </section>
 </div></main>
@@ -493,8 +661,26 @@ body.has-mbar .fab{bottom:84px}
   <div class="msgs" id="msgs" aria-live="polite"></div>
   <div class="sugs" id="sugs"></div>
   <form id="chatForm"><textarea id="chatIn" rows="1" placeholder="Ask about majors, courses, your results…" aria-label="Message"></textarea>
+    <button class="mic" id="micBtn" type="button" aria-label="Speak your question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
     <button class="send" id="sendBtn" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
 </section>
+
+<dialog id="exploreDlg" class="wide">
+  <div class="modal-head"><h3>Explore UB programs</h3><button aria-label="Close" data-close>×</button></div>
+  <div class="modal-body"><div class="field-row"><input type="text" id="exQ" placeholder="Search programs, careers or interests…" aria-label="Search programs"><select id="exSchool" aria-label="Filter by school" style="max-width:240px"></select></div><div id="exList" class="exlist"></div></div>
+</dialog>
+<dialog id="quizDlg">
+  <div class="modal-head"><h3>Interest quiz</h3><button aria-label="Close" data-close>×</button></div>
+  <div class="modal-body" id="quizBody"></div>
+</dialog>
+<dialog id="keysDlg">
+  <div class="modal-head"><h3>Keyboard shortcuts</h3><button aria-label="Close" data-close>×</button></div>
+  <div class="modal-body"><table class="keys"><tbody>
+    <tr><td><kbd>?</kbd></td><td>Show this list</td></tr><tr><td><kbd>/</kbd></td><td>Open the advisor chat</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>5</kbd></td><td>Switch results tabs</td></tr><tr><td><kbd>E</kbd></td><td>Explore programs</td></tr>
+    <tr><td><kbd>D</kbd></td><td>Toggle dark mode</td></tr><tr><td><kbd>H</kbd></td><td>Back to top</td></tr><tr><td><kbd>Esc</kbd></td><td>Close chat or dialog</td></tr>
+  </tbody></table></div>
+</dialog>
 
 <dialog id="aiDlg">
   <div class="modal-head"><h3>Connect Gemini AI</h3><button aria-label="Close" data-close>×</button></div>
@@ -975,7 +1161,7 @@ function renderResults(a,res,note){
     </ol>
     <div class="p-foot"><span>Report ${repNo} · Generated ${date}</span><span>Advisory only — not an admission decision</span></div>
   </article>`;
-  $("#out").hidden=false;
+  $("#out").hidden=false; wi=null; cmpSel=null; afterResults();
   document.title=`${meta.student?meta.student+"’s":"Your"} report — UB Subject Advisor`;
   refreshSugs();
 }
@@ -1027,7 +1213,7 @@ function greet(){
   refreshSugs();
 }
 function refreshSugs(){
-  const s=last?[`Why is ${last.res.recs[0].name.replace(/ \(.*\)/,"")} my best fit?`,"Which subjects should I improve?","Compare my top two options","What's the first year like?"]
+  const s=last?[`Why is ${last.res.recs[0].name.replace(/ \(.*\)/,"")} my best fit?`,"Which subjects should I improve?","Compare my top two options","Is my 4-year plan balanced?"]
     :["What majors does UB offer?","How does the matching work?","Which major fits someone who loves coding?"];
   $("#sugs").innerHTML=s.map(x=>`<button type="button">${esc(x)}</button>`).join("");
   $$("#sugs button").forEach(b=>b.onclick=()=>send(b.textContent));
@@ -1035,7 +1221,8 @@ function refreshSugs(){
 function context(){
   if(!last) return "The student hasn't uploaded results yet.";
   const {a,res}=last;
-  return JSON.stringify({...evidence(a),programs:undefined,recommendations:res.recs.map(r=>({program:r.name,school:r.school,match:Math.round(r.score),reasons:r.why,watch_outs:r.watch,sample_first_semester:r.courses})),reasoning:res.steps});
+  let plan; try{ if(focusProg){const p=getPlan(focusProg); plan={program:focusProg,semesters:p.sems.map((s,i)=>SEM_NAMES[i]+": "+s.map(c=>courseLabel(c).code).join(", "))};} }catch(e){}
+  return JSON.stringify({...evidence(a),programs:undefined,current_4_year_plan:plan,recommendations:res.recs.map(r=>({program:r.name,school:r.school,match:Math.round(r.score),reasons:r.why,watch_outs:r.watch,sample_first_semester:r.courses})),reasoning:res.steps});
 }
 function localAnswer(q){
   if(!last) return "Upload your results (or click **Load demo student**) and press **Get my recommendations** — then I can give you personal advice.";
@@ -1089,7 +1276,7 @@ function restart(){
   rows=[];meta={};picked.clear();shown=false;last=null;if(msgs.children.length)greet();
   $("#goal").value="";$("#level").selectedIndex=0;$("#file").value="";
   const d=$("#demo");d.textContent="Load demo student";d.classList.remove("done");d.disabled=false;
-  $("#out").hidden=true;$("#placeholder").hidden=false;showErr();
+  $("#out").hidden=true;$("#placeholder").hidden=false;showErr();$(".tabs").hidden=true;
   renderChips();renderTable();
   window.scrollTo({top:0,behavior:"smooth"}); document.title="UB Subject Advisor — Find your major at UB";
   if(snap.rows.length||snap.picked.length) toast("Started over.",{action:"Undo",onAction:()=>{applySnap(snap); if(hadResults){shown=true;renderResults(hadResults.a,hadResults.res);updateSteps();} toast("Restored.");}});
@@ -1100,7 +1287,7 @@ function toast(msg,{action,onAction,ms=4500}={}){
   const t=document.createElement("div"); t.className="toast"; t.innerHTML=`<span>${esc(msg)}</span>`;
   if(action){const b=document.createElement("button");b.textContent=action;b.onclick=()=>{close();onAction&&onAction();};t.appendChild(b);}
   const close=()=>{t.classList.add("out");setTimeout(()=>t.remove(),200);};
-  $("#toasts").appendChild(t); setTimeout(close,ms);
+  const box=$("#toasts"); box.appendChild(t); while(box.children.length>3) box.firstElementChild.remove(); setTimeout(close,ms);
 }
 
 /* ---------- Session persistence ---------- */
@@ -1126,6 +1313,616 @@ $("#tplBtn").onclick=()=>{dl("ub-advisor-template.csv","student,Your Name\nboard
 $("#sampleBtn").onclick=()=>{dl("demo_student_results.csv",DEMO+"\n");toast("Demo file downloaded.");};
 function netUI(){ $("#aiBtn").classList.toggle("offline",!navigator.onLine); if(!navigator.onLine){$("#aiLbl").textContent="Offline";} else setAiUI(); }
 addEventListener("online",()=>{netUI();toast("Back online — AI available.");}); addEventListener("offline",()=>{netUI();toast("You're offline. The built-in engine will be used.");});
+
+/* =====================================================================
+   FEATURE PACK: academic advisor, 8-semester planner, compare, what-if,
+   explorer, interest quiz, profiles, share link, display + chat extras
+   ===================================================================== */
+
+/* ---------- Course catalogue (illustrative — verify in the UB catalog) ---------- */
+const CAT_SRC=`ENG 105|Writing and Rhetoric|3|
+UBS 101|UB Seminar|3|
+EAS 199|UB Seminar: Engineering|3|
+EAS 230|Engineering Computations|3|MTH 141
+EAS 207|Statics|3|PHY 107,MTH 141
+EAS 208|Dynamics|3|EAS 207
+EAS 209|Mechanics of Solids|3|EAS 207
+MTH 115|Precalculus|4|
+MTH 121|Survey of Calculus I|4|
+MTH 122|Survey of Calculus II|4|MTH 121
+MTH 131|Mathematics for Management|4|
+MTH 141|College Calculus I|4|
+MTH 142|College Calculus II|4|MTH 141
+MTH 241|College Calculus III|4|MTH 142
+MTH 306|Intro to Differential Equations|4|MTH 142
+MTH 309|Linear Algebra|4|MTH 142
+MTH 191|Intro to Proofs|4|
+MTH 411|Abstract Algebra|4|MTH 191,MTH 309
+MTH 431|Real Analysis|4|MTH 191,MTH 241
+MTH 4XX|Mathematics elective|4|MTH 309
+STA 119|Statistical Methods|4|
+STA 301|Intro to Probability|4|MTH 142
+PHY 101|College Physics I|4|
+PHY 102|College Physics II|4|PHY 101
+PHY 107|General Physics I|4|
+PHY 108|General Physics II|4|PHY 107,MTH 141
+PHY 207|General Physics III|4|PHY 108
+PHY 301|Intermediate Mechanics|4|PHY 207,MTH 241
+PHY 401|Quantum Mechanics|4|PHY 301,MTH 306
+PHY 405|Electricity and Magnetism|4|PHY 207,MTH 241
+PHY 4XX|Physics elective|3|PHY 301
+CHE 101|General Chemistry for Health|4|
+CHE 107|General Chemistry I|4|
+CHE 108|General Chemistry II|4|CHE 107
+CHE 201|Organic Chemistry I|4|CHE 108
+CHE 202|Organic Chemistry II|4|CHE 201
+CHE 331|Physical Chemistry|4|CHE 108,MTH 142
+CHE 351|Analytical Chemistry|4|CHE 108
+CHE 4XX|Chemistry elective|3|CHE 202
+BCH 403|Biochemistry|4|CHE 202
+BIO 200|Evolutionary Biology|4|
+BIO 201|Cell Biology|4|BIO 200,CHE 107
+BIO 305|Genetics|4|BIO 201
+BIO 319|Ecology|4|BIO 200
+BIO 350|Human Physiology|4|BIO 201
+BIO 4XX|Biology elective|3|BIO 305
+MIC 301|Microbiology|4|BIO 200
+CSE 115|Intro to Computer Science I|4|
+CSE 116|Intro to Computer Science II|4|CSE 115
+CSE 191|Discrete Structures|4|
+CSE 220|Systems Programming|4|CSE 116
+CSE 250|Data Structures|4|CSE 116,CSE 191
+CSE 305|Programming Languages|4|CSE 250
+CSE 331|Algorithms and Complexity|4|CSE 250
+CSE 341|Computer Organization|4|CSE 220
+CSE 368|Intro to Artificial Intelligence|4|CSE 250
+CSE 421|Operating Systems|4|CSE 341
+CSE 442|Software Engineering|4|CSE 250
+CSE 474|Intro to Machine Learning|4|CSE 250,MTH 309
+CSE 490|Computer Architecture|4|CSE 341
+CSE 4XX|CSE technical elective|4|CSE 250
+EE 202|Circuit Analysis I|4|PHY 108,MTH 142
+EE 205|Signals and Systems|3|EE 202,MTH 306
+EE 278|Digital Logic|4|
+EE 310|Electronic Devices and Circuits|4|EE 202
+EE 324|Electromagnetics|3|PHY 108,MTH 241
+EE 353|Microcontrollers|4|EE 278,CSE 115
+EE 4XX|EE technical elective|3|EE 202
+EE 494|Senior Capstone Design|4|EE 310
+MAE 177|Engineering Drawing and CAD|3|
+MAE 204|Thermodynamics|3|PHY 107,MTH 142
+MAE 335|Fluid Mechanics|3|EAS 208,MTH 306
+MAE 340|Dynamic Systems|3|EAS 208,MTH 306
+MAE 364|Manufacturing Processes|3|EAS 209
+MAE 376|Applied Mathematics for MAE|3|MTH 306,MTH 309
+MAE 381|Engineering Materials|3|CHE 107
+MAE 422|Aerodynamics|3|MAE 335
+MAE 423|Aerospace Propulsion|3|MAE 204,MAE 335
+MAE 427|Flight Dynamics and Control|3|MAE 340
+MAE 451|Design Process and Methods|3|MAE 364
+MAE 4XX|MAE technical elective|3|MAE 204
+MAE 494|Senior Design Project|3|MAE 451
+BE 201|Intro to Biomedical Engineering|3|BIO 200
+BE 301|Biomechanics|3|EAS 209
+BE 302|Biomaterials|3|CHE 108
+BE 351|Bioinstrumentation|3|EE 202
+BE 401|Biomedical Imaging|3|BE 351
+BE 495|BME Capstone Design|4|BE 351
+CIE 340|Intro to Environmental Engineering|3|CHE 108
+CIE 341|Water and Wastewater Treatment|3|CIE 340
+CIE 343|Environmental Chemistry|3|CHE 108
+CIE 354|Hydraulics|3|EAS 208
+CIE 4XX|Environmental elective|3|CIE 340
+CIE 494|Environmental Engineering Capstone|3|CIE 341
+PHC 311|Pharmaceutics|4|CHE 202
+PHC 321|Pharmacology|4|BIO 201
+PHC 331|Medicinal Chemistry|4|CHE 202
+PHC 401|Pharmacokinetics|4|PHC 311,MTH 142
+PHC 4XX|Pharmaceutical sciences elective|3|PHC 321
+ECO 181|Intro to Macroeconomics|3|
+ECO 182|Intro to Microeconomics|3|
+ECO 380|Statistics for Economists|4|ECO 182,STA 119
+ECO 405|Intermediate Microeconomics|4|ECO 182,MTH 141
+ECO 406|Intermediate Macroeconomics|4|ECO 181,ECO 182
+ECO 481|Econometrics|4|ECO 380
+ECO 4XX|Economics elective|3|ECO 405
+MGA 201|Financial Accounting|3|
+MGA 202|Managerial Accounting|3|MGA 201
+MGQ 301|Statistics for Management|3|MTH 131
+MGS 351|Information Systems|3|
+MGM 301|Organizational Behavior|3|
+MKT 311|Marketing Management|3|ECO 182
+MGF 301|Corporate Finance|3|MGA 201,MGQ 301
+MGO 302|Operations Management|3|MGQ 301
+MGB 4XX|Business elective|3|MGA 201
+MGM 497|Business Strategy Capstone|3|MGF 301,MKT 311
+PSY 101|Intro to Psychology|3|
+PSY 207|Psychological Statistics|4|PSY 101
+PSY 230|Research Methods|4|PSY 207
+PSY 321|Cognitive Psychology|3|PSY 101
+PSY 322|Social Psychology|3|PSY 101
+PSY 336|Developmental Psychology|3|PSY 101
+PSY 341|Abnormal Psychology|3|PSY 101
+PSY 351|Biological Psychology|3|PSY 101,BIO 200
+PSY 4XX|Psychology seminar|3|PSY 230
+SOC 101|Intro to Sociology|3|
+NUR 250|Intro to Professional Nursing|3|
+NUR 301|Health Assessment|4|BIO 350
+NUR 305|Pathophysiology|3|BIO 350
+NUR 307|Pharmacology for Nursing|3|NUR 305
+NUR 351|Adult Health Nursing I|6|NUR 301
+NUR 352|Adult Health Nursing II|6|NUR 351
+NUR 361|Maternal and Child Nursing|5|NUR 301
+NUR 401|Community Health Nursing|5|NUR 351
+NUR 451|Nursing Leadership Capstone|6|NUR 352
+COM 101|Human Communication|3|
+COM 125|Intro to Mass Communication|3|
+COM 217|Media Writing|3|ENG 105
+COM 240|Interpersonal Communication|3|COM 101
+COM 301|Communication Research Methods|3|COM 101
+COM 336|Persuasion|3|COM 101
+COM 337|Public Relations|3|COM 217
+COM 350|Digital Media|3|COM 125
+COM 4XX|Communication elective|3|COM 301
+COM 499|Senior Seminar|3|COM 301
+ARC 101|Intro to Architecture|3|
+ARC 121|Design Studio I|6|
+ARC 122|Design Studio II|6|ARC 121
+ARC 211|American Architecture|3|ARC 101
+ARC 221|Design Studio III|6|ARC 122
+ARC 222|Design Studio IV|6|ARC 221
+ARC 241|Building Technology I|3|PHY 101
+ARC 242|Building Technology II|3|ARC 241
+ARC 321|Design Studio V|6|ARC 222
+ARC 322|Design Studio VI|6|ARC 321
+ARC 362|Structures I|3|PHY 101,MTH 141
+ARC 403|Thesis Studio|6|ARC 322
+ARC 4XX|Architecture elective|3|ARC 211`;
+const CAT={};
+CAT_SRC.split("\n").forEach(l=>{const [code,name,cr,pre]=l.split("|");CAT[code]={code,name,cr:+cr,pre:pre?pre.split(","):[]};});
+const GEN_POOL=["PSY 101 Intro to Psychology","SOC 101 Intro to Sociology","ECO 181 Intro to Macroeconomics","COM 101 Human Communication","PHI 101 Intro to Philosophy","HIS 106 World Civilizations","ART 101 Drawing I","MUS 115 Understanding Music","GEO 101 Intro to Geography","ANT 101 Intro to Anthropology","ENG 2XX Literature course","AAS/Language course (e.g. SPA 101)","DMS 105 Digital Media","Wellness / physical education"];
+
+/* ---------- Program tracks, careers ---------- */
+const X=(c,n)=>Array(n).fill(c);
+const ENGR1=["MTH 141","PHY 107","CHE 107","EAS 199","MTH 142","PHY 108","EAS 230"];
+const TRACK={
+ "Computer Science (BS)":["CSE 115","MTH 141","CSE 191","UBS 101","CSE 116","MTH 142","CSE 220","CSE 250","MTH 309","STA 301","PHY 107","CSE 305","CSE 331","CSE 341","CSE 368","CSE 442","CSE 421","CSE 474",...X("CSE 4XX",3)],
+ "Computer Engineering (BS)":["CSE 115","MTH 141","PHY 107","EAS 199","CSE 116","MTH 142","PHY 108","CSE 191","EE 278","EE 202","MTH 241","CSE 220","CSE 250","MTH 306","MTH 309","CSE 341","EE 310","EE 205","EE 353","CSE 421","CSE 490","CSE 4XX","EE 4XX","EE 494"],
+ "Electrical Engineering (BS)":[...ENGR1,"CSE 115","MTH 241","EE 202","EE 278","MTH 306","EE 205","EE 310","MTH 309","EE 324","EE 353","STA 301",...X("EE 4XX",3),"EE 494"],
+ "Mechanical Engineering (BS)":[...ENGR1,"MAE 177","EAS 207","MTH 241","EAS 208","EAS 209","MTH 306","MAE 204","MAE 381","MTH 309","MAE 335","MAE 340","MAE 364","MAE 376","EE 202","MAE 451",...X("MAE 4XX",2),"MAE 494"],
+ "Aerospace Engineering (BS)":[...ENGR1,"MAE 177","EAS 207","MTH 241","EAS 208","EAS 209","MTH 306","MAE 204","MAE 381","MTH 309","MAE 335","MAE 340","MAE 364","MAE 422","MAE 423","MAE 427","MAE 451","MAE 494"],
+ "Biomedical Engineering (BS)":["MTH 141","CHE 107","BIO 200","EAS 199","MTH 142","CHE 108","PHY 107","BE 201","PHY 108","BIO 201","MTH 241","EAS 207","EAS 209","MTH 306","EE 202","BE 301","BE 302","BIO 350","BE 351","STA 301","BE 401","BE 495"],
+ "Mathematics (BS)":["MTH 141","MTH 191","UBS 101","CSE 115","MTH 142","MTH 241","MTH 309","STA 301","MTH 306","PHY 107","MTH 411","MTH 431",...X("MTH 4XX",4)],
+ "Physics (BS)":["PHY 107","MTH 141","UBS 101","PHY 108","MTH 142","CHE 107","PHY 207","MTH 241","MTH 306","MTH 309","CSE 115","PHY 301","PHY 405","PHY 401",...X("PHY 4XX",3)],
+ "Biological Sciences (BS)":["BIO 200","CHE 107","MTH 121","UBS 101","BIO 201","CHE 108","STA 119","CHE 201","CHE 202","BIO 305","PHY 101","PHY 102","BIO 319","BIO 350","BCH 403",...X("BIO 4XX",3)],
+ "Pharmaceutical Sciences (BS)":["CHE 107","BIO 200","MTH 141","UBS 101","CHE 108","BIO 201","MTH 142","CHE 201","CHE 202","PHY 101","STA 119","BIO 350","BCH 403","PHC 311","PHC 321","PHC 331","PHC 401",...X("PHC 4XX",2)],
+ "Chemistry (BS)":["CHE 107","MTH 141","UBS 101","CHE 108","MTH 142","PHY 107","PHY 108","CHE 201","CHE 202","MTH 241","CHE 351","CHE 331","BCH 403",...X("CHE 4XX",4)],
+ "Environmental Engineering (BS)":[...ENGR1,"BIO 200","CHE 108","MTH 241","EAS 207","MTH 306","EAS 208","CIE 340","CIE 343","CIE 354","STA 301","CIE 341",...X("CIE 4XX",3),"CIE 494"],
+ "Business Administration (BS)":["MGA 201","ECO 182","MTH 131","UBS 101","ECO 181","MGA 202","MGQ 301","MGS 351","MGM 301","MKT 311","MGF 301","MGO 302",...X("MGB 4XX",4),"MGM 497"],
+ "Economics (BA)":["ECO 181","ECO 182","MTH 141","UBS 101","STA 119","ECO 380","ECO 405","ECO 406","ECO 481",...X("ECO 4XX",5)],
+ "Psychology (BA)":["PSY 101","BIO 200","UBS 101","PSY 207","SOC 101","PSY 230","PSY 321","PSY 322","PSY 336","PSY 341","PSY 351",...X("PSY 4XX",3)],
+ "Nursing (BS)":["BIO 200","CHE 101","PSY 101","UBS 101","NUR 250","BIO 201","MIC 301","BIO 350","STA 119","PSY 336","NUR 301","NUR 305","NUR 307","NUR 351","NUR 361","NUR 352","NUR 401","NUR 451"],
+ "Communication (BA)":["COM 101","COM 125","UBS 101","SOC 101","COM 217","COM 240","PSY 101","COM 301","COM 336","COM 337","COM 350",...X("COM 4XX",4),"COM 499"],
+ "Architecture (BS)":["ARC 101","ARC 121","MTH 141","ARC 122","PHY 101","ARC 211","ARC 221","ARC 241","ARC 222","ARC 242","ARC 362","ARC 321","ARC 322",...X("ARC 4XX",2),"ARC 403"]
+};
+const CAREERS={
+ "Computer Science (BS)":["Software engineer","Machine learning / AI engineer","Data scientist","Cybersecurity analyst","Product engineer"],
+ "Computer Engineering (BS)":["Embedded systems engineer","Hardware design engineer","Firmware developer","Robotics engineer"],
+ "Electrical Engineering (BS)":["Power systems engineer","Electronics design engineer","Controls engineer","RF / telecom engineer"],
+ "Mechanical Engineering (BS)":["Design engineer","Manufacturing engineer","Automotive engineer","Energy / HVAC engineer"],
+ "Aerospace Engineering (BS)":["Aerospace design engineer","Propulsion engineer","Flight test engineer","Systems engineer"],
+ "Biomedical Engineering (BS)":["Medical device engineer","Clinical engineer","Biomechanics researcher","Regulatory affairs specialist"],
+ "Mathematics (BS)":["Actuary","Quantitative analyst","Data analyst","Math teacher","Researcher (graduate school)"],
+ "Physics (BS)":["Research scientist","Engineering physicist","Data scientist","Medical physicist (with graduate study)"],
+ "Biological Sciences (BS)":["Pre-medicine / physician pathway","Lab research scientist","Biotech associate","Public health specialist"],
+ "Pharmaceutical Sciences (BS)":["Pharmaceutical scientist","Clinical research associate","PharmD pathway","Regulatory scientist"],
+ "Chemistry (BS)":["Chemist","Materials scientist","Quality control analyst","Environmental chemist"],
+ "Environmental Engineering (BS)":["Water resources engineer","Environmental consultant","Sustainability engineer","Air quality engineer"],
+ "Business Administration (BS)":["Financial analyst","Marketing manager","Management consultant","Operations analyst","Entrepreneur"],
+ "Economics (BA)":["Economic analyst","Policy analyst","Banking analyst","Data analyst"],
+ "Psychology (BA)":["Clinical psychology pathway (graduate)","HR specialist","UX researcher","Counselor (graduate)"],
+ "Nursing (BS)":["Registered nurse","Pediatric nurse","Critical care nurse","Nurse practitioner (graduate)"],
+ "Communication (BA)":["PR specialist","Social media manager","Journalist","Content strategist"],
+ "Architecture (BS)":["Architectural designer","Urban planner","Sustainable design consultant","BIM specialist"]
+};
+const PREP={
+ math:{res:"Khan Academy — Precalculus and AP Calculus AB",weeks:["Algebra, functions and graphs","Trigonometry and exponentials","Limits and intro to derivatives","Timed placement-style practice"]},
+ cs:{res:"Harvard CS50x (free online)",weeks:["Variables, conditions and loops","Functions, arrays and strings","Build one small project","Intro to data structures (lists, maps)"]},
+ phys:{res:"Khan Academy — Physics",weeks:["Kinematics and vectors","Newton's laws","Work, energy and momentum","Mixed problem sets"]},
+ chem:{res:"Khan Academy — Chemistry",weeks:["Atomic structure and periodic trends","Bonding and molecular shape","Stoichiometry","Equilibrium and acids/bases"]},
+ bio:{res:"Khan Academy — Biology",weeks:["Cells and organelles","Genetics and DNA","Evolution and ecology","Practice questions and diagrams"]},
+ eng:{res:"Purdue OWL (online writing lab)",weeks:["Essay structure and thesis statements","Paragraphing and evidence","Citations (APA / MLA)","Write and revise a 1,000-word essay"]},
+ econ:{res:"Khan Academy — Economics",weeks:["Supply and demand","Elasticity and markets","GDP, inflation and unemployment","Graph-based practice"]},
+ soc:{res:"Khan Academy — Statistics and probability",weeks:["Research questions and methods","Descriptive statistics","Reading a journal article","Short literature summary"]},
+ art:{res:"A daily sketchbook + online design fundamentals",weeks:["Daily sketching and line work","Composition and perspective","Colour and form","Assemble 3 portfolio pieces"]}
+};
+
+/* ---------- Plan engine ---------- */
+let plans={}; try{plans=JSON.parse(store.get("ubadv_plans")||"{}")}catch(e){plans={}}
+const savePlans=()=>store.set("ubadv_plans",JSON.stringify(plans));
+const SEM_NAMES=["Fall · Year 1","Spring · Year 1","Fall · Year 2","Spring · Year 2","Fall · Year 3","Spring · Year 3","Fall · Year 4","Spring · Year 4"];
+const isEng=name=>/Engineering/.test(name);
+function needsMathPrep(name){ const a=last?last.a.area:{}; return (TRACK[name]||[]).includes("MTH 141") && a.math!=null && a.math<80; }
+function buildPlan(name,{light=false,prep=needsMathPrep(name)}={}){
+  let req=[...(TRACK[name]||[])];
+  if(!req.includes("ENG 105")) req.push("ENG 105");
+  const sem=req.find(c=>c==="UBS 101"||c==="EAS 199");
+  req=[...(sem?[sem]:[]),"ENG 105",...req.filter(c=>c!==sem&&c!=="ENG 105")];   // seminar + writing go first
+  if(prep&&req.includes("MTH 141")) req.splice(req.indexOf("MTH 141"),0,"MTH 115");
+  const extraPre=prep?{"MTH 141":["MTH 115"]}:{};
+  const preOf=c=>[...((CAT[c]||{}).pre||[]),...(extraPre[c]||[])].filter(p=>req.includes(p));
+  const sems=Array.from({length:8},()=>[]); const placed={}; let gen=0; let uid=0;
+  const pending=req.map(c=>({c,id:++uid}));
+  for(let s=0;s<8;s++){
+    const target=(s===0&&light)?12:15; let cr=0, core=0;
+    const FOUND=c=>c==="UBS 101"||c==="EAS 199"||c==="ENG 105";   // count as the term's gen-ed room
+    const left=pending.reduce((t,it)=>t+(FOUND(it.c)?0:((CAT[it.c]||{}).cr||3)),0);
+    const cap=Math.max(target-3, Math.ceil(left/(8-s)));          // leave room for ~1 gen-ed a term when possible
+    for(const it of [...pending]){
+      const info=CAT[it.c]; if(!info) continue;
+      const f=FOUND(it.c);
+      if(cr+info.cr>target+2 || (!f&&core+info.cr>cap+1)) continue;
+      if(preOf(it.c).every(p=>placed[p]!==undefined&&placed[p]<s)){
+        sems[s].push({id:it.id,code:it.c}); cr+=info.cr; if(!f) core+=info.cr; placed[it.c]=Math.min(placed[it.c]??99,s);
+        pending.splice(pending.indexOf(it),1);
+        if(core>=cap||cr>=target) break;
+      }
+    }
+    while(cr<target-1){ sems[s].push({id:++uid,code:gen<6?"GEN":"FREE",label:null}); cr+=3; gen++; }
+  }
+  pending.forEach((it,i)=>sems[7-(i%2)].push({id:it.id,code:it.c}));
+  const semCr=i=>sems[i].reduce((t,c)=>t+credits(c),0);
+  let tot=sems.flat().reduce((t,c)=>t+credits(c),0);
+  while(tot<120){ const i=[3,4,5,6,7].sort((a,b)=>semCr(a)-semCr(b))[0]; sems[i].push({id:++uid,code:"FREE"}); tot+=3; }
+  return {name,light,prep,sems,gpa:Array(8).fill(""),ai:null,v:2};
+}
+function getPlanFresh(name){ const p=plans[name]; return p&&p.v===2?p:null; }
+function credits(c){return c.code==="GEN"||c.code==="FREE"?3:(CAT[c.code]?CAT[c.code].cr:3);}
+function courseLabel(c){
+  if(c.code==="GEN") return {code:"Gen Ed",name:c.label||"UB Curriculum: Pathway course",gen:true};
+  if(c.code==="FREE") return {code:"Elective",name:c.label||"Free elective",gen:true};
+  const i=CAT[c.code]||{name:c.code}; return {code:c.code,name:i.name};
+}
+function getPlan(name){ if(!getPlanFresh(name)) {plans[name]=buildPlan(name); savePlans();} return plans[name]; }
+function planIssues(p){
+  const where={}; p.sems.forEach((s,i)=>s.forEach(c=>{ if(CAT[c.code]) where[c.code]=Math.min(where[c.code]??99,i); }));
+  const issues=[]; const flagged=new Set();
+  p.sems.forEach((s,i)=>{
+    s.forEach(c=>{ const pre=[...((CAT[c.code]||{}).pre||[]),...(p.prep&&c.code==="MTH 141"?["MTH 115"]:[])];
+      pre.forEach(q=>{ if(where[q]===undefined) return; if(where[q]>=i){ issues.push({type:"pre",sem:i,msg:`${c.code} needs ${q} first — ${q} is in ${SEM_NAMES[where[q]]}.`}); flagged.add(c.id);} }); });
+    const cr=s.reduce((t,c)=>t+credits(c),0);
+    if(cr>18) issues.push({type:"load",sem:i,msg:`${SEM_NAMES[i]} has ${cr} credits — above the usual 18-credit maximum.`});
+    else if(cr<12) issues.push({type:"load",sem:i,msg:`${SEM_NAMES[i]} has ${cr} credits — below full-time (12).`});
+  });
+  return {issues,flagged};
+}
+
+/* ---------- Scoring helpers (shared by compare / what-if / minors) ---------- */
+function scoreWith(area,overall,interests=picked,goal=$("#goal").value.trim()){
+  return PROGRAMS.map(p=>{
+    let ws=0,sum=0;
+    for(const [k,w] of Object.entries(p.w)){ const v=area[k]!=null?area[k]:Math.min(overall,65); sum+=v*w; ws+=w; }
+    const hits=p.tags.filter(t=>interests.has(t)); const interest=interests.size?hits.length/Math.min(p.tags.length,3):.5;
+    const g=goal&&p.goals.test(goal);
+    return {p,score:Math.max(0,Math.min(99,(sum/ws)*.6+Math.min(interest,1)*30+(g?10:0)))};
+  }).sort((a,b)=>b.score-a.score);
+}
+function minorsFor(major){
+  if(!last) return [];
+  const majorP=PROGRAMS.find(p=>p.name===major);
+  return scoreWith(last.a.area,last.a.overall).filter(x=>x.p.name!==major&&!(isEng(major)&&isEng(x.p.name))&&x.p.name!=="Nursing (BS)"&&x.p.name!=="Architecture (BS)")
+    .map(x=>{const extra=x.p.tags.filter(t=>picked.has(t)&&!(majorP.tags.includes(t))); return {...x,extra,rank:x.score+extra.length*6};})
+    .sort((a,b)=>b.rank-a.rank).slice(0,3)
+    .map(x=>({minor:x.p.name.replace(/ \((BS|BA)\)/,""),why:x.extra.length?`adds your interest in ${x.extra.join(", ")}`:`a strong ${Math.round(x.score)}% fit with your results`}));
+}
+
+/* ---------- Tabs ---------- */
+let focusProg=null, curTab="report";
+function setTab(t){
+  curTab=t; $$(".tabs [data-tab]").forEach(b=>{const on=b.dataset.tab===t;b.classList.toggle("on",on);b.setAttribute("aria-selected",on);});
+  $$(".pane").forEach(p=>p.hidden=p.dataset.pane!==t);
+  if(t==="advisor") renderAdvisor(); if(t==="plan") renderPlan(); if(t==="compare") renderCompare(); if(t==="whatif") renderWhatIf();
+}
+$$(".tabs [data-tab]").forEach(b=>b.onclick=()=>{setTab(b.dataset.tab); $(".tabs").scrollIntoView({behavior:"smooth",block:"start"});});
+$(".tabs").addEventListener("keydown",e=>{ if(!/Arrow(Left|Right)/.test(e.key)) return; const bs=[...$$(".tabs [data-tab]")]; let i=bs.findIndex(b=>b.dataset.tab===curTab); i=(i+(e.key==="ArrowRight"?1:-1)+bs.length)%bs.length; setTab(bs[i].dataset.tab); bs[i].focus(); });
+function progSelect(id){
+  const top=last?last.res.recs.map(r=>r.name):[]; const rest=PROGRAMS.map(p=>p.name).filter(n=>!top.includes(n));
+  return `<label class="psel">Program <select id="${id}">${top.length?`<optgroup label="Your top matches">${top.map(n=>`<option${n===focusProg?" selected":""}>${esc(n)}</option>`).join("")}</optgroup>`:""}<optgroup label="All programs">${rest.map(n=>`<option${n===focusProg?" selected":""}>${esc(n)}</option>`).join("")}</optgroup></select></label>`;
+}
+function bindProgSelect(id,fn){ const s=$("#"+id); if(s) s.onchange=()=>{focusProg=s.value; fn();}; }
+function afterResults(){ focusProg=last.res.recs[0].name; $(".tabs").hidden=false; setTab("report"); }
+
+/* ---------- Academic Advisor ---------- */
+let checks={}; try{checks=JSON.parse(store.get("ubadv_checks")||"{}")}catch(e){}
+function renderAdvisor(){
+  const P=PROGRAMS.find(p=>p.name===focusProg), a=last.a, lvl=$("#level").value;
+  const keys=Object.entries(P.w).sort((x,y)=>y[1]-x[1]);
+  const status=v=>v==null?["Not taken","miss"]:v>=85?["Ready","ok"]:v>=75?["Review","mid"]:["Gap","bad"];
+  const weak=keys.filter(([k])=>a.area[k]==null||a.area[k]<80).map(([k])=>k);
+  const prep=needsMathPrep(P.name);
+  const list=[
+    ["cat",`Read the ${P.name} curriculum in the UB Undergraduate Catalog`],
+    ...(P.w.math?[["place",prep?"Take the math placement assessment — plan for Precalculus (MTH 115) first":"Take the math placement assessment to confirm Calculus I readiness"]]:[]),
+    ...(lvl.startsWith("International")?[["intl","Arrange credential evaluation and check English-proficiency requirements"]]:[]),
+    ...(lvl.startsWith("Transfer")?[["xfer","Request a transfer-credit evaluation for completed courses"]]:[]),
+    ["orient","Attend orientation and meet your assigned academic advisor"],
+    ["reg","Register for your first-semester courses (see the 4-Year Plan tab)"],
+    ...(weak.length?[["tutor",`Book tutoring early for ${weak.map(k=>AREAS[k].toLowerCase()).join(", ")}`]]:[]),
+    ["minor","Choose a minor or concentration by the end of Year 2"],
+    ["intern","Line up an internship, co-op or research position by Year 3"],
+    ["grad","Run a degree audit each semester and apply to graduate in Year 4"]
+  ];
+  const ck=checks[P.name]||{}; const done=list.filter(([k])=>ck[k]).length;
+  const qs=[
+    ...(P.w.math?[`Given my ${a.area.math!=null?Math.round(a.area.math)+"% in math":"math background"}, which math course should I start in?`]:[]),
+    `Is ${P.name} a direct-admit major, or do I need to meet requirements to be accepted into it?`,
+    "Which of my previous exams (AP, IB, A-levels, CBSE, etc.) can earn UB credit?",
+    ...(weak.length?[`What tutoring or support is available for ${AREAS[weak[0]].toLowerCase()}?`]:[]),
+    `Which minors pair well with ${P.name.replace(/ \(.*\)/,"")}?`,
+    "When should I start looking for internships or undergraduate research?",
+    ...(lvl.startsWith("International")?["What are the credential-evaluation and English-proficiency requirements for me?"]:[]),
+    ...(lvl.startsWith("Transfer")?["How will my completed credits apply to this degree?"]:[])
+  ];
+  const minors=minorsFor(P.name);
+  const prepAreas=weak.filter(k=>PREP[k]).slice(0,3);
+  $("#paneAdvisor").innerHTML=`
+   <div class="pane-head"><div><h2>Academic Advisor</h2><p class="hint">A personal advising session for your chosen program.</p></div>${progSelect("advSel")}</div>
+   <div class="grid2">
+    <section class="box"><h3>Readiness scorecard</h3>
+      ${keys.map(([k,w])=>{const v=a.area[k];const [lab,cls]=status(v);return `<div class="rd"><div class="rd-top"><span>${AREAS[k]} <small>${w>=3?"core":w>=2?"important":"supporting"}</small></span><span class="chipst ${cls}">${lab}${v!=null?" · "+Math.round(v)+"%":""}</span></div><div class="rbar"><i class="${cls}" style="width:${v??0}%"></i></div></div>`;}).join("")}
+      ${prep?`<p class="callout">Your math average is ${Math.round(a.area.math)}%. The advisor recommends starting with <b>Precalculus</b> before Calculus I — the 4-Year Plan already includes it.</p>`:""}
+    </section>
+    <section class="box"><h3>Your advising checklist <span class="count">${done}/${list.length}</span></h3>
+      <div class="pbar"><i style="width:${done/list.length*100}%"></i></div>
+      <ul class="checklist">${list.map(([k,t])=>`<li><label><input type="checkbox" data-ck="${k}"${ck[k]?" checked":""}> <span>${esc(t)}</span></label></li>`).join("")}</ul>
+    </section>
+   </div>
+   <div class="grid2">
+    <section class="box"><h3>Prep plan before your first semester</h3>
+      ${prepAreas.length?prepAreas.map(k=>`<div class="prep"><b>${AREAS[k]}</b> <small>· ${esc(PREP[k].res)}</small><ol>${PREP[k].weeks.map((w,i)=>`<li><span>Week ${i+1}</span>${esc(w)}</li>`).join("")}</ol></div>`).join(""):`<p class="ok-note">✓ No preparation gaps for this program — keep your skills fresh over the summer.</p>`}
+    </section>
+    <section class="box"><h3>Questions to ask your advisor</h3>
+      <ol class="qlist" id="qlist">${qs.map(q=>`<li>${esc(q)}</li>`).join("")}</ol>
+      <div class="row"><button class="btn ghost sm" id="qCopy">Copy questions</button><button class="btn sm" id="aiNotes">✨ Get AI advisor notes</button></div>
+      <div id="aiNotesOut"></div>
+    </section>
+   </div>
+   <div class="grid2">
+    <section class="box"><h3>Where this degree can lead</h3><ul class="tags">${(CAREERS[P.name]||[]).map(c=>`<li>${esc(c)}</li>`).join("")}</ul><p class="small">Example roles only — many need further study or experience.</p></section>
+    <section class="box"><h3>Suggested minors</h3>${minors.length?`<ul class="minors">${minors.map(m=>`<li><b>${esc(m.minor)}</b><span>${esc(m.why)}</span></li>`).join("")}</ul><p class="small">Confirm which minors are offered in the UB catalog.</p>`:"<p class='small'>Upload results to see minor ideas.</p>"}</section>
+   </div>`;
+  bindProgSelect("advSel",renderAdvisor);
+  $$("#paneAdvisor [data-ck]").forEach(c=>c.onchange=()=>{(checks[P.name]=checks[P.name]||{})[c.dataset.ck]=c.checked; store.set("ubadv_checks",JSON.stringify(checks)); renderAdvisor();});
+  $("#qCopy").onclick=()=>copyText([...$$("#qlist li")].map((l,i)=>`${i+1}. ${l.textContent}`).join("\n"),"Questions copied.");
+  $("#aiNotes").onclick=()=>aiAdvisorNotes(P);
+}
+async function aiAdvisorNotes(P){
+  const out=$("#aiNotesOut");
+  if(!apiKey){ out.innerHTML=`<p class="callout">AI is locked. Tap <b>Unlock AI</b> in the header to get personalised notes.</p>`; return; }
+  out.innerHTML=`<div class="mini-load"><span class="spinner"></span>The advisor is thinking…</div>`;
+  try{
+    const raw=await gemini({
+      systemInstruction:{parts:[{text:"You are a careful University at Buffalo academic advisor. Think before answering. Use only the evidence given; cite the student's numbers. No invented requirements, deadlines or costs. Each note under 30 words."}]},
+      contents:[{role:"user",parts:[{text:`Program: ${P.name}\nEvidence: ${JSON.stringify(evidence(last.a))}\nGive 3-4 advising notes (strategy for success in this program for THIS student) and 3 extra questions they should ask their advisor.`}]}],
+      generationConfig:{temperature:.4,responseMimeType:"application/json",thinkingConfig:{thinkingLevel:"low"},responseSchema:{type:"OBJECT",required:["notes","questions"],properties:{notes:{type:"ARRAY",items:{type:"STRING"}},questions:{type:"ARRAY",items:{type:"STRING"}}}}}
+    },{timeout:40000});
+    const j=JSON.parse(raw);
+    out.innerHTML=`<div class="ai-box"><span class="src">Gemini AI</span><ul>${(j.notes||[]).map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
+    (j.questions||[]).forEach(q=>{const li=document.createElement("li");li.className="new";li.textContent=q;$("#qlist").appendChild(li);});
+  }catch(e){ out.innerHTML=`<p class="callout">Couldn't get AI notes: ${esc(e.message)}</p>`; }
+}
+
+/* ---------- 4-Year Plan ---------- */
+function renderPlan(){
+  const p=getPlan(focusProg); const {issues,flagged}=planIssues(p);
+  const semCr=p.sems.map(s=>s.reduce((t,c)=>t+credits(c),0)); const total=semCr.reduce((a,b)=>a+b,0);
+  const gp=p.gpa.map((g,i)=>[parseFloat(g),semCr[i]]).filter(([g])=>!isNaN(g)&&g>=0&&g<=4);
+  const cum=gp.length?gp.reduce((t,[g,c])=>t+g*c,0)/gp.reduce((t,[,c])=>t+c,0):null;
+  const aiTip=i=>p.ai&&p.ai.semesters?((p.ai.semesters.find(x=>x.semester===i+1)||{}).tip||""):"";
+  $("#panePlan").innerHTML=`
+   <div class="pane-head"><div><h2>4-Year Degree Plan</h2><p class="hint">Eight semesters, about 15 credits each, with prerequisites in order. Click any course to move it or swap a gen-ed.</p></div>${progSelect("planSel")}</div>
+   <div class="plan-bar">
+     <div class="credits"><b>${total}</b> / 120 credits<div class="pbar"><i style="width:${Math.min(100,total/120*100)}%"></i></div></div>
+     <label class="tog"><input type="checkbox" id="optLight"${p.light?" checked":""}> Lighter first semester</label>
+     <label class="tog"><input type="checkbox" id="optPrep"${p.prep?" checked":""}${(TRACK[p.name]||[]).includes("MTH 141")?"":" disabled"}> Start with Precalculus</label>
+     <span class="grow"></span>
+     <button class="btn ghost sm" id="planReset">Reset</button>
+     <button class="btn ghost sm" id="planCsv">⤓ CSV</button>
+     <button class="btn sm" id="planAi">✨ AI review</button>
+   </div>
+   ${issues.length?`<div class="issues"><b>${issues.length} thing${issues.length>1?"s":""} to fix</b><ul>${issues.map(x=>`<li>${esc(x.msg)}</li>`).join("")}</ul></div>`:`<div class="issues ok">✓ Prerequisites are in order and every semester is a full-time load.</div>`}
+   ${p.ai?`<div class="ai-box"><span class="src">Gemini AI review</span><p>${esc(p.ai.overview||"")}</p>${(p.ai.risks||[]).length?`<ul>${p.ai.risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`:""}</div>`:""}
+   <div class="sems">${p.sems.map((s,i)=>`
+     <section class="sem${semCr[i]>18||semCr[i]<12?" warn":""}" data-sem="${i}">
+       <header><b>${SEM_NAMES[i]}</b><span>${semCr[i]} cr</span></header>
+       <ul>${s.map(c=>{const L=courseLabel(c);return `<li class="crs${L.gen?" gen":""}${flagged.has(c.id)?" bad":""}" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(L.code+" "+L.name)}"><span class="cc">${esc(L.code)}</span><span class="cn">${esc(L.name)}</span><span class="cr">${credits(c)}</span></li>`;}).join("")}</ul>
+       ${aiTip(i)?`<p class="tip">💡 ${esc(aiTip(i))}</p>`:""}
+       <footer><label>Expected GPA <input type="number" min="0" max="4" step="0.1" value="${esc(p.gpa[i])}" data-gpa="${i}" placeholder="–"></label></footer>
+     </section>`).join("")}</div>
+   <div class="gpa-out">${cum!=null?`Projected cumulative GPA: <b>${cum.toFixed(2)}</b> over ${gp.reduce((t,[,c])=>t+c,0)} credits`:"Enter expected GPAs above to project your cumulative GPA."}</div>
+   <p class="small">Course numbers and sequences are illustrative. Your official plan comes from the UB catalog and your advisor's degree audit.</p>`;
+  bindProgSelect("planSel",renderPlan);
+  $("#optLight").onchange=e=>{plans[p.name]=buildPlan(p.name,{light:e.target.checked,prep:p.prep}); savePlans(); renderPlan(); toast("Plan rebuilt.");};
+  $("#optPrep").onchange=e=>{plans[p.name]=buildPlan(p.name,{light:p.light,prep:e.target.checked}); savePlans(); renderPlan(); toast("Plan rebuilt.");};
+  $("#planReset").onclick=()=>{const old=plans[p.name]; plans[p.name]=buildPlan(p.name); savePlans(); renderPlan(); toast("Plan reset.",{action:"Undo",onAction:()=>{plans[p.name]=old;savePlans();renderPlan();}});};
+  $("#planCsv").onclick=()=>{ const lines=[["Semester","Code","Course","Credits"].join(",")]; p.sems.forEach((s,i)=>s.forEach(c=>{const L=courseLabel(c);lines.push([SEM_NAMES[i],L.code,`"${L.name.replace(/"/g,"'")}"`,credits(c)].join(","));})); dl(`${p.name.replace(/\W+/g,"-")}-4-year-plan.csv`,lines.join("\n")); toast("Plan downloaded."); };
+  $("#planAi").onclick=()=>aiPlanReview(p);
+  $$("#panePlan [data-gpa]").forEach(inp=>inp.onchange=()=>{p.gpa[+inp.dataset.gpa]=inp.value; savePlans(); renderPlan();});
+  $$("#panePlan .crs").forEach(li=>{ li.onclick=e=>coursePop(p,+li.dataset.id,li); li.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();coursePop(p,+li.dataset.id,li);}}; });
+}
+function coursePop(p,id,anchor){
+  $$(".pop").forEach(x=>x.remove());
+  const si=p.sems.findIndex(s=>s.some(c=>c.id===id)); const c=p.sems[si].find(c=>c.id===id); const L=courseLabel(c); const info=CAT[c.code];
+  const pop=document.createElement("div"); pop.className="pop"; pop.setAttribute("role","dialog");
+  pop.innerHTML=`<b>${esc(L.code)} · ${esc(L.name)}</b><small>${credits(c)} credits${info&&info.pre.length?` · needs ${info.pre.join(", ")}`:""}</small>
+    <label>Move to <select data-mv>${SEM_NAMES.map((n,i)=>`<option value="${i}"${i===si?" selected":""}>${n}</option>`).join("")}</select></label>
+    ${L.gen?`<label>Choose course <select data-sw><option value="">${c.code==="GEN"?"UB Curriculum: Pathway course":"Free elective"}</option>${GEN_POOL.map(g=>`<option${g===c.label?" selected":""}>${esc(g)}</option>`).join("")}</select></label>`:""}
+    <button class="btn sm" data-ok>Done</button>`;
+  anchor.closest(".sem").appendChild(pop);
+  pop.querySelector("select").focus();
+  const close=()=>{pop.remove();};
+  pop.querySelector("[data-mv]").onchange=e=>{const to=+e.target.value; p.sems[si]=p.sems[si].filter(x=>x.id!==id); p.sems[to].push(c); savePlans(); renderPlan(); const {flagged}=planIssues(p); toast(flagged.has(id)?`Moved — but check prerequisites for ${L.code}.`:`Moved ${L.code} to ${SEM_NAMES[to]}.`);};
+  const sw=pop.querySelector("[data-sw]"); if(sw) sw.onchange=()=>{c.label=sw.value||null; savePlans(); renderPlan();};
+  pop.querySelector("[data-ok]").onclick=close;
+  pop.addEventListener("keydown",e=>{if(e.key==="Escape"){e.stopPropagation();close();anchor.focus();}});
+  setTimeout(()=>document.addEventListener("click",function h(ev){if(!pop.contains(ev.target)&&ev.target!==anchor){close();document.removeEventListener("click",h);}}),0);
+}
+async function aiPlanReview(p){
+  if(!apiKey){ toast("Unlock AI in the header to get an AI plan review."); return; }
+  const btn=$("#planAi"); btn.disabled=true; btn.innerHTML=`<span class="spinner sm"></span> Reviewing…`;
+  try{
+    const plan=p.sems.map((s,i)=>({semester:i+1,term:SEM_NAMES[i],courses:s.map(c=>{const L=courseLabel(c);return `${L.code} ${L.name} (${credits(c)})`;})}));
+    const raw=await gemini({
+      systemInstruction:{parts:[{text:"You are a University at Buffalo academic advisor reviewing a student's 4-year plan. Think step by step about workload balance, prerequisite order, and the student's weak areas. Be specific and practical, cite their numbers, each tip under 25 words. Don't invent policies."}]},
+      contents:[{role:"user",parts:[{text:`Program: ${p.name}\nStudent: ${JSON.stringify({...evidence(last.a),programs:undefined})}\nPlan: ${JSON.stringify(plan)}\nIssues detected: ${JSON.stringify(planIssues(p).issues.map(x=>x.msg))}`}]}],
+      generationConfig:{temperature:.4,responseMimeType:"application/json",thinkingConfig:{thinkingLevel:"low"},responseSchema:{type:"OBJECT",required:["overview","semesters","risks"],properties:{overview:{type:"STRING"},risks:{type:"ARRAY",items:{type:"STRING"}},semesters:{type:"ARRAY",items:{type:"OBJECT",required:["semester","tip"],properties:{semester:{type:"INTEGER"},tip:{type:"STRING"}}}}}}}
+    },{timeout:45000});
+    p.ai=JSON.parse(raw); savePlans(); renderPlan(); toast("AI review added to your plan.");
+  }catch(e){ toast("AI review failed: "+e.message); btn.disabled=false; btn.textContent="✨ AI review"; }
+}
+
+/* ---------- Compare ---------- */
+let cmpSel=null;
+function renderCompare(){
+  const all=scoreWith(last.a.area,last.a.overall); const byName=Object.fromEntries(all.map(x=>[x.p.name,x]));
+  if(!cmpSel) cmpSel=last.res.recs.slice(0,3).map(r=>r.name);
+  const cols=cmpSel.map(n=>({p:PROGRAMS.find(p=>p.name===n),s:(last.res.recs.find(r=>r.name===n)||byName[n]).score}));
+  const best=Math.max(...cols.map(c=>c.s));
+  const row=(label,fn)=>`<tr><th scope="row">${label}</th>${cols.map(c=>`<td>${fn(c)}</td>`).join("")}</tr>`;
+  $("#paneCompare").innerHTML=`
+   <div class="pane-head"><div><h2>Compare programs</h2><p class="hint">Pick up to three programs to compare side by side.</p></div></div>
+   <div class="cmp-pick">${PROGRAMS.map(p=>`<label class="chip${cmpSel.includes(p.name)?" on":""}"><input type="checkbox" value="${esc(p.name)}"${cmpSel.includes(p.name)?" checked":""}><span class="box"></span>${esc(p.name.replace(/ \((BS|BA)\)/,""))}</label>`).join("")}</div>
+   <div class="tablewrap"><table class="cmp"><thead><tr><th></th>${cols.map(c=>`<th scope="col">${esc(c.p.name)}</th>`).join("")}</tr></thead><tbody>
+    ${row("Your match",c=>`<b class="big${c.s===best?" win":""}">${Math.round(c.s)}%</b>`)}
+    ${row("School",c=>esc(c.p.school))}
+    ${row("Key subjects (your score)",c=>Object.entries(c.p.w).filter(([,w])=>w>=2).map(([k])=>`${AREAS[k]} <span class="${last.a.area[k]==null?"miss":last.a.area[k]>=85?"ok":last.a.area[k]>=75?"mid":"bad"}">${last.a.area[k]==null?"—":Math.round(last.a.area[k])+"%"}</span>`).join("<br>"))}
+    ${row("Matches your interests",c=>{const h=c.p.tags.filter(t=>picked.has(t));return h.length?h.map(esc).join(", "):"—";})}
+    ${row("Careers",c=>(CAREERS[c.p.name]||[]).slice(0,3).map(esc).join("<br>"))}
+    ${row("First semester",c=>getPlan(c.p.name).sems[0].map(x=>esc(courseLabel(x).code)).join(", "))}
+    ${row("Prep needed",c=>needsMathPrep(c.p.name)?"Precalculus first":Object.entries(c.p.w).filter(([k,w])=>w>=2&&(last.a.area[k]??0)<75).map(([k])=>AREAS[k]).join(", ")||"None")}
+   </tbody></table></div>`;
+  $$("#paneCompare .cmp-pick input").forEach(i=>i.onchange=()=>{ if(i.checked){ if(cmpSel.length>=3){i.checked=false;toast("You can compare up to 3 programs.");return;} cmpSel.push(i.value);} else { if(cmpSel.length<=1){i.checked=true;return;} cmpSel=cmpSel.filter(n=>n!==i.value);} renderCompare(); });
+}
+
+/* ---------- What-if simulator ---------- */
+let wi=null;
+function renderWhatIf(){
+  if(!wi) wi={...last.a.area};
+  $("#paneWhatif").innerHTML=`
+   <div class="pane-head"><div><h2>What-if simulator</h2><p class="hint">Drag a slider to see how improving (or adding) a subject changes your matches. Your real results aren't changed.</p></div><button class="btn ghost sm" id="wiReset">Reset to my results</button></div>
+   <div class="grid2">
+    <section class="box sliders">${Object.keys(AREAS).map(k=>{const on=wi[k]!=null;return `<div class="sl"><label><input type="checkbox" data-on="${k}"${on?" checked":""}> ${AREAS[k]}</label><input type="range" min="40" max="100" value="${on?Math.round(wi[k]):70}" data-k="${k}"${on?"":" disabled"} aria-label="${AREAS[k]} score"><output>${on?Math.round(wi[k])+"%":"—"}</output></div>`;}).join("")}</section>
+    <section class="box"><h3>Top matches in this scenario</h3><ol class="wi-list" id="wiList"></ol>
+    <p class="small">▲/▼ show change in match points versus your real results; ↑ shows places gained in the ranking.</p></section>
+   </div>`;
+  $$("#paneWhatif [data-k]").forEach(r=>r.oninput=()=>{wi[r.dataset.k]=+r.value; r.nextElementSibling.textContent=r.value+"%"; renderWhatIfList();});
+  $$("#paneWhatif [data-on]").forEach(c=>c.onchange=()=>{const k=c.dataset.on, r=$(`#paneWhatif [data-k="${k}"]`); if(c.checked){wi[k]=+r.value; r.disabled=false; r.nextElementSibling.textContent=r.value+"%";} else {delete wi[k]; r.disabled=true; r.nextElementSibling.textContent="—";} renderWhatIfList();});
+  $("#wiReset").onclick=()=>{wi={...last.a.area}; renderWhatIf();};
+  renderWhatIfList();
+}
+function renderWhatIfList(){
+  const base=scoreWith(last.a.area,last.a.overall); const baseRank=Object.fromEntries(base.map((x,i)=>[x.p.name,{i,s:x.score}]));
+  const vals=Object.values(wi); const ov=vals.length?Math.max(last.a.overall,0):last.a.overall;
+  const res=scoreWith(wi,ov).slice(0,6);
+  $("#wiList").innerHTML=res.map((x,i)=>{const b=baseRank[x.p.name];const d=x.score-b.s;const mv=b.i-i;return `<li><span class="nm">${esc(x.p.name)}</span><span class="sc">${Math.round(x.score)}%</span><span class="dl ${d>0.5?"up":d<-0.5?"dn":""}">${d>0.5?"▲ "+d.toFixed(0):d<-0.5?"▼ "+Math.abs(d).toFixed(0):"—"}</span>${mv>0?`<span class="mv">↑${mv}</span>`:""}</li>`;}).join("");
+}
+
+/* ---------- Program explorer ---------- */
+const exDlg=$("#exploreDlg");
+function renderExplore(){
+  const q=($("#exQ").value||"").toLowerCase(), sch=$("#exSchool").value;
+  const items=PROGRAMS.filter(p=>(!sch||p.school===sch)&&(!q||(p.name+" "+p.school+" "+p.tags.join(" ")+" "+(CAREERS[p.name]||[]).join(" ")).toLowerCase().includes(q)));
+  $("#exList").innerHTML=items.length?items.map(p=>`<details class="ex"><summary><b>${esc(p.name)}</b><span>${esc(p.school)}</span></summary>
+    <div class="ex-body"><p><b>Key subjects:</b> ${Object.entries(p.w).sort((a,b)=>b[1]-a[1]).map(([k])=>AREAS[k]).join(", ")}</p>
+    <p><b>Great if you like:</b> ${p.tags.map(esc).join(", ")}</p><p><b>Careers:</b> ${(CAREERS[p.name]||[]).map(esc).join(", ")}</p>
+    <p><b>Year 1:</b> ${buildPlan(p.name,{prep:false}).sems.slice(0,2).map((s,i)=>`${SEM_NAMES[i].split(" · ")[0]}: ${s.map(c=>courseLabel(c).code).join(", ")}`).join(" · ")}</p>
+    ${last?`<button class="btn sm" data-plan="${esc(p.name)}">Open 4-year plan</button>`:""}</div></details>`).join(""):`<p class="small">No programs match “${esc(q)}”.</p>`;
+  $$("#exList [data-plan]").forEach(b=>b.onclick=()=>{focusProg=b.dataset.plan; exDlg.close(); setTab("plan"); $("#results").scrollIntoView({behavior:"smooth"});});
+}
+$("#exSchool").innerHTML=`<option value="">All schools</option>`+[...new Set(PROGRAMS.map(p=>p.school))].map(s=>`<option>${esc(s)}</option>`).join("");
+$("#exQ").oninput=renderExplore; $("#exSchool").onchange=renderExplore;
+$$("[data-open-explore]").forEach(b=>b.onclick=()=>{renderExplore(); exDlg.showModal(); setTimeout(()=>$("#exQ").focus(),50);});
+
+/* ---------- Interest quiz ---------- */
+const QUIZ=[
+ ["A free Saturday — what sounds best?",[["Building an app or game",["coding","AI & data"]],["Taking apart a gadget or building a robot",["robotics","building things"]],["Volunteering at a clinic",["health & medicine","people & society"]],["Sketching or designing something",["design & art","writing"]]]],
+ ["Which class did you enjoy most?",[["Math",["math","AI & data"]],["Biology or chemistry",["biology","chemistry"]],["Physics",["space","building things"]],["English or social studies",["writing","people & society"]]]],
+ ["Pick a headline you'd click first",[["New AI model beats humans at…",["AI & data","coding"]],["Rover finds water on Mars",["space"]],["Breakthrough cancer drug approved",["health & medicine","chemistry"]],["Startup raises $50M",["business","economics"]]]],
+ ["In a group project you usually…",[["Crunch the numbers",["math","economics"]],["Build the prototype",["building things","robotics"]],["Lead and present",["business","people & society"]],["Write the report",["writing","psychology"]]]],
+ ["Which problem would you most like to solve?",[["Climate change and clean water",["environment","chemistry"]],["Mental health",["psychology","health & medicine"]],["Making cities and buildings better",["design & art","building things"]],["Smarter software for everyone",["coding","AI & data"]]]],
+ ["Your dream workplace",[["A tech company",["coding","AI & data"]],["A hospital or lab",["health & medicine","biology"]],["A design studio or newsroom",["design & art","writing"]],["Your own business",["business","economics"]]]]
+];
+let qi=0, qScore={};
+const quizDlg=$("#quizDlg");
+function renderQuiz(){
+  if(qi>=QUIZ.length){
+    const top=Object.entries(qScore).sort((a,b)=>b[1]-a[1]).filter(([,v])=>v>=2).slice(0,5).map(([k])=>k);
+    const pickedTop=top.length?top:Object.entries(qScore).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k])=>k);
+    $("#quizBody").innerHTML=`<p>Your strongest interests:</p><ul class="tags">${pickedTop.map(t=>`<li>${esc(cap(t))}</li>`).join("")}</ul><div class="modal-actions"><button class="btn" id="quizApply">Use these interests</button><button class="btn ghost" id="quizAgain">Retake</button></div>`;
+    $("#quizApply").onclick=()=>{pickedTop.forEach(t=>picked.add(t)); renderChips(); quizDlg.close(); toast(`Added ${pickedTop.length} interests from the quiz.`); $("#profile").scrollIntoView({behavior:"smooth"});};
+    $("#quizAgain").onclick=()=>{qi=0;qScore={};renderQuiz();};
+    return;
+  }
+  const [q,opts]=QUIZ[qi];
+  $("#quizBody").innerHTML=`<div class="qprog"><i style="width:${qi/QUIZ.length*100}%"></i></div><p class="small">Question ${qi+1} of ${QUIZ.length}</p><h4>${esc(q)}</h4><div class="qopts">${opts.map(([t],i)=>`<button class="qopt" data-i="${i}">${esc(t)}</button>`).join("")}</div>`;
+  $$("#quizBody .qopt").forEach(b=>b.onclick=()=>{opts[+b.dataset.i][1].forEach(t=>qScore[t]=(qScore[t]||0)+1); qi++; renderQuiz();});
+  $("#quizBody .qopt").focus();
+}
+$$("[data-open-quiz]").forEach(b=>b.onclick=()=>{qi=0;qScore={};renderQuiz();quizDlg.showModal();});
+
+/* ---------- Saved profiles ---------- */
+const profSel=$("#profSel");
+const getProfiles=()=>{try{return JSON.parse(store.get("ubadv_profiles")||"[]")}catch(e){return []}};
+function renderProfiles(){ const ps=getProfiles(); profSel.innerHTML=`<option value="">Saved profiles (${ps.length})</option>`+ps.map((p,i)=>`<option value="${i}">${esc(p.name)} · ${esc(p.date)}</option>`).join(""); $("#profDel").hidden=!ps.length; }
+$("#profSave").onclick=()=>{ if(!rows.length){toast("Add some results first.");return;} const ps=getProfiles(); const name=meta.student||`Profile ${ps.length+1}`; const i=ps.findIndex(p=>p.name===name); const entry={name,date:new Date().toLocaleDateString(),snap:snapshot()}; if(i>=0) ps[i]=entry; else ps.push(entry); store.set("ubadv_profiles",JSON.stringify(ps.slice(-12))); renderProfiles(); toast(`Saved profile “${name}”.`); };
+profSel.onchange=()=>{ const p=getProfiles()[+profSel.value]; if(!p) return; applySnap(p.snap); profSel.value=""; toast(`Loaded “${p.name}”.`); };
+$("#profDel").onclick=()=>{ const ps=getProfiles(); const i=profSel.value===""?ps.length-1:+profSel.value; const gone=ps.splice(i,1)[0]; store.set("ubadv_profiles",JSON.stringify(ps)); renderProfiles(); if(gone) toast(`Deleted “${gone.name}”.`,{action:"Undo",onAction:()=>{const q=getProfiles();q.splice(i,0,gone);store.set("ubadv_profiles",JSON.stringify(q));renderProfiles();}}); };
+renderProfiles();
+
+/* ---------- Share link ---------- */
+const b64e=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+const b64d=s=>decodeURIComponent(escape(atob(s.replace(/-/g,"+").replace(/_/g,"/"))));
+function copyText(t,msg){ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(msg)).catch(()=>{const ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast(msg);}catch(e){toast("Copy failed — select and copy manually.");}ta.remove();}); }
+$("#shareBtn").onclick=()=>{ const s=snapshot(); const url=location.origin+location.pathname+"#s="+b64e(JSON.stringify({r:s.rows,m:s.meta,p:s.picked,g:s.goal,l:s.level})); copyText(url,"Share link copied — it opens this exact report."); };
+function loadShared(){ const m=location.hash.match(/[#&]s=([\w-]+)/); if(!m) return false;
+  try{ const j=JSON.parse(b64d(m[1])); applySnap({rows:j.r,meta:j.m,picked:j.p,goal:j.g,level:j.l}); window.history.replaceState(null,"",location.pathname); toast("Opened a shared report."); setTimeout(run,300); return true; }
+  catch(e){ toast("That share link is broken."); return false; } }
+
+/* ---------- Display: dark mode + text size ---------- */
+const root=document.documentElement;
+function setTheme(t){ root.dataset.theme=t; store.set("ubadv_theme",t); $("#themeBtn").setAttribute("aria-pressed",t==="dark"); $("#themeBtn").title=t==="dark"?"Switch to light mode":"Switch to dark mode"; $('meta[name="theme-color"]').content=t==="dark"?"#0b1a2e":"#005bbb"; }
+setTheme(store.get("ubadv_theme")||(matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
+$("#themeBtn").onclick=()=>{setTheme(root.dataset.theme==="dark"?"light":"dark");};
+const SIZES=[1,1.1,1.2,.92]; let sz=+(store.get("ubadv_size")||0)%SIZES.length;
+function setSize(i){ sz=i; root.style.setProperty("--zoom",SIZES[i]); store.set("ubadv_size",String(i)); $("#sizeBtn").title=`Text size: ${Math.round(SIZES[i]*100)}%`; }
+setSize(sz); $("#sizeBtn").onclick=()=>{setSize((sz+1)%SIZES.length); toast(`Text size ${Math.round(SIZES[sz]*100)}%`);};
+
+/* ---------- Voice input for chat ---------- */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition; const mic=$("#micBtn");
+if(!SR) mic.hidden=true; else {
+  let rec=null;
+  mic.onclick=()=>{ if(rec){rec.stop();return;} rec=new SR(); rec.lang="en-US"; rec.interimResults=true;
+    mic.classList.add("rec"); rec.onresult=e=>{chatIn.value=[...e.results].map(r=>r[0].transcript).join(""); autosize();};
+    rec.onend=()=>{mic.classList.remove("rec"); rec=null; if(chatIn.value.trim()) send(chatIn.value);};
+    rec.onerror=()=>{toast("Voice input isn't available right now.");}; rec.start(); };
+}
+
+/* ---------- Keyboard shortcuts ---------- */
+const keyDlg=$("#keysDlg");
+$$("[data-open-keys]").forEach(b=>b.onclick=()=>keyDlg.showModal());
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea,select,[contenteditable]")||e.metaKey||e.ctrlKey||e.altKey) return;
+  if(document.querySelector("dialog[open]")) return;
+  const k=e.key;
+  if(k==="?"){e.preventDefault();keyDlg.showModal();}
+  else if(k==="/"){e.preventDefault();openChat();}
+  else if(k==="d"){setTheme(root.dataset.theme==="dark"?"light":"dark");}
+  else if(k==="e"){$("[data-open-explore]").click();}
+  else if(k==="h"){goHome();}
+  else if(/^[1-5]$/.test(k)&&last&&shown){const t=["report","advisor","plan","compare","whatif"][+k-1]; setTab(t); $(".tabs").scrollIntoView({behavior:"smooth"});}
+});
+$$("dialog [data-close]").forEach(b=>{ if(!b.onclick) b.onclick=()=>b.closest("dialog").close(); });
+$$("dialog").forEach(d=>d.addEventListener("click",e=>{if(e.target===d)d.close();}));
 
 /* ---------- Demo data ---------- */
 const DEMO=`student,Arjun Mehta
@@ -1165,7 +1962,7 @@ how.addEventListener("click",e=>{if(e.target===how)how.close();});
 renderChips(); updateSteps();
 try{ const s=JSON.parse(store.get("ubadv_session")||"null"); if(s&&(s.rows||[]).length){ applySnap(s); if(s.meta&&s.meta.student==="Arjun Mehta"){const d=$("#demo");d.textContent="✓ Demo loaded";d.classList.add("done");d.disabled=true;} toast("Welcome back — your last session was restored.",{action:"Start fresh",onAction:restart,ms:6000}); } }catch(e){}
 restoring=false; save(); netUI();
-if(location.hash&&$(location.hash)) setTimeout(()=>$(location.hash).scrollIntoView(),50);
+if(!loadShared()&&location.hash&&/^#[a-z]+$/i.test(location.hash)&&$(location.hash)) setTimeout(()=>$(location.hash).scrollIntoView(),50);
 })();
 </script>
 </body>
