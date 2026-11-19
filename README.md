@@ -28,7 +28,20 @@ report ranking UB undergraduate programs, with step-by-step reasoning and an AI 
 - Compare up to 3 programs side by side · What-if simulator (sliders)
 - Program explorer with search/filter · 1-minute interest quiz
 - Saved profiles · share link that reopens the exact report
-- Dark mode · text size · keyboard shortcuts (press `?`) · session restore, undo, toasts
+- Keyboard shortcuts (press `?`) · session restore, undo, toasts
+
+## Statistical methodology
+Adapted, for an educational advising context, from published research by **Dr. Leonid Khinkis**
+(Professor of Teaching, Institute for Artificial Intelligence and Data Science, University at Buffalo):
+
+| Feature in the app | Method | Source |
+|---|---|---|
+| 90% intervals and P(#1) for every recommendation | Monte Carlo re-scoring (600 runs) with measurement error on grades and ±15% log-normal weight perturbation | Bucki, Khinkis, Malmberg, Parsons & Greco (2001), *Monte Carlo investigation of rival experimental designs for the Hill model* |
+| "Clear best fit / likely / close call" verdict | Identifiability of a unique optimum vs competing minima | Khinkis, Crotzer & Oprisan (2018), *Sizing up the regions of unique minima in the least squares nonlinear regression*, Math. Appl. 7 |
+| "Most informative next result" | D-optimality: the extra grade that most reduces det Cov of the top-3 match scores | Khinkis, Krzyzanski, Jusko & Greco (2009), *D-optimal designs for parameter estimation for indirect pharmacodynamic response models*, J Pharmacokinet Pharmacodyn 36 |
+| Readiness curves in the Academic Advisor | 4-parameter Hill (sigmoid) model R(x)=E0+(Emax−E0)·xʰ/(xʰ+EC50ʰ) | Khinkis, Levasseur, Faessel & Greco (2003), *Optimal design for estimating parameters of the 4-parameter Hill model* |
+
+These adaptations have not been reviewed by Dr. Khinkis.
 
 ## AI access
 The Gemini API key is stored **only encrypted** (AES-256-GCM, PBKDF2-SHA256 with 250k iterations)

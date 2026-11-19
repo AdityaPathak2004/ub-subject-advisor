@@ -302,7 +302,6 @@ noscript div{background:#fff3cd;color:#664d03;padding:12px 20px;text-align:cente
 
 
 /* ===== Feature pack ===== */
-body{zoom:var(--zoom,1)}
 .icon-btn{width:34px;height:34px;display:grid;place-items:center;border-radius:2px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
 .icon-btn:hover{background:rgba(255,255,255,.24)}.icon-btn svg{width:18px;height:18px}
 .subnav kbd{font-size:11px;border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:0 5px}
@@ -321,9 +320,9 @@ body{zoom:var(--zoom,1)}
 .psel select{font:inherit;font-size:14px;padding:7px 9px;border:1px solid #b9c2cf;border-radius:2px;background:#fff;max-width:300px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
 @media (max-width:820px){.grid2{grid-template-columns:1fr}}
-.box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
-.box h3{margin:0 0 12px;font-size:16px;color:var(--harriman);display:flex;align-items:center;gap:8px}
-.box .count{margin-left:auto;font-size:13px;color:var(--townsend);font-weight:600}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 12px;font-size:16px;color:var(--harriman);display:flex;align-items:center;gap:8px}
+.panel .count{margin-left:auto;font-size:13px;color:var(--townsend);font-weight:600}
 .rd{margin-bottom:12px}.rd-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px;gap:8px}
 .rd small{color:var(--townsend);font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin-left:4px}
 .chipst{font-size:12px;font-weight:700;padding:1px 8px;border-radius:10px;white-space:nowrap}
@@ -422,34 +421,7 @@ table.keys td{padding:6px 8px;border:0}table.keys{margin:0}
 kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;border:1px solid #c3cbd6;border-bottom-width:2px;border-radius:4px;padding:1px 6px;background:#f7f9fc;color:var(--ink)}
 .chat .mic{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ub-blue);cursor:pointer;display:grid;place-items:center;align-self:flex-end}
 .chat .mic svg{width:18px;height:18px}.chat .mic.rec{background:var(--autumn);color:#fff;border-color:var(--autumn);animation:blink 1s infinite}
-@media print{ .tabs,.pane-head .psel,.plan-bar .btn,.plan-bar .tog,.pop,.cmp-pick,#wiReset{display:none!important} .pane{animation:none} .sem,.box{box-shadow:none;break-inside:avoid} .sems{grid-template-columns:repeat(2,1fr)} }
-
-/* ===== Dark mode ===== */
-[data-theme=dark]{--bg:#0e1621;--ink:#e6ebf2;--line:#2a3646;--townsend:#9aa7b8;--harriman:#cfe0f7;--shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);color-scheme:dark}
-[data-theme=dark] body{background:var(--bg);color:var(--ink)}
-[data-theme=dark] .topbar{background:#0b3d7a}[data-theme=dark] .subnav,[data-theme=dark] footer{background:#081423}
-[data-theme=dark] .hero{background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 22px),linear-gradient(120deg,#0a2f5c,#0b3d7a 60%,#114a8f)}
-[data-theme=dark] .stepper,[data-theme=dark] .card,[data-theme=dark] .box,[data-theme=dark] .rec,[data-theme=dark] .sem,[data-theme=dark] .plan-bar,[data-theme=dark] .tablewrap,[data-theme=dark] .think,[data-theme=dark] .reason,[data-theme=dark] .ex,[data-theme=dark] .qopt,[data-theme=dark] .chip,[data-theme=dark] .pop,[data-theme=dark] dialog,[data-theme=dark] .chat,[data-theme=dark] .sugs,[data-theme=dark] .chat form,[data-theme=dark] .mbar,[data-theme=dark] .toTop,[data-theme=dark] .chat .mic{background:#152131;color:var(--ink);border-color:var(--line)}
-[data-theme=dark] .stepper .dot{background:#152131}
-[data-theme=dark] input[type=text],[data-theme=dark] select,[data-theme=dark] textarea,[data-theme=dark] .cell,[data-theme=dark] td input,[data-theme=dark] .sem footer input,[data-theme=dark] .profrow select,[data-theme=dark] .psel select,[data-theme=dark] .pop select{background:#0e1621;color:var(--ink);border-color:#36465b}
-[data-theme=dark] .drop{background:#122033;border-color:#36557d}[data-theme=dark] .drop:hover{background:#16283f}
-[data-theme=dark] .btn.ghost{background:transparent;color:#8fc0ff;border-color:#4a87d6}[data-theme=dark] .btn.ghost:hover{background:#16283f;color:#cfe0f7}
-[data-theme=dark] .linkbtn,[data-theme=dark] a{color:#8fc0ff}
-[data-theme=dark] .chip.on,[data-theme=dark] .crs:hover,[data-theme=dark] .crs:focus,[data-theme=dark] .qopt:hover{background:#16304f;border-color:#4a87d6}
-[data-theme=dark] .chip.on{color:#fff}
-[data-theme=dark] .student,[data-theme=dark] .ai-box,[data-theme=dark] .tags li,[data-theme=dark] .prep li span,[data-theme=dark] .src{background:#16283f;color:#cfe0f7;border-color:#2b4a72}
-[data-theme=dark] .callout,[data-theme=dark] .sem .tip,[data-theme=dark] .ai-note{background:#2b2512;color:#f0e2b8}
-[data-theme=dark] .issues{background:#2b1a17;border-color:#5a2f27;color:#f4c9c0}[data-theme=dark] .issues.ok{background:#11291f;border-color:#1f5a46;color:#7fe0c6}
-[data-theme=dark] .crs .cn{color:var(--ink)}[data-theme=dark] .crs.gen .cn{color:#a9b4c3}[data-theme=dark] .crs.bad{background:#3a1d18;border-color:#7a3a2f}
-[data-theme=dark] .rbar,[data-theme=dark] .pbar,[data-theme=dark] .qprog,[data-theme=dark] .ring .track{background:#24303f;stroke:#24303f}
-[data-theme=dark] .msgs{background:#0e1621}[data-theme=dark] .msg.bot{background:#152131;border-color:var(--line)}
-[data-theme=dark] .placeholder{background:repeating-linear-gradient(135deg,#111b28 0 10px,#0f1824 10px 20px);border-color:#2a3646}
-[data-theme=dark] .tabs{background:var(--bg)}
-[data-theme=dark] table.cmp th,[data-theme=dark] table.cmp td,[data-theme=dark] .checklist li,[data-theme=dark] .minors li,[data-theme=dark] .wi-list li,[data-theme=dark] .sem header,[data-theme=dark] .sem footer{border-color:var(--line)}
-[data-theme=dark] table.cmp thead th{background:#0b3d7a}
-[data-theme=dark] .ok{color:#5fd6b9}[data-theme=dark] .mid{color:#f0c24f}[data-theme=dark] .bad{color:#ff8f78}
-[data-theme=dark] kbd{background:#0e1621;color:var(--ink);border-color:#36465b}
-[data-theme=dark] .paper{box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media print{ .tabs,.pane-head .psel,.plan-bar .btn,.plan-bar .tog,.pop,.cmp-pick,#wiReset{display:none!important} .pane{animation:none} .sem,.panel{box-shadow:none;break-inside:avoid} .sems{grid-template-columns:repeat(2,1fr)} }
 
 /* AI status */
 .ai-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:5px 11px;border-radius:2px;cursor:pointer;margin-left:auto}
@@ -537,6 +509,146 @@ body.has-mbar .fab{bottom:84px}
 @media print{.fab,.chat{display:none!important}}
 @media print{.steps,.subnav,.stepper,.toolbar .actions,.mbar,.hero .pills,footer .foot{display:none}.rec{box-shadow:none;break-inside:avoid}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* =====================================================================
+   REFINED ACADEMIC THEME (overhaul) — UB palette, serif display, calm surfaces
+   ===================================================================== */
+:root{--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Charter,Georgia,serif;--r:10px;--hair:#e4e8ee;--bg:#f6f7f9;
+  --shadow:0 1px 2px rgba(16,34,64,.04),0 8px 24px rgba(16,34,64,.06)}
+body{background:var(--bg);-webkit-font-smoothing:antialiased;letter-spacing:.005em}
+h1,h2,h3,.card h2,.pane-head h2,.toolbar h2,.panel h3,.think h3{font-family:var(--serif);letter-spacing:-.01em}
+/* header */
+.topbar{background:var(--ub-blue);position:relative;z-index:30}
+.topbar .wrap{height:68px;gap:16px}
+.logo-img{height:42px}
+.brand-sub{font-family:var(--serif);font-size:17px;color:#fff;opacity:.92;padding-left:16px;border-left:1px solid rgba(255,255,255,.35);line-height:1.1}
+.topnav{margin-left:auto;display:flex;align-items:center;gap:6px}
+.topnav>button:not(.ai-btn){background:none;border:0;color:#fff;font:inherit;font-size:14.5px;font-weight:500;padding:8px 12px;border-radius:6px;cursor:pointer;opacity:.9}
+.topnav>button:not(.ai-btn):hover{opacity:1;background:rgba(255,255,255,.1)}
+.ai-btn{margin-left:8px;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 13px;font-weight:600}
+.ai-btn:hover{background:rgba(255,255,255,.12)}
+@media (max-width:640px){.brand-sub{display:none}.topnav>button:not(.ai-btn){padding:8px 8px;font-size:14px}.logo-img{height:34px}}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:0;color:#fff;background:radial-gradient(1100px 500px at 85% -10%,#2f80d6 0%,transparent 60%),linear-gradient(160deg,#00408a 0%,var(--ub-blue) 45%,#0a66c9 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--solar)}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-art .hc path{fill:none;stroke:url(#hg);stroke-width:2.2;stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 2.4s .2s cubic-bezier(.6,0,.2,1) forwards}
+.hero-art .hc .h2{stroke-width:1.4;opacity:.55;animation-delay:.5s}.hero-art .hc .h3{stroke-width:1;opacity:.35;animation-delay:.8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .wrap.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;padding:72px 20px 76px}
+@media (max-width:900px){.hero .wrap.hero-grid{grid-template-columns:1fr;padding:48px 20px 52px}.hero-card{display:none}}
+.eyebrow{font-size:12.5px;letter-spacing:2px;color:var(--solar);margin-bottom:14px}
+.hero h1{font-family:var(--serif);font-size:58px;line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:0 0 18px}
+.hero h1 em{font-style:italic;color:var(--solar);font-weight:600}
+@media (max-width:640px){.hero h1{font-size:40px}}
+.hero p.lead{font-size:18px;line-height:1.6;max-width:560px;opacity:.92}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn.gold{background:var(--solar);border-color:var(--solar);color:var(--harriman);text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.btn.gold:hover{background:#ffd457;border-color:#ffd457;color:var(--harriman);transform:translateY(-1px)}
+.btn.glass{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.45);color:#fff}
+.btn.glass:hover{background:rgba(255,255,255,.18);border-color:#fff}
+.hero-stats{list-style:none;display:flex;gap:34px;padding:0;margin:40px 0 0;flex-wrap:wrap}
+.hero-stats li{display:flex;flex-direction:column;border-left:2px solid rgba(255,199,44,.8);padding-left:12px}
+.hero-stats b{font-family:var(--serif);font-size:30px;line-height:1}
+.hero-stats span{font-size:13px;opacity:.85;margin-top:4px}
+.hero-card{background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:22px 22px 18px;box-shadow:0 30px 60px rgba(0,20,60,.35);transform:perspective(1200px) rotateY(-8deg) rotateX(3deg);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:perspective(1200px) rotateY(-8deg) rotateX(3deg) translateY(-8px)}}
+.hc-top{font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--townsend);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.hc-dot{width:8px;height:8px;border-radius:50%;background:var(--lasalle);box-shadow:0 0 0 4px rgba(0,166,156,.15)}
+.hc-row{display:flex;justify-content:space-between;font-size:14px;margin-top:10px}.hc-row b{font-family:var(--serif);color:var(--harriman)}
+.hc-row.best b{color:var(--ub-blue)}
+.hc-bar{height:7px;background:#edf1f6;border-radius:4px;margin-top:6px;overflow:hidden}
+.hc-bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,#7fb0ea,var(--ub-blue));border-radius:4px;transform-origin:left;animation:grow 1.2s .6s cubic-bezier(.2,.8,.2,1) both}
+.hc-row.best+.hc-bar i{background:linear-gradient(90deg,var(--ub-blue),#003f86)}
+.hc-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:12px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--townsend)}
+.hc-badge{background:#e3f6f3;color:#007a72;font-weight:700;padding:3px 9px;border-radius:999px}
+/* stepper */
+.stepper{border-bottom:1px solid var(--hair);background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px)}
+.stepper ol{padding:12px 20px}
+.stepper .dot{width:26px;height:26px;font-size:12px}
+.stepper li.active .dot{box-shadow:0 0 0 4px #e1edfb}
+/* cards & surfaces */
+main .wrap{padding:40px 20px 72px}
+.steps{gap:24px}
+.card,.panel,.sem,.plan-bar,.tablewrap,.rec,.think,.reason{border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--shadow)}
+.card{padding:28px}
+.card h2{font-size:22px;margin-bottom:6px}
+.num{background:var(--harriman);width:28px;height:28px;font-family:var(--serif);font-size:15px}
+.hint{line-height:1.55}
+.drop{border-radius:var(--r);border:1.5px dashed #b6c7dc;background:linear-gradient(180deg,#fbfdff,#f3f7fc);padding:28px}
+.btn{border-radius:8px;font-weight:600;transition:all .18s}
+.btn.ghost{border:1px solid #c9d3df;color:var(--harriman);background:#fff}
+.btn.ghost:hover{border-color:var(--ub-blue);color:var(--ub-blue);background:#f5f9fe}
+.btn.big{border-radius:10px;padding:15px;font-size:16.5px;box-shadow:0 8px 20px rgba(0,91,187,.25)}
+.btn.big:hover{transform:translateY(-1px)}
+.chip{border-radius:8px;border-color:var(--hair);padding:10px 12px}
+.chip.on{background:#eef5fd;border-color:var(--ub-blue)}
+.group-title{letter-spacing:1px;font-size:11.5px}
+input[type=text],select,.profrow select,.psel select{border-radius:8px;border-color:#cdd5df}
+.cell,td input{border-radius:6px;border-color:#e6eaf0}
+.student{border-radius:8px;border-left-width:3px}
+.profrow{padding-top:12px;margin-top:14px;border-top:1px solid var(--hair)}
+.linkrow{font-size:13px;color:var(--townsend)}
+/* D-optimal insight */
+.insight{margin-top:12px;background:linear-gradient(135deg,#fffaf0,#fff4d6);border:1px solid #f5dc8f;border-radius:8px;padding:11px 14px;font-size:14px;line-height:1.5;animation:up .3s ease both}
+.ins-k{display:block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8a5a00;margin-bottom:2px}
+.ins-why{background:none;border:0;color:var(--ub-blue);font:inherit;font-size:12.5px;cursor:pointer;padding:0;margin-left:4px;text-decoration:underline dotted}
+/* results */
+.placeholder{border-radius:var(--r);border:1.5px dashed #c9d3df;background:#fff}
+.toolbar{margin-bottom:8px}
+.toolbar h2{font-size:28px}
+.toolbar .btn{padding:8px 14px;font-size:14px}
+.tabs{display:inline-flex;gap:2px;padding:4px;background:#eceff4;border:0;border-radius:12px;position:sticky;top:60px;margin:6px 0 24px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+.tabs button{border:0;margin:0;padding:9px 18px;border-radius:9px;font-size:14px;color:#4b5563}
+.tabs button.on{background:#fff;color:var(--harriman);box-shadow:0 1px 3px rgba(16,34,64,.12)}
+.tabs button:hover:not(.on){color:var(--harriman);background:rgba(255,255,255,.55)}
+@media (max-width:640px){.tabs{display:flex;overflow-x:auto}}
+.pane-head h2{font-size:26px}
+.panel{padding:22px 24px}.panel h3{font-size:18px}
+.paper{border-radius:4px;border-top:4px solid var(--ub-blue);box-shadow:0 2px 6px rgba(16,34,64,.05),0 24px 60px rgba(16,34,64,.10)}
+.fig .err line{stroke:#1d2b3f;stroke-width:1.3}
+.verdict{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;font-size:14.5px;margin:6px 0 4px;padding:10px 14px;border-radius:4px;background:#f2f8f7;border-left:3px solid var(--lasalle);text-align:left}
+.verdict span{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#007a72;white-space:nowrap}
+.verdict.v-likely{background:#fffaf0;border-left-color:var(--solar)}.verdict.v-likely span{color:#8a5a00}
+.verdict.v-close{background:#fdf3f1;border-left-color:var(--autumn)}.verdict.v-close span{color:#b23a22}
+/* hill chart */
+.hill{width:100%;height:auto;display:block;margin:4px 0 12px}
+.hill .g{stroke:#eef1f5}.hill .t{font-size:10.5px;fill:#8a94a3}.hill .ax{font-size:11px;fill:#6b7280}
+.hill path{fill:none;stroke-width:2.2}.hill .c75{stroke:var(--ub-blue)}.hill .c70{stroke:#6aa3e4;stroke-dasharray:5 4}.hill .c65{stroke:#a9c8ee;stroke-dasharray:2 4}
+.hill .ec{stroke:#c9d3df;stroke-dasharray:3 3}
+.hill .pt circle{fill:var(--harriman);stroke:#fff;stroke-width:2;opacity:.92}
+.hill .pt text{font-size:10.5px;fill:#fff;font-weight:700}
+.rd-n{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--harriman);color:#fff;font-size:10.5px;font-weight:700;margin-right:6px;vertical-align:1px}
+/* methodology dialog */
+dialog{border-radius:14px}
+.modal-head{background:#fff;color:var(--harriman);border-bottom:1px solid var(--hair);padding:18px 24px}
+.modal-head h3{font-family:var(--serif);font-size:22px}
+.modal-head button{color:var(--townsend)}
+.m-intro{font-size:15.5px;line-height:1.6;margin-top:0}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media (max-width:640px){.m-grid{grid-template-columns:1fr}}
+.m-grid section{border:1px solid var(--hair);border-radius:10px;padding:14px 16px;position:relative}
+.m-grid h4{margin:0 0 6px;font-family:var(--serif);font-size:16.5px;color:var(--harriman)}
+.m-grid p{margin:0;font-size:14px;line-height:1.55}
+.m-n{position:absolute;right:14px;top:12px;font-family:var(--serif);font-size:13px;color:#b6c2d1}
+.m-grid cite{display:block;margin-top:8px;font-size:12.5px;color:var(--ub-blue);font-style:italic}
+/* footer */
+footer{background:#06203f;margin-top:40px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:32px 20px}
+.f-brand{display:flex;align-items:center;gap:18px;max-width:520px}.f-brand img{height:40px;margin:0}.f-brand p{margin:0;font-size:13.5px;color:#a8b6c8;line-height:1.5}
+.f-links{display:flex;gap:20px;flex-wrap:wrap}
+.f-links a,.f-links button{color:#dbe4ef;background:none;border:0;font:inherit;font-size:14px;cursor:pointer;text-decoration:none;padding:0}
+.f-links a:hover,.f-links button:hover{color:#fff;text-decoration:underline}
+.legal kbd{background:transparent;color:#a8b6c8;border-color:#3a506b}
+/* chat */
+.fab{border-radius:999px;box-shadow:0 10px 28px rgba(0,47,86,.28)}
+.chat{border-radius:16px}
+.chat-head{background:linear-gradient(135deg,var(--ub-blue),#0047a0)}
+/* misc */
+.toTop{border-color:var(--hair)}
+.toast{border-radius:10px;background:#0f2a4a}
+@media (max-width:560px){.topnav>button:not(.ai-btn){display:none}.hero-stats{gap:18px}.hero-stats b{font-size:24px}.hero-stats li{padding-left:9px}}
+@media (prefers-reduced-motion:reduce){.hero-card{animation:none}.hero-art .hc path{stroke-dashoffset:0}}
 </style>
 </head>
 <body>
@@ -547,30 +659,42 @@ body.has-mbar .fab{bottom:84px}
   <div class="topbar">
     <div class="wrap">
       <a href="./" class="logo-link" id="homeLink" aria-label="University at Buffalo — Subject Advisor home"><img class="logo-img" alt="University at Buffalo" src="assets/ub-logo-white.png"></a>
-      <button class="ai-btn" id="aiBtn" type="button"><span class="sdot"></span><span id="aiLbl">Connect AI</span></button>
-      <button class="icon-btn" id="sizeBtn" type="button" aria-label="Change text size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 18 9 6l5 12M6 14h6M15 18l3-7 3 7M16 16h4"/></svg></button>
-      <button class="icon-btn" id="themeBtn" type="button" aria-label="Dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
-      <span class="tag">Student Advisor · Demo</span>
+      <span class="brand-sub">Subject Advisor</span>
+      <nav class="topnav" aria-label="Main">
+        <button type="button" data-open-explore>Programs</button>
+        <button type="button" data-open-how>Methodology</button>
+        <button class="ai-btn" id="aiBtn" type="button"><span class="sdot"></span><span id="aiLbl">Unlock AI</span></button>
+      </nav>
     </div>
   </div>
-  <nav class="subnav"><div class="wrap">
-    <a href="#upload">Upload results</a><a href="#profile">Your interests</a><a href="#results">Recommendations</a>
-    <button data-open-explore>Explore programs</button>
-    <button class="right" data-open-how>How matching works</button>
-    <button data-open-keys aria-label="Keyboard shortcuts">Shortcuts&nbsp;<kbd>?</kbd></button>
-  </div></nav>
 </header>
 
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">Undergraduate Subject Advisor</p>
-  <h1>Find your major at UB</h1>
-  <p class="lead">Upload your previous results, tell us what you enjoy, and the advisor ranks UB programs that fit your strengths — with reasons, gaps to work on, and sample first-semester courses.</p>
-  <div class="pills">
-    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Takes 1 minute</span>
-    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Free</span>
-    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Private — no sign-up</span>
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="hg" x1="0" x2="1"><stop offset="0" stop-color="#ffc72c" stop-opacity="0"/><stop offset=".55" stop-color="#ffc72c" stop-opacity=".9"/><stop offset="1" stop-color="#ffc72c" stop-opacity=".2"/></linearGradient></defs>
+    <g class="hc">
+      <path d="M0,470 C380,468 520,452 600,330 C680,205 760,96 1200,86"/>
+      <path d="M0,480 C420,478 600,465 690,350 C780,232 860,140 1200,128" class="h2"/>
+      <path d="M0,490 C470,488 690,476 780,372 C870,268 950,186 1200,176" class="h3"/>
+    </g>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Undergraduate Subject Advisor</p>
+      <h1>Find the major<br>that fits <em>you</em>.</h1>
+      <p class="lead">Upload your previous results and tell us what you enjoy. The advisor ranks all 18 UB programs, stress-tests the result with statistics, and maps out your four years.</p>
+      <div class="cta"><a class="btn gold" href="#upload">Start with my results</a><button class="btn glass" type="button" id="heroDemo">Try the demo student →</button></div>
+      <ul class="hero-stats"><li><b>18</b><span>UB programs ranked</span></li><li><b>600</b><span>simulations per report</span></li><li><b>8</b><span>semesters planned</span></li></ul>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="hc-top"><span class="hc-dot"></span>Advising report · preview</div>
+      <div class="hc-row best"><span>Computer Science (BS)</span><b>97%</b></div><div class="hc-bar"><i style="--w:97%"></i></div>
+      <div class="hc-row"><span>Mathematics (BS)</span><b>87%</b></div><div class="hc-bar"><i style="--w:87%"></i></div>
+      <div class="hc-row"><span>Computer Engineering (BS)</span><b>86%</b></div><div class="hc-bar"><i style="--w:86%"></i></div>
+      <div class="hc-foot"><span class="hc-badge">Clear best fit</span><span>P(#1) = 0.93 · Monte Carlo</span></div>
+    </div>
   </div>
-</div></section>
+</section>
 
 <nav class="stepper" aria-label="Progress"><ol>
   <li id="st1" class="active"><span class="dot">1</span><span class="label">Upload results</span><span class="line"></span></li>
@@ -592,10 +716,11 @@ body.has-mbar .fab{bottom:84px}
         <button class="btn ghost" id="demo">Load demo student</button>
         <button class="btn ghost" id="addRow">+ Add subject</button>
       </div>
-      <div class="profrow"><button class="btn ghost sm" id="profSave" type="button">💾 Save profile</button><select id="profSel" aria-label="Saved profiles"></select><button class="linkbtn" id="profDel" type="button" hidden>Delete</button></div>
-      <div class="linkrow"><button class="linkbtn" id="tplBtn" type="button">⤓ Download a blank template (CSV)</button> · <button class="linkbtn" id="sampleBtn" type="button">⤓ Download the demo file</button></div>
+      <div class="profrow"><button class="btn ghost sm" id="profSave" type="button">Save profile</button><select id="profSel" aria-label="Saved profiles"></select><button class="linkbtn" id="profDel" type="button" hidden>Delete</button></div>
+      <div class="linkrow"><button class="linkbtn" id="tplBtn" type="button">Blank template (CSV)</button> · <button class="linkbtn" id="sampleBtn" type="button">Demo file</button></div>
       <div class="err" id="err" style="color:#990000;font-size:14px;margin-top:8px"></div>
       <div class="student" id="student"></div>
+      <div id="insightBox"></div>
       <div id="tblWrap" hidden>
         <div class="table-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></svg>Click any cell to edit</div>
         <table id="tbl">
@@ -629,17 +754,17 @@ body.has-mbar .fab{bottom:84px}
     <div id="out" hidden>
       <div class="toolbar"><h2>Your recommendations report</h2>
         <div class="actions">
-          <button class="btn ghost" data-open-how>How is my match calculated?</button>
-          <button class="btn ghost" id="shareBtn">🔗 Share</button>
+          <button class="btn ghost" data-open-how>Methodology</button>
+          <button class="btn ghost" id="shareBtn">Share link</button>
           <button class="btn ghost" id="restart">Start over</button>
           <button class="btn" onclick="window.print()">Print / save PDF</button>
         </div></div>
       <nav class="tabs" role="tablist" aria-label="Results sections" hidden>
-        <button role="tab" data-tab="report" class="on" aria-selected="true">📄 Report</button>
-        <button role="tab" data-tab="advisor" aria-selected="false">🎓 Academic Advisor</button>
-        <button role="tab" data-tab="plan" aria-selected="false">🗓️ 4-Year Plan</button>
-        <button role="tab" data-tab="compare" aria-selected="false">⚖️ Compare</button>
-        <button role="tab" data-tab="whatif" aria-selected="false">🎚️ What-if</button>
+        <button role="tab" data-tab="report" class="on" aria-selected="true">Report</button>
+        <button role="tab" data-tab="advisor" aria-selected="false">Academic Advisor</button>
+        <button role="tab" data-tab="plan" aria-selected="false">4-Year Plan</button>
+        <button role="tab" data-tab="compare" aria-selected="false">Compare</button>
+        <button role="tab" data-tab="whatif" aria-selected="false">What-if</button>
       </nav>
       <div id="recs" class="pane" data-pane="report" role="tabpanel"></div>
       <div id="paneAdvisor" class="pane" data-pane="advisor" role="tabpanel" hidden></div>
@@ -678,7 +803,7 @@ body.has-mbar .fab{bottom:84px}
   <div class="modal-body"><table class="keys"><tbody>
     <tr><td><kbd>?</kbd></td><td>Show this list</td></tr><tr><td><kbd>/</kbd></td><td>Open the advisor chat</td></tr>
     <tr><td><kbd>1</kbd>–<kbd>5</kbd></td><td>Switch results tabs</td></tr><tr><td><kbd>E</kbd></td><td>Explore programs</td></tr>
-    <tr><td><kbd>D</kbd></td><td>Toggle dark mode</td></tr><tr><td><kbd>H</kbd></td><td>Back to top</td></tr><tr><td><kbd>Esc</kbd></td><td>Close chat or dialog</td></tr>
+    <tr><td><kbd>H</kbd></td><td>Back to top</td></tr><tr><td><kbd>Esc</kbd></td><td>Close chat or dialog</td></tr>
   </tbody></table></div>
 </dialog>
 
@@ -703,39 +828,30 @@ body.has-mbar .fab{bottom:84px}
 <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
 <div class="mbar" id="mbar"><button class="btn" id="go2">Get my recommendations</button></div>
 
-<dialog id="how">
-  <div class="modal-head"><h3>How is my match calculated?</h3><button aria-label="Close" data-close>×</button></div>
-  <div class="modal-body">
-    Every UB program gets a score out of 100, built from three parts:
-    <div class="weights"><i></i><i></i><i></i></div>
-    <div class="legend"><span>Academic fit 60%</span><span>Interests 30%</span><span>Career goal 10%</span></div>
-    <ol>
-      <li><b>Academic fit.</b> Your subjects are grouped into areas (math, computing, physics…). Each program weighs the areas it needs most — for example Computer Science leans on computing and math.</li>
-      <li><b>Interests.</b> How many of your chosen interests match what the program is about.</li>
-      <li><b>Career goal.</b> A bonus when your goal points directly to that program.</li>
-    </ol>
-    If a key subject is missing from your results, the advisor uses a cautious estimate and flags it under <em>Watch out for</em>. With Gemini connected, your results are sent to Google to generate the reasoning; otherwise everything stays in your browser.
+<dialog id="how" class="wide">
+  <div class="modal-head"><h3>Methodology</h3><button aria-label="Close" data-close>×</button></div>
+  <div class="modal-body method">
+    <p class="m-intro">Every recommendation combines a transparent scoring model with statistical methods adapted from the research of <b>Dr. Leonid Khinkis</b> (Professor of Teaching, Institute for Artificial Intelligence and Data Science, University at Buffalo) on nonlinear regression and optimal experimental design.</p>
+    <div class="m-grid">
+      <section><span class="m-n">01</span><h4>Match score</h4><p>Each program scores your results in the subjects it weighs most (60%), your interests (30%) and your career goal (10%).</p><div class="weights"><i></i><i></i><i></i></div></section>
+      <section><span class="m-n">02</span><h4>Monte Carlo robustness</h4><p>The ranking is re-run 600 times with each grade perturbed by its measurement error and program weights by ±15%, giving 90% intervals and the probability each program ranks first.</p><cite>After Bucki, Khinkis et al. (2001)</cite></section>
+      <section><span class="m-n">03</span><h4>Identifiable best fit</h4><p>A recommendation is a <i>clear</i> best fit when it wins ≥ 80% of simulations; otherwise it is <i>likely</i> or a <i>close call</i> — analogous to a unique versus competing minima.</p><cite>After Khinkis, Crotzer &amp; Oprisan (2018)</cite></section>
+      <section><span class="m-n">04</span><h4>D-optimal next result</h4><p>The advisor finds which additional grade would most shrink the joint confidence region (det Cov) of your top-3 matches — the result worth adding next.</p><cite>After Khinkis, Krzyzanski, Jusko &amp; Greco (2009)</cite></section>
+      <section><span class="m-n">05</span><h4>Hill readiness curves</h4><p>Course readiness follows a 4-parameter Hill (sigmoid) model: it rises steeply around a threshold score EC<sub>50</sub> and levels off near a ceiling.</p><cite>After Khinkis, Levasseur, Faessel &amp; Greco (2003)</cite></section>
+      <section><span class="m-n">06</span><h4>AI reasoning</h4><p>With AI unlocked, Gemini reviews the evidence step by step and may adjust a score by at most 8 points, explaining why. Without it, a built-in engine writes the reasoning.</p></section>
+    </div>
+    <p class="small">Methods are adapted for an educational advising context and have not been reviewed by Dr. Khinkis. If a key subject is missing, a cautious estimate is used and flagged. With AI unlocked, results are sent to Google to generate the reasoning; otherwise everything stays in your browser.</p>
   </div>
 </dialog>
 
 <footer>
   <div class="wrap foot">
-    <div>
-      <img src="assets/ub-logo-white.png" alt="University at Buffalo">
-      An unofficial demo that helps prospective students explore UB majors using their own academic results.
-    </div>
-    <div><h5>About</h5><ul>
-      <li><button data-open-how>How matching works</button></li>
-      <li><a href="#upload">Try the demo student</a></li>
-      <li><a href="#results">Your recommendations</a></li></ul></div>
-    <div><h5>Explore UB</h5><ul>
-      <li><a href="https://www.buffalo.edu" target="_blank" rel="noopener">buffalo.edu</a></li>
-      <li><a href="https://admissions.buffalo.edu" target="_blank" rel="noopener">Undergraduate admissions</a></li></ul></div>
-    <div><h5>Need help?</h5><ul>
-      <li><a href="https://admissions.buffalo.edu" target="_blank" rel="noopener">Talk to an admissions counselor</a></li>
-      <li><button id="restart2">Start over</button></li></ul></div>
+    <div class="f-brand"><img src="assets/ub-logo-white.png" alt="University at Buffalo"><p>An unofficial student demo for exploring UB majors from your own academic results.</p></div>
+    <nav class="f-links" aria-label="Footer">
+      <button data-open-how>Methodology</button><button data-open-explore>Programs</button><a href="https://www.buffalo.edu" target="_blank" rel="noopener">buffalo.edu</a><a href="https://admissions.buffalo.edu" target="_blank" rel="noopener">Admissions</a><button id="restart2">Start over</button>
+    </nav>
   </div>
-  <div class="wrap legal"><span>Unofficial student-built demo. Not affiliated with or endorsed by the University at Buffalo.</span><span>Your results stay in your browser unless you connect Gemini AI.</span></div>
+  <div class="wrap legal"><span>Not affiliated with or endorsed by the University at Buffalo. Statistical methods adapted from published research by Dr. Leonid Khinkis.</span><span>Press <kbd>?</kbd> for keyboard shortcuts</span></div>
 </footer>
 
 <script>
@@ -860,6 +976,7 @@ function renderTable(){
   $("#tblWrap").hidden=!rows.length;
   const s=$("#student");
   if(meta.student){s.style.display="block";s.innerHTML=`<b>${esc(meta.student)}</b>${meta.board?" · "+esc(meta.board):""}${meta.intended_start?" · Starting "+esc(meta.intended_start):""}`;} else s.style.display="none";
+  try{ $("#insightBox").innerHTML=insightLine(); $$("#insightBox [data-open-how]").forEach(b=>b.onclick=()=>$("#how").showModal()); }catch(e){}
   updateSteps();
 }
 
@@ -1091,11 +1208,15 @@ function renderResults(a,res,note){
   const counts={}; rows.forEach(r=>{const k=areaOf(r.subject||""); if(k&&pct(r)!=null) counts[k]=(counts[k]||0)+1;});
   const keyStrength=r=>{const ks=Object.entries(r.w).filter(([k,w])=>w>=2&&a.area[k]!=null).sort((x,y)=>a.area[y[0]]-a.area[x[0]]); return ks.length?`${AREAS[ks[0][0]]} (${Math.round(a.area[ks[0][0]])}%)`:"—";};
   const maxS=Math.max(...recs.map(r=>r.score));
-  const fig=`<svg class="fig" viewBox="0 0 640 ${recs.length*38+44}" role="img" aria-label="Program match scores">
+  const mc=monteCarlo(a); last.mc=mc; const vd=verdict(mc,recs);
+  const ci=r=>{const sh=r.score-mc.mean[r.name]; return mc.ci[r.name].map(x=>Math.max(0,Math.min(100,x+sh)));};
+  const dnext=dOptimalNext(a,recs).slice(0,3);
+  const fig=`<svg class="fig" viewBox="0 0 640 ${recs.length*38+44}" role="img" aria-label="Program match scores with 90% intervals">
     ${[0,25,50,75,100].map(t=>`<line x1="${230+t*3.8}" y1="8" x2="${230+t*3.8}" y2="${recs.length*38+14}" class="grid"/><text x="${230+t*3.8}" y="${recs.length*38+32}" class="tick">${t}</text>`).join("")}
-    ${recs.map((r,i)=>`<text x="222" y="${i*38+33}" class="lab">${esc(r.name)}</text>
+    ${recs.map((r,i)=>{const [lo,hi]=ci(r);return `<text x="222" y="${i*38+33}" class="lab">${esc(r.name)}</text>
       <rect x="230" y="${i*38+17}" width="${r.score*3.8}" height="22" class="${r.score===maxS?"b1":"b2"}" style="animation-delay:${i*80}ms"/>
-      <text x="${236+r.score*3.8}" y="${i*38+33}" class="val">${Math.round(r.score)}</text>`).join("")}
+      <g class="err"><line x1="${230+lo*3.8}" x2="${230+hi*3.8}" y1="${i*38+28}" y2="${i*38+28}"/><line x1="${230+lo*3.8}" x2="${230+lo*3.8}" y1="${i*38+23}" y2="${i*38+33}"/><line x1="${230+hi*3.8}" x2="${230+hi*3.8}" y1="${i*38+23}" y2="${i*38+33}"/></g>
+      <text x="${236+Math.max(r.score,hi)*3.8}" y="${i*38+33}" class="val">${Math.round(r.score)}</text>`;}).join("")}
   </svg>`;
   $("#recs").innerHTML=`
   <article class="paper">
@@ -1106,7 +1227,7 @@ function renderResults(a,res,note){
     <p class="p-aff">Analysis: ${engine}</p>
 
     <section class="p-abs"><h2>Abstract</h2>
-      <p>${abstract} The analysis identifies <b>${esc(recs[0].name)}</b> as the strongest fit (${Math.round(recs[0].score)}% match)${recs[1]?`, followed by ${esc(recs[1].name)} (${Math.round(recs[1].score)}%)`:""}. ${weak.length?`Preparation is advised in ${weak.join(", ")} before first-year core courses.`:"No significant preparation gaps were identified."}</p>
+      <p>${abstract} The analysis identifies <b>${esc(recs[0].name)}</b> as the strongest fit (${Math.round(recs[0].score)}% match)${recs[1]?`, followed by ${esc(recs[1].name)} (${Math.round(recs[1].score)}%)`:""}. ${weak.length?`Preparation is advised in ${weak.join(", ")} before first-year core courses.`:"No significant preparation gaps were identified."} A Monte Carlo robustness analysis (${mc.N} simulations) classifies the result as a <b>${vd.label.toLowerCase()}</b>.</p>
       <p class="kw"><b>Keywords:</b> ${[...sorted.slice(0,3).map(([k])=>AREAS[k].toLowerCase()),...[...picked].slice(0,3).map(s=>s.toLowerCase()),"program fit"].join("; ")}</p>
     </section>
 
@@ -1125,6 +1246,14 @@ function renderResults(a,res,note){
     <p>Each program <i>p</i> receives a match score combining weighted academic fit, interest alignment and goal alignment:</p>
     <div class="eq"><span>Match(<i>p</i>) = 0.60 · <i>A<sub>p</sub></i> + 0.30 · <i>I<sub>p</sub></i> + 0.10 · <i>G<sub>p</sub></i></span><span class="eqn">(1)</span></div>
     <p>where <i>A<sub>p</sub></i> is the weighted mean of area scores using the program's subject weights, <i>I<sub>p</sub></i> the share of the program's themes matched by the student's interests, and <i>G<sub>p</sub></i> a bonus when the career goal points directly to the program. Missing key areas receive a conservative estimate (at most 65%) and are flagged.${res.source==="gemini"?" A large language model then reviewed the evidence, reasoned through it step by step, and adjusted scores by at most ±8 points where justified (Section 5).":""}</p>
+    <h3>3.1&nbsp; Robustness analysis (Monte Carlo)</h3>
+    <p>Following the Monte Carlo comparison of rival designs by Bucki, Khinkis <i>et al.</i> [4], the ranking was recomputed ${mc.N} times. In each run every area score was perturbed by its measurement error (σ = ${SIGMA} points per grade, scaled by 1/√<i>n</i>; σ = ${PRIOR_SD} for areas with no grades) and every program weight by a log-normal factor (±15%). We report how often each program ranks first, P(#1), and the 5th–95th percentile of its match score (Figure 1).</p>
+    <h3>3.2&nbsp; Identifiability of the best fit</h3>
+    <p>Khinkis, Crotzer and Oprisan [5] characterise when a least-squares problem has a readily identifiable unique global minimum. By analogy, the best-fit program is called <i>clear</i> when P(#1) ≥ 0.80, <i>likely</i> when 0.50 ≤ P(#1) &lt; 0.80, and a <i>close call</i> otherwise.</p>
+    <h3>3.3&nbsp; Most informative next result (D-optimal design)</h3>
+    <p>Adapting D-optimal experimental design [6, 7], the top-3 match scores are treated as linear in the area abilities, <i>s</i> = <i>A</i>·<i>a</i>, with covariance <i>A</i>·diag(<i>v</i>)·<i>A</i><sup>⊤</sup>. For each area we compute how much one additional grade would reduce det Cov(<i>s</i>) — the volume of the joint confidence region — and recommend the largest reduction.</p>
+    <h3>3.4&nbsp; Readiness curves (4-parameter Hill model)</h3>
+    <p>Readiness for a program's core courses is modelled with the sigmoid 4-parameter Hill model studied in [6]: <i>R</i>(<i>x</i>) = <i>E</i><sub>0</sub> + (<i>E</i><sub>max</sub> − <i>E</i><sub>0</sub>)·<i>x</i><sup><i>h</i></sup> / (<i>x</i><sup><i>h</i></sup> + EC<sub>50</sub><sup><i>h</i></sup>), with <i>E</i><sub>0</sub> = ${HILL.E0}, <i>E</i><sub>max</sub> = ${HILL.Emax}, <i>h</i> = ${HILL.h} and EC<sub>50</sub> = 75 / 70 / 65 for core, important and supporting subjects (see the Academic Advisor tab).</p>
 
     <h2><span>4</span>Results</h2>
     <p>Area averages are shown in Table 2. Program rankings appear in Figure 1 and Table 3.</p>
@@ -1132,11 +1261,16 @@ function renderResults(a,res,note){
     <table class="bk"><thead><tr><th>Area</th><th class="n">Subjects</th><th class="n">Average (%)</th><th>Assessment</th></tr></thead><tbody>
       ${sorted.map(([k,v])=>`<tr><td>${AREAS[k]}</td><td class="n">${counts[k]||0}</td><td class="n">${Math.round(v)}</td><td>${v>=90?"Excellent":v>=85?"Strong":v>=80?"Good":v>=70?"Needs reinforcement":"Priority gap"}</td></tr>`).join("")}
     </tbody></table></div>
-    <figure>${fig}<figcaption><b>Figure 1.</b> Match scores (0–100) for the five highest-ranked programs. The best fit is highlighted.</figcaption></figure>
+    <div class="verdict v-${vd.key}"><span>${vd.label}</span>${esc(vd.text)}</div>
+    <figure>${fig}<figcaption><b>Figure 1.</b> Match scores (0–100) for the five highest-ranked programs, with 90% Monte Carlo intervals (whiskers). The best fit is highlighted.</figcaption></figure>
     <div class="tblk"><p class="cap"><b>Table 3.</b> Ranked program recommendations.</p>
-    <table class="bk"><thead><tr><th class="n">#</th><th>Program</th><th>School</th><th class="n">Match (%)</th><th>Key strength</th></tr></thead><tbody>
-      ${recs.map((r,i)=>`<tr${i?"":' class="best"'}><td class="n">${i+1}</td><td>${esc(r.name)}</td><td class="sm">${esc(r.school)}</td><td class="n">${Math.round(r.score)}</td><td>${keyStrength(r)}</td></tr>`).join("")}
+    <table class="bk"><thead><tr><th class="n">#</th><th>Program</th><th>School</th><th class="n">Match (%)</th><th class="n">90% interval</th><th class="n">P(#1)</th><th>Key strength</th></tr></thead><tbody>
+      ${recs.map((r,i)=>{const [lo,hi]=ci(r);return `<tr${i?"":' class="best"'}><td class="n">${i+1}</td><td>${esc(r.name)}</td><td class="sm">${esc(r.school)}</td><td class="n">${Math.round(r.score)}</td><td class="n">${Math.round(lo)}–${Math.round(hi)}</td><td class="n">${(mc.wins[r.name]||0).toFixed(2)}</td><td>${keyStrength(r)}</td></tr>`;}).join("")}
     </tbody></table></div>
+    ${dnext.length?`<div class="tblk"><p class="cap"><b>Table 4.</b> Most informative next result (D-criterion: reduction in det Cov of the top-3 match scores from one additional grade).</p>
+    <table class="bk"><thead><tr><th>Area</th><th>Current evidence</th><th class="n">Reduction in det Cov</th></tr></thead><tbody>
+      ${dnext.map((d,i)=>`<tr${i?"":' class="best"'}><td>${AREAS[d.k]}</td><td>${d.missing?"No grades":(counts[d.k]||0)+" grade"+((counts[d.k]||0)>1?"s":"")}</td><td class="n">${Math.round(d.gain*100)}%</td></tr>`).join("")}
+    </tbody></table></div>`:""}
 
     <h2><span>5</span>Discussion: Advisor Reasoning</h2>
     ${note?`<p class="note">${esc(note)}</p>`:""}
@@ -1157,7 +1291,11 @@ function renderResults(a,res,note){
     <ol class="refs">
       <li>University at Buffalo. <i>Undergraduate Catalog</i>. Buffalo, NY: University at Buffalo, The State University of New York.</li>
       <li>University at Buffalo, Office of Admissions. <i>Undergraduate Admissions</i>. https://admissions.buffalo.edu</li>
-      <li>UB Undergraduate Subject Advisor. <i>Scoring model and program weights</i>, v1.0 (this report, Section 3).</li>
+      <li>UB Undergraduate Subject Advisor. <i>Scoring model and program weights</i>, v2.0 (this report, Section 3).</li>
+      <li>Bucki, C., Khinkis, L.A., Malmberg, A., Parsons, J. &amp; Greco, W.R. (2001). Monte Carlo investigation of rival experimental designs for the Hill model. In <i>Monte Carlo Simulation</i>, pp. 247–253. A. A. Balkema.</li>
+      <li>Khinkis, L., Crotzer, M. &amp; Oprisan, A. (2018). Sizing up the regions of unique minima in the least squares nonlinear regression. <i>Mathematics for Applications</i>, 7, 41–52.</li>
+      <li>Khinkis, L.A., Levasseur, L., Faessel, H. &amp; Greco, W.R. (2003). Optimal design for estimating parameters of the 4-parameter Hill model. <i>Nonlinearity in Biology, Toxicology, and Medicine</i>, 1, 363–377.</li>
+      <li>Khinkis, L.A., Krzyzanski, W., Jusko, W.J. &amp; Greco, W.R. (2009). D-optimal designs for parameter estimation for indirect pharmacodynamic response models. <i>Journal of Pharmacokinetics and Pharmacodynamics</i>, 36, 523–539.</li>
     </ol>
     <div class="p-foot"><span>Report ${repNo} · Generated ${date}</span><span>Advisory only — not an admission decision</span></div>
   </article>`;
@@ -1668,28 +1806,30 @@ function renderAdvisor(){
   $("#paneAdvisor").innerHTML=`
    <div class="pane-head"><div><h2>Academic Advisor</h2><p class="hint">A personal advising session for your chosen program.</p></div>${progSelect("advSel")}</div>
    <div class="grid2">
-    <section class="box"><h3>Readiness scorecard</h3>
-      ${keys.map(([k,w])=>{const v=a.area[k];const [lab,cls]=status(v);return `<div class="rd"><div class="rd-top"><span>${AREAS[k]} <small>${w>=3?"core":w>=2?"important":"supporting"}</small></span><span class="chipst ${cls}">${lab}${v!=null?" · "+Math.round(v)+"%":""}</span></div><div class="rbar"><i class="${cls}" style="width:${v??0}%"></i></div></div>`;}).join("")}
+    <section class="panel"><h3>Readiness for core courses</h3>
+      <p class="small" style="margin:-6px 0 6px">Modelled with a 4-parameter Hill curve — readiness rises steeply around the threshold score (EC<sub>50</sub>).</p>
+      ${hillChart(keys.map(([k,w])=>({label:AREAS[k],v:a.area[k],ec:ec50For(w)})))}
+      ${keys.map(([k,w])=>{const v=a.area[k];const [lab,cls]=status(v);return `<div class="rd"><div class="rd-top"><span>${a.area[k]!=null?`<i class="rd-n">${keys.findIndex(x=>x[0]===k)+1}</i>`:""}${AREAS[k]} <small>${w>=3?"core":w>=2?"important":"supporting"}</small></span><span class="chipst ${cls}">${v!=null?"Readiness "+Math.round(hill(v,ec50For(w))*100)+"%":lab}</span></div><div class="rbar"><i class="${cls}" style="width:${v??0}%"></i></div></div>`;}).join("")}
       ${prep?`<p class="callout">Your math average is ${Math.round(a.area.math)}%. The advisor recommends starting with <b>Precalculus</b> before Calculus I — the 4-Year Plan already includes it.</p>`:""}
     </section>
-    <section class="box"><h3>Your advising checklist <span class="count">${done}/${list.length}</span></h3>
+    <section class="panel"><h3>Your advising checklist <span class="count">${done}/${list.length}</span></h3>
       <div class="pbar"><i style="width:${done/list.length*100}%"></i></div>
       <ul class="checklist">${list.map(([k,t])=>`<li><label><input type="checkbox" data-ck="${k}"${ck[k]?" checked":""}> <span>${esc(t)}</span></label></li>`).join("")}</ul>
     </section>
    </div>
    <div class="grid2">
-    <section class="box"><h3>Prep plan before your first semester</h3>
+    <section class="panel"><h3>Prep plan before your first semester</h3>
       ${prepAreas.length?prepAreas.map(k=>`<div class="prep"><b>${AREAS[k]}</b> <small>· ${esc(PREP[k].res)}</small><ol>${PREP[k].weeks.map((w,i)=>`<li><span>Week ${i+1}</span>${esc(w)}</li>`).join("")}</ol></div>`).join(""):`<p class="ok-note">✓ No preparation gaps for this program — keep your skills fresh over the summer.</p>`}
     </section>
-    <section class="box"><h3>Questions to ask your advisor</h3>
+    <section class="panel"><h3>Questions to ask your advisor</h3>
       <ol class="qlist" id="qlist">${qs.map(q=>`<li>${esc(q)}</li>`).join("")}</ol>
-      <div class="row"><button class="btn ghost sm" id="qCopy">Copy questions</button><button class="btn sm" id="aiNotes">✨ Get AI advisor notes</button></div>
+      <div class="row"><button class="btn ghost sm" id="qCopy">Copy questions</button><button class="btn sm" id="aiNotes">Get AI advisor notes</button></div>
       <div id="aiNotesOut"></div>
     </section>
    </div>
    <div class="grid2">
-    <section class="box"><h3>Where this degree can lead</h3><ul class="tags">${(CAREERS[P.name]||[]).map(c=>`<li>${esc(c)}</li>`).join("")}</ul><p class="small">Example roles only — many need further study or experience.</p></section>
-    <section class="box"><h3>Suggested minors</h3>${minors.length?`<ul class="minors">${minors.map(m=>`<li><b>${esc(m.minor)}</b><span>${esc(m.why)}</span></li>`).join("")}</ul><p class="small">Confirm which minors are offered in the UB catalog.</p>`:"<p class='small'>Upload results to see minor ideas.</p>"}</section>
+    <section class="panel"><h3>Where this degree can lead</h3><ul class="tags">${(CAREERS[P.name]||[]).map(c=>`<li>${esc(c)}</li>`).join("")}</ul><p class="small">Example roles only — many need further study or experience.</p></section>
+    <section class="panel"><h3>Suggested minors</h3>${minors.length?`<ul class="minors">${minors.map(m=>`<li><b>${esc(m.minor)}</b><span>${esc(m.why)}</span></li>`).join("")}</ul><p class="small">Confirm which minors are offered in the UB catalog.</p>`:"<p class='small'>Upload results to see minor ideas.</p>"}</section>
    </div>`;
   bindProgSelect("advSel",renderAdvisor);
   $$("#paneAdvisor [data-ck]").forEach(c=>c.onchange=()=>{(checks[P.name]=checks[P.name]||{})[c.dataset.ck]=c.checked; store.set("ubadv_checks",JSON.stringify(checks)); renderAdvisor();});
@@ -1727,8 +1867,8 @@ function renderPlan(){
      <label class="tog"><input type="checkbox" id="optPrep"${p.prep?" checked":""}${(TRACK[p.name]||[]).includes("MTH 141")?"":" disabled"}> Start with Precalculus</label>
      <span class="grow"></span>
      <button class="btn ghost sm" id="planReset">Reset</button>
-     <button class="btn ghost sm" id="planCsv">⤓ CSV</button>
-     <button class="btn sm" id="planAi">✨ AI review</button>
+     <button class="btn ghost sm" id="planCsv">Export CSV</button>
+     <button class="btn sm" id="planAi">AI review</button>
    </div>
    ${issues.length?`<div class="issues"><b>${issues.length} thing${issues.length>1?"s":""} to fix</b><ul>${issues.map(x=>`<li>${esc(x.msg)}</li>`).join("")}</ul></div>`:`<div class="issues ok">✓ Prerequisites are in order and every semester is a full-time load.</div>`}
    ${p.ai?`<div class="ai-box"><span class="src">Gemini AI review</span><p>${esc(p.ai.overview||"")}</p>${(p.ai.risks||[]).length?`<ul>${p.ai.risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`:""}</div>`:""}
@@ -1736,7 +1876,7 @@ function renderPlan(){
      <section class="sem${semCr[i]>18||semCr[i]<12?" warn":""}" data-sem="${i}">
        <header><b>${SEM_NAMES[i]}</b><span>${semCr[i]} cr</span></header>
        <ul>${s.map(c=>{const L=courseLabel(c);return `<li class="crs${L.gen?" gen":""}${flagged.has(c.id)?" bad":""}" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(L.code+" "+L.name)}"><span class="cc">${esc(L.code)}</span><span class="cn">${esc(L.name)}</span><span class="cr">${credits(c)}</span></li>`;}).join("")}</ul>
-       ${aiTip(i)?`<p class="tip">💡 ${esc(aiTip(i))}</p>`:""}
+       ${aiTip(i)?`<p class="tip">${esc(aiTip(i))}</p>`:""}
        <footer><label>Expected GPA <input type="number" min="0" max="4" step="0.1" value="${esc(p.gpa[i])}" data-gpa="${i}" placeholder="–"></label></footer>
      </section>`).join("")}</div>
    <div class="gpa-out">${cum!=null?`Projected cumulative GPA: <b>${cum.toFixed(2)}</b> over ${gp.reduce((t,[,c])=>t+c,0)} credits`:"Enter expected GPAs above to project your cumulative GPA."}</div>
@@ -1778,7 +1918,7 @@ async function aiPlanReview(p){
       generationConfig:{temperature:.4,responseMimeType:"application/json",thinkingConfig:{thinkingLevel:"low"},responseSchema:{type:"OBJECT",required:["overview","semesters","risks"],properties:{overview:{type:"STRING"},risks:{type:"ARRAY",items:{type:"STRING"}},semesters:{type:"ARRAY",items:{type:"OBJECT",required:["semester","tip"],properties:{semester:{type:"INTEGER"},tip:{type:"STRING"}}}}}}}
     },{timeout:45000});
     p.ai=JSON.parse(raw); savePlans(); renderPlan(); toast("AI review added to your plan.");
-  }catch(e){ toast("AI review failed: "+e.message); btn.disabled=false; btn.textContent="✨ AI review"; }
+  }catch(e){ toast("AI review failed: "+e.message); btn.disabled=false; btn.textContent="AI review"; }
 }
 
 /* ---------- Compare ---------- */
@@ -1811,8 +1951,8 @@ function renderWhatIf(){
   $("#paneWhatif").innerHTML=`
    <div class="pane-head"><div><h2>What-if simulator</h2><p class="hint">Drag a slider to see how improving (or adding) a subject changes your matches. Your real results aren't changed.</p></div><button class="btn ghost sm" id="wiReset">Reset to my results</button></div>
    <div class="grid2">
-    <section class="box sliders">${Object.keys(AREAS).map(k=>{const on=wi[k]!=null;return `<div class="sl"><label><input type="checkbox" data-on="${k}"${on?" checked":""}> ${AREAS[k]}</label><input type="range" min="40" max="100" value="${on?Math.round(wi[k]):70}" data-k="${k}"${on?"":" disabled"} aria-label="${AREAS[k]} score"><output>${on?Math.round(wi[k])+"%":"—"}</output></div>`;}).join("")}</section>
-    <section class="box"><h3>Top matches in this scenario</h3><ol class="wi-list" id="wiList"></ol>
+    <section class="panel sliders">${Object.keys(AREAS).map(k=>{const on=wi[k]!=null;return `<div class="sl"><label><input type="checkbox" data-on="${k}"${on?" checked":""}> ${AREAS[k]}</label><input type="range" min="40" max="100" value="${on?Math.round(wi[k]):70}" data-k="${k}"${on?"":" disabled"} aria-label="${AREAS[k]} score"><output>${on?Math.round(wi[k])+"%":"—"}</output></div>`;}).join("")}</section>
+    <section class="panel"><h3>Top matches in this scenario</h3><ol class="wi-list" id="wiList"></ol>
     <p class="small">▲/▼ show change in match points versus your real results; ↑ shows places gained in the ranking.</p></section>
    </div>`;
   $$("#paneWhatif [data-k]").forEach(r=>r.oninput=()=>{wi[r.dataset.k]=+r.value; r.nextElementSibling.textContent=r.value+"%"; renderWhatIfList();});
@@ -1888,15 +2028,6 @@ function loadShared(){ const m=location.hash.match(/[#&]s=([\w-]+)/); if(!m) ret
   try{ const j=JSON.parse(b64d(m[1])); applySnap({rows:j.r,meta:j.m,picked:j.p,goal:j.g,level:j.l}); window.history.replaceState(null,"",location.pathname); toast("Opened a shared report."); setTimeout(run,300); return true; }
   catch(e){ toast("That share link is broken."); return false; } }
 
-/* ---------- Display: dark mode + text size ---------- */
-const root=document.documentElement;
-function setTheme(t){ root.dataset.theme=t; store.set("ubadv_theme",t); $("#themeBtn").setAttribute("aria-pressed",t==="dark"); $("#themeBtn").title=t==="dark"?"Switch to light mode":"Switch to dark mode"; $('meta[name="theme-color"]').content=t==="dark"?"#0b1a2e":"#005bbb"; }
-setTheme(store.get("ubadv_theme")||(matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
-$("#themeBtn").onclick=()=>{setTheme(root.dataset.theme==="dark"?"light":"dark");};
-const SIZES=[1,1.1,1.2,.92]; let sz=+(store.get("ubadv_size")||0)%SIZES.length;
-function setSize(i){ sz=i; root.style.setProperty("--zoom",SIZES[i]); store.set("ubadv_size",String(i)); $("#sizeBtn").title=`Text size: ${Math.round(SIZES[i]*100)}%`; }
-setSize(sz); $("#sizeBtn").onclick=()=>{setSize((sz+1)%SIZES.length); toast(`Text size ${Math.round(SIZES[sz]*100)}%`);};
-
 /* ---------- Voice input for chat ---------- */
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition; const mic=$("#micBtn");
 if(!SR) mic.hidden=true; else {
@@ -1916,13 +2047,111 @@ document.addEventListener("keydown",e=>{
   const k=e.key;
   if(k==="?"){e.preventDefault();keyDlg.showModal();}
   else if(k==="/"){e.preventDefault();openChat();}
-  else if(k==="d"){setTheme(root.dataset.theme==="dark"?"light":"dark");}
   else if(k==="e"){$("[data-open-explore]").click();}
   else if(k==="h"){goHome();}
   else if(/^[1-5]$/.test(k)&&last&&shown){const t=["report","advisor","plan","compare","whatif"][+k-1]; setTab(t); $(".tabs").scrollIntoView({behavior:"smooth"});}
 });
 $$("dialog [data-close]").forEach(b=>{ if(!b.onclick) b.onclick=()=>b.closest("dialog").close(); });
 $$("dialog").forEach(d=>d.addEventListener("click",e=>{if(e.target===d)d.close();}));
+
+/* =====================================================================
+   STATISTICAL METHODS — adapted from the research of Dr. Leonid Khinkis
+   [K1] Khinkis, Levasseur, Faessel & Greco (2003) Optimal design for estimating
+        parameters of the 4-parameter Hill model. Dose-Response / NBTM 1, 363–377.
+   [K2] Khinkis, Krzyzanski, Jusko & Greco (2009) D-optimal designs for parameter
+        estimation for indirect pharmacodynamic response models. J Pharmacokinet
+        Pharmacodyn 36, 523–539.
+   [K3] Bucki, Khinkis, Malmberg, Parsons & Greco (2001) Monte Carlo investigation of
+        rival experimental designs for the Hill model. Monte Carlo Simulation, 247–253.
+   [K4] Khinkis, Crotzer & Oprisan (2018) Sizing up the regions of unique minima in
+        the least squares nonlinear regression. Mathematics for Applications 7, 41–52.
+   ===================================================================== */
+
+/* ---- (1) 4-parameter Hill model: preparation score -> course readiness ----
+   R(x) = E0 + (Emax − E0) · x^h / (x^h + EC50^h)
+   E0 = floor, Emax = ceiling, EC50 = score giving half-maximal readiness, h = Hill slope. */
+const HILL={E0:.04,Emax:.97,h:9};
+const ec50For=w=>w>=3?75:w>=2?70:65;                 // core subjects demand more preparation
+const hill=(x,ec50,{E0,Emax,h}=HILL)=>E0+(Emax-E0)*Math.pow(x,h)/(Math.pow(x,h)+Math.pow(ec50,h));
+
+/* ---- deterministic PRNG so the same transcript always gives the same simulation ---- */
+function rng(seed){ let a=seed>>>0; return ()=>{a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^t>>>15,t|1); t^=t+Math.imul(t^t>>>7,t|61); return ((t^t>>>14)>>>0)/4294967296;}; }
+const gauss=r=>{let u=0,v=0; while(!u)u=r(); while(!v)v=r(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
+const seedOf=()=>[...JSON.stringify(rows)+[...picked].join()].reduce((s,c)=>(s*31+c.charCodeAt(0))|0,7);
+const SIGMA=6;            // assumed measurement error of one grade, in percentage points
+const PRIOR_SD=12;        // uncertainty of an area with no grades at all
+function areaCounts(){ const n={}; rows.forEach(r=>{const k=areaOf(r.subject||""); if(k&&pct(r)!=null) n[k]=(n[k]||0)+1;}); return n; }
+function areaVar(k,area,n){ return area[k]!=null ? SIGMA*SIGMA/(n[k]||1) : PRIOR_SD*PRIOR_SD; }
+
+/* ---- (2) Monte Carlo robustness of the ranking (after [K3]) ----
+   Re-score every program N times with (a) each area perturbed by its measurement error and
+   (b) program weights perturbed log-normally (±15%), then count how often each program ranks #1
+   and take the 5th–95th percentile of each match score. */
+function monteCarlo(a,N=600){
+  const r=rng(seedOf()), n=areaCounts(), goal=$("#goal").value.trim();
+  const wins={}, sims={}; PROGRAMS.forEach(p=>{wins[p.name]=0; sims[p.name]=[];});
+  for(let s=0;s<N;s++){
+    const ar={}; Object.keys(AREAS).forEach(k=>{ const base=a.area[k]!=null?a.area[k]:Math.min(a.overall,65); ar[k]=Math.max(0,Math.min(100,base+gauss(r)*Math.sqrt(areaVar(k,a.area,n)))); });
+    let best=null,bs=-1;
+    PROGRAMS.forEach(p=>{
+      let ws=0,sum=0; for(const [k,w0] of Object.entries(p.w)){ const w=w0*Math.exp(gauss(r)*.15); sum+=ar[k]*w; ws+=w; }
+      const hits=p.tags.filter(t=>picked.has(t)); const it=picked.size?Math.min(1,hits.length/Math.min(p.tags.length,3)):.5;
+      const sc=Math.max(0,Math.min(99,(sum/ws)*.6+it*30+(goal&&p.goals.test(goal)?10:0)));
+      sims[p.name].push(sc); if(sc>bs){bs=sc;best=p.name;}
+    });
+    wins[best]++;
+  }
+  const q=(arr,p)=>{const s=[...arr].sort((x,y)=>x-y); return s[Math.min(s.length-1,Math.floor(p*s.length))];};
+  const out={N,wins:{},ci:{},mean:{}};
+  PROGRAMS.forEach(p=>{ out.wins[p.name]=wins[p.name]/N; out.ci[p.name]=[q(sims[p.name],.05),q(sims[p.name],.95)]; out.mean[p.name]=sims[p.name].reduce((t,x)=>t+x,0)/N; });
+  return out;
+}
+
+/* ---- (3) Identifiability of the best fit (after [K4]) ----
+   A "unique minimum" is readily identifiable when one program wins most simulations;
+   near-ties play the role of competing local minima. */
+function verdict(mc,recs){
+  const p1=mc.wins[recs[0].name]||0, p2=recs[1]?(mc.wins[recs[1].name]||0):0;
+  if(p1>=.8) return {key:"clear",label:"Clear best fit",text:`${recs[0].name} ranked first in ${Math.round(p1*100)}% of ${mc.N} simulations — a well-identified, unique best fit.`};
+  if(p1>=.5) return {key:"likely",label:"Likely best fit",text:`${recs[0].name} ranked first in ${Math.round(p1*100)}% of simulations; ${recs[1].name} won ${Math.round(p2*100)}%. Worth exploring both.`};
+  return {key:"close",label:"Close call",text:`No single program dominates: ${recs[0].name} won ${Math.round(p1*100)}% and ${recs[1]?recs[1].name:"others"} ${Math.round(p2*100)}% of simulations. More evidence would help.`};
+}
+
+/* ---- (4) D-optimal choice of the next result to add (after [K1],[K2]) ----
+   Treat the top-3 match scores as linear in the area abilities:  s = A·a,  Cov(s) = A·diag(v)·Aᵀ.
+   One more grade in area k changes v_k → 1/(1/v_k + 1/σ²). The D-optimal next "measurement" is the
+   one that most reduces det Cov(s) (the volume of the joint confidence region). */
+function det3(M){ if(M.length===1) return M[0][0]; if(M.length===2) return M[0][0]*M[1][1]-M[0][1]*M[1][0];
+  return M[0][0]*(M[1][1]*M[2][2]-M[1][2]*M[2][1])-M[0][1]*(M[1][0]*M[2][2]-M[1][2]*M[2][0])+M[0][2]*(M[1][0]*M[2][1]-M[1][1]*M[2][0]); }
+function dOptimalNext(a,top){
+  const n=areaCounts(), K=Object.keys(AREAS);
+  const A=top.slice(0,3).map(p=>{const ws=Object.values(p.w).reduce((s,x)=>s+x,0); return K.map(k=>.6*(p.w[k]||0)/ws);});
+  const cov=v=>A.map(ri=>A.map(rj=>K.reduce((s,k,i)=>s+ri[i]*rj[i]*v[i],0)));
+  const v0=K.map(k=>areaVar(k,a.area,n)); const d0=det3(cov(v0));
+  if(!(d0>0)) return [];
+  return K.map((k,i)=>{ const v=[...v0]; v[i]=1/(1/v0[i]+1/(SIGMA*SIGMA)); const d=det3(cov(v)); return {k,gain:1-d/d0,missing:a.area[k]==null}; })
+          .filter(x=>x.gain>.02).sort((x,y)=>y.gain-x.gain);
+}
+function insightLine(){
+  if(!hasResults()) return "";
+  const a=analyse(); const best=dOptimalNext(a,a.recs.map(r=>PROGRAMS.find(p=>p.name===r.name)))[0];
+  if(!best) return "";
+  return `<div class="insight"><span class="ins-k">Most informative next result</span> Adding ${best.missing?"a":"another"} <b>${AREAS[best.k]}</b> grade would shrink the uncertainty in your top-3 matches by <b>${Math.round(best.gain*100)}%</b> <button class="ins-why" type="button" data-open-how aria-label="How is this calculated?">D-optimal design ⓘ</button></div>`;
+}
+
+/* ---- (5) Hill readiness chart ---- */
+function hillChart(items){
+  const W=520,H=210,L=44,R=14,T=14,B=34, X=x=>L+(x-40)/60*(W-L-R), Y=y=>T+(1-y)*(H-T-B);
+  const curve=ec=>{let d="";for(let x=40;x<=100;x+=1){d+=(x===40?"M":"L")+X(x).toFixed(1)+","+Y(hill(x,ec)).toFixed(1);}return d;};
+  const ecs=[...new Set(items.map(i=>i.ec))];
+  return `<svg class="hill" viewBox="0 0 ${W} ${H}" role="img" aria-label="Readiness curves">
+   ${[0,.25,.5,.75,1].map(y=>`<line x1="${L}" x2="${W-R}" y1="${Y(y)}" y2="${Y(y)}" class="g"/><text x="${L-8}" y="${Y(y)+4}" class="t" text-anchor="end">${Math.round(y*100)}%</text>`).join("")}
+   ${[40,50,60,70,80,90,100].map(x=>`<text x="${X(x)}" y="${H-12}" class="t" text-anchor="middle">${x}</text>`).join("")}
+   ${ecs.map(ec=>`<path d="${curve(ec)}" class="c${ec}"/><line x1="${X(ec)}" x2="${X(ec)}" y1="${Y(.5)}" y2="${H-B}" class="ec"/>`).join("")}
+   ${items.map((i,j)=>i.v==null?"":`<g class="pt"><circle cx="${X(Math.max(40,i.v))}" cy="${Y(hill(Math.max(40,i.v),i.ec))}" r="8.5"/><text x="${X(Math.max(40,i.v))}" y="${Y(hill(Math.max(40,i.v),i.ec))+3.8}" text-anchor="middle">${j+1}</text></g>`).join("")}
+   <text x="${(L+W-R)/2}" y="${H}" class="ax" text-anchor="middle">Your preparation score (%)</text>
+  </svg>`;
+}
 
 /* ---------- Demo data ---------- */
 const DEMO=`student,Arjun Mehta
@@ -1951,6 +2180,7 @@ file.onchange=()=>readFile(file.files[0]);
 ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("over");}));
 drop.addEventListener("drop",e=>readFile(e.dataTransfer.files[0]));
 $("#demo").onclick=e=>{showErr();load(parse(DEMO,"demo.csv"));const b=e.currentTarget;b.textContent="✓ Demo loaded";b.classList.add("done");b.disabled=true;b.blur();toast("Demo student Arjun Mehta loaded.");};
+$("#heroDemo").onclick=()=>{ if(!$("#demo").disabled) $("#demo").click(); $("#upload").scrollIntoView({behavior:"smooth"}); };
 $("#addRow").onclick=()=>{rows.push({subject:"",score:"",max:"100"});renderTable();$("#tbl tbody tr:last-child .cell").focus();};
 $("#go").onclick=run; $("#go2").onclick=run;
 $("#restart").onclick=restart; $("#restart2").onclick=restart;
